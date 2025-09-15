@@ -1,0 +1,18 @@
+{
+  "editor.codeActionsOnSave": [
+    // Sort package.json keys with
+    // https://marketplace.visualstudio.com/items?itemName=unional.vscode-sort-package-json
+    "source.sortPackageJson"
+  ],
+  "autoBarrel.files.detectExportsInFiles": false,
+  "autoBarrel.files.useNamedExports": false,
+  "autoBarrel.files.exportDefaultFilename": "camelCase",
+  "autoBarrel.files.ignoreFilePathPatternOnExport": [
+    "**/*.spec.*",
+    "**/*.test.*",
+    "**/*.e2e.*",
+    "**/*.web.*",
+    "**/index.ts",
+    "**/index.js"
+  ],
+}

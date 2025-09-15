@@ -1,0 +1,12 @@
+import React from 'react';
+import { Radio, RadioElement, RadioProps } from '@meow-ui/components';
+
+export const RadioShowcase = (props: RadioProps): RadioElement => {
+  const [checked, setChecked] = React.useState<boolean>(props.checked);
+
+  return (
+    <Radio {...props} checked={checked} onChange={setChecked}>
+      {props.children}
+    </Radio>
+  );
+};

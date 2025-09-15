@@ -1,0 +1,11 @@
+import React from 'react';
+import { ImageStyle } from 'react-native';
+import { Icon, IconElement } from '@meow-ui/components';
+
+export const EyeIcon = (style: ImageStyle): IconElement => (
+  <Icon {...style} name='eye' />
+);
+
+export const EyeOffIcon = (style: ImageStyle): IconElement => (
+  <Icon {...style} name='eye-off' />
+);

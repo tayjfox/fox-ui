@@ -1,0 +1,36 @@
+{
+  "name": "@meow-ui/components",
+  "version": "5.3.1",
+  "description": "React Native components based on Eva Design System",
+  "keywords": [
+    "react-native",
+    "ui-kitten",
+    "ui-kit"
+  ],
+  "homepage": "https://github.com/akveo/react-native-ui-kitten#readme",
+  "bugs": {
+    "url": "https://github.com/akveo/react-native-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akveo/react-native-ui-kitten.git"
+  },
+  "license": "MIT",
+  "author": "akveo <contact@akveo.com>",
+  "dependencies": {
+    "@eva-design/dss": "^2.2.0",
+    "@eva-design/processor": "^2.2.0",
+    "fecha": "4.2.3",
+    "hoist-non-react-statics": "^3.3.2",
+    "lodash.merge": "^4.6.2",
+    "nativewind": "^4.2.1",
+    "tailwindcss": "3.4.17"
+  },
+  "peerDependencies": {
+    "react-native-reanimated": "~3.17.4",
+    "react-native-svg": "15.12.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
