@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-native",
+    "checkJs": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "lib": [
+      "es2022"
+    ],
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "incremental": false,
+    "disableSourceOfProjectReferenceRedirect": true,
+    "tsBuildInfoFile": "${configDir}/.cache/tsbuildinfo.json",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "Preserve",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
+    "declaration": true,
+    "declarationMap": true,
+    "moduleSuffixes": [
+      ".ios",
+      ".android",
+      ".native",
+      ""
+    ],
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@eva-design/*": [
+        "../../../eva/packages/*"
+      ],
+      "@ui-kitten/*": [
+        "../../packages/*"
+      ],
+      "@meow-ui/*": [
+        "../../packages/*"
+      ],
+      "@kitten/*": [
+        "../../packages/components/*"
+      ]
+    }
+  },
+  "exclude": [
+    "./node_modules",
+    "./babel.config.js",
+    "./metro.config.js",
+    "build",
+    "dist",
+    ".next",
+    ".expo"
+  ],
+  "extends": "expo/tsconfig.base",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "nativewind-env.d.ts",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ]
+}

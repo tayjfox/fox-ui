@@ -10,7 +10,16 @@
     "clean": "node ./scripts/clean.js",
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
+    "ios": "turbo run ios",
     "turbo:clean": "turbo run clean && rm -rf node_modules"
+  },
+  "resolutions": {
+    "expo-constants": "18.0.9",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native": "0.81.4",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.9.2"
   },
   "devDependencies": {
     "prettier": "^3.6.2",

@@ -1,4 +1,18 @@
-import App from './app/app.component';
+import {
+  Text,
+  View,
+} from 'react-native';
 
-// eslint-disable-next-line no-restricted-syntax
-export default App;
+export default function App() {
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Text>Universal React with Expo</Text>
+    </View>
+  );
+}

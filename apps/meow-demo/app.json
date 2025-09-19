@@ -1,0 +1,47 @@
+{
+  "name": "Fox UI",
+  "description": "A Demo React Native fox UI based application",
+  "slug": "foxui",
+  "version": "1.0.0",
+  "scheme": "foxui",
+  "orientation": "portrait",
+  "icon": "./src/assets/images/app-icon.png",
+  "newArchEnabled": true,
+  "userInterfaceStyle": "automatic",
+  "assetBundlePatterns": [
+    "**/*"
+  ],
+  "ios": {
+    "supportsTablet": true,
+    "bundleIdentifier": "io.vedla.foxui",
+    "buildNumber": "1",
+    "icon": "./src/assets/images/app-icon.png",
+    "config": {
+      "usesNonExemptEncryption": false
+    }
+  },
+  "android": {
+    "edgeToEdgeEnabled": true,
+    "icon": "./src/assets/images/app-icon.png",
+    "versionCode": 1,
+    "package": "io.vedla.foxui"
+  },
+  "web": {
+    "favicon": "./src/assets/images/favicon.png",
+    "bundler": "metro"
+  },
+  "extra": {},
+  "experiments": {
+    "tsconfigPaths": true,
+    "typedRoutes": true
+  },
+  "owner": "vedla",
+  "runtimeVersion": {
+    "policy": "appVersion"
+  },
+  "plugins": [
+    "expo-router",
+    "expo-web-browser",
+    "expo-font"
+  ]
+}

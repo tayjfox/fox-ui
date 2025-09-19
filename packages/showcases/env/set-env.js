@@ -7,4 +7,4 @@ const { [0]: envArgument } = scriptArguments;
 const envConfigFile = path.resolve(__dirname, `./${envArgument}.env.js`);
 const envConfigMainFile = path.resolve(__dirname, `./index.js`);
 
-fs.copyFileSync(envConfigFile, envConfigMainFile);
+// fs.copyFileSync(envConfigFile, envConfigMainFile);

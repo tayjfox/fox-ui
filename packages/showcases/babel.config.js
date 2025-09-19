@@ -28,8 +28,7 @@ const presets = [
 
 const plugins = [
   ['module-resolver', moduleResolverConfig],
-  ["@babel/plugin-proposal-decorators", { 'legacy': true }],
-  ["react-native-web", { commonjs: true }]
+  ["babel-preset-expo"]
 ];
 
 module.exports = function (api) {

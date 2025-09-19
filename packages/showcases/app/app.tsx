@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { reloadAsync } from 'expo-updates';
 import { enableScreens } from 'react-native-screens';
+
 import * as eva from '@eva-design/eva';
 import * as material from '@eva-design/material';
 import {
@@ -9,8 +11,7 @@ import {
   IconRegistry,
 } from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
-import { default as customMapping } from './mapping.json';
-import { themes } from './themes';
+
 import { AppNavigator } from '../navigation/app.navigator';
 import {
   AppMapping,
@@ -18,6 +19,8 @@ import {
   ThemeContext,
   ThemeContextType,
 } from '../services/theme.service';
+import customMapping from './mapping.json';
+import { themes } from './themes';
 
 const mappings = {
   Eva: eva.mapping,
@@ -64,6 +67,7 @@ export default (): React.ReactElement => {
 
   return (
     <>
+
       <IconRegistry icons={EvaIconsPack} />
       <ApplicationProvider {...applicationProviderConfig}>
         <ThemeContext.Provider value={themeContextProviderConfig}>

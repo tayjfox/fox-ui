@@ -1,5 +1,5 @@
 import 'react-native-reanimated';
-// import './global.css';
+import '../global.css';
 
 import React from 'react';
 
@@ -134,18 +134,9 @@ export function AppLayout() {
 }
 
 function AppProviders() {
-  // const { isLoading } = useContext(DataContext) as DataContextValue;
-  // const SCREEN_OPTIONS = { animation: 'fade', headerShown: false } as const;
-  const SCREEN_OPTIONS = { headerShown: false } as const;
-  // const ROOT_OPTIONS = { headerShown: false } as const;
-  // const DRAWER_OPTIONS = { headerShown: false } as const;
 
-  // const MODAL_OPTIONS = {
-  //   presentation: 'modal',
-  //   animation: 'fade_from_bottom',
-  //   title: 'Settings',
-  //   headerRight: () => <ThemeToggle />,
-  // } as const;
+  const SCREEN_OPTIONS = { headerShown: false } as const;
+
 
   return (
     // <View className='h-full flex-1 bg-body'>

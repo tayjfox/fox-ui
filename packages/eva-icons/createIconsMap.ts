@@ -1,7 +1,9 @@
-import { IconProvider } from '@ui-kitten/components';
 import { SvgProps } from 'react-native-svg';
-import { findIconByName } from 'react-native-eva-icons/icons';
+
+import { IconProvider } from '@ui-kitten/components';
+
 import { EvaIcon } from './evaIcon.component';
+import { findIconByName } from './node_modules/react-native-eva-icons/icons';
 
 export const createIconsMap = (): { [key: string]: IconProvider<SvgProps> } => {
   return new Proxy({}, {

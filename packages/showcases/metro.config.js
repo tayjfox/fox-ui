@@ -18,7 +18,7 @@ const moduleDependencies = [
   path.resolve(__dirname, '../../node_modules/fecha'),
 
   // @ui-kitten/eva-icons
-  path.resolve(__dirname, '../../node_modules/react-native-eva-icons'),
+  path.resolve(__dirname, '../eva-icons'),
   path.resolve(__dirname, '../../node_modules/react-native-svg'),
 
   // @ui-kitten/moment

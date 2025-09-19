@@ -1,4 +1,22 @@
 {
-  "compilerOptions": {},
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@eva-design/*": [
+        "../../../eva/packages/*"
+      ],
+      "@ui-kitten/*": [
+        "../../packages/*"
+      ],
+      "@meow-ui/*": [
+        "../../packages/*"
+      ],
+      "@kitten/*": [
+        "../../packages/components/*"
+      ]
+    }
+  },
   "extends": "expo/tsconfig.base"
 }
