@@ -10,19 +10,19 @@ export {
   MeasureElement,
   MeasureElementProps,
   MeasuringElement,
-} from './components/measure/MeasureElement';
-export { Frame, Point, Size } from './components/measure/type';
+} from './components/utils/MeasureElement';
+export { Frame, Point, Size } from './components/utils/type';
 export {
   WebEventResponder,
   WebEventResponderCallbacks,
   WebEventResponderInstance,
-} from './services/WebEventResponder';
-export { RTLService } from './services/rtl/RTL_Service';
+} from './components/utils/WebEventResponder';
+export { RTLService } from './components/utils/RTLService';
 export {
   FlexStyleProps,
   FlexViewCrossStyleProps,
   PropsService,
   TextStyleProps,
-} from './services/props/PropsService';
+} from './components/utils/PropsService';
 
 export * from './typings';

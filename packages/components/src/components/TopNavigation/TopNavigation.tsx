@@ -1,7 +1,14 @@
 /**
  * @license
- * Copyright Akveo. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
+ * Copyright (c) 2025 Vedla Labs by Tay Fox. All Rights Reserved.
+ * Originally developed as UI Kitten by Akveo.
+ *
+ * This project is licensed under the MIT License.
+ * See the LICENSE file in the project root for full license information.
+ *
+ * @author Tay Fox <tay@vedla.ca>
+ * @description: A React Native implementation of Eva Design System's Button component.
+ * @since MeowUI 0.1.0
  */
 
 import React from 'react';
@@ -24,15 +31,15 @@ import {
   StyledComponentProps,
   StyleType,
 } from '../../theme';
-import { TextProps } from '../text/text.component';
+import { TextProps } from '../../ui/text/text.component';
 
 type TopNavigationStyledProps = Overwrite<StyledComponentProps, {
   appearance?: LiteralUnion<'default' | 'control'>;
 }>;
 
 export interface TopNavigationProps extends ViewProps, TopNavigationStyledProps {
-  title?: RenderProp<TextProps> | React.ReactText;
-  subtitle?: RenderProp<TextProps> | React.ReactText;
+  title?: RenderProp<TextProps> | React.ReactNode;
+  subtitle?: RenderProp<TextProps> | React.ReactNode;
   accessoryLeft?: () => React.ReactElement;
   accessoryRight?: () => React.ReactElement;
   alignment?: AlignmentProp;
@@ -149,9 +156,9 @@ export class TopNavigation extends React.Component<TopNavigationProps> {
   };
 
   public render(): React.ReactElement<ViewProps> {
-    const { eva, style, title, subtitle, alignment, accessoryLeft, accessoryRight, ...viewProps } = this.props;
+    const { eva, style, title, subtitle, alignment = 'start', accessoryLeft, accessoryRight, ...viewProps } = this.props;
 
-    const evaStyles = this.getComponentStyle(eva.style);
+    const evaStyles = this.getComponentStyle(eva?.style ?? {});
     const alignmentStyles = this.getAlignmentDependentStyles(alignment);
 
     return (

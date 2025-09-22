@@ -62,32 +62,32 @@ export type TopNavigationActionElement = React.ReactElement<TopNavigationActionP
 export class TopNavigationAction extends React.Component<TopNavigationActionProps> {
 
   public onBlur = (event: NativeSyntheticEvent<TargetedEvent>): void => {
-    this.props.eva.dispatch([]);
+    this.props.eva?.dispatch?.([]);
     this.props.onBlur?.(event);
   };
 
   private onMouseEnter = (event: NativeSyntheticEvent<TargetedEvent>): void => {
-    this.props.eva.dispatch([Interaction.HOVER]);
+    this.props.eva?.dispatch?.([Interaction.HOVER]);
     this.props.onMouseEnter?.(event);
   };
 
   private onMouseLeave = (event: NativeSyntheticEvent<TargetedEvent>): void => {
-    this.props.eva.dispatch([]);
+    this.props.eva?.dispatch?.([]);
     this.props.onMouseLeave?.(event);
   };
 
   private onFocus = (event: NativeSyntheticEvent<TargetedEvent>): void => {
-    this.props.eva.dispatch([Interaction.FOCUSED]);
+    this.props.eva?.dispatch?.([Interaction.FOCUSED]);
     this.props.onFocus?.(event);
   };
 
   private onPressIn = (event: GestureResponderEvent): void => {
-    this.props.eva.dispatch([Interaction.ACTIVE]);
+    this.props.eva?.dispatch?.([Interaction.ACTIVE]);
     this.props.onPressIn?.(event);
   };
 
   private onPressOut = (event: GestureResponderEvent): void => {
-    this.props.eva.dispatch([]);
+    this.props.eva?.dispatch?.([]);
     this.props.onPressOut?.(event);
   };
 
@@ -113,7 +113,7 @@ export class TopNavigationAction extends React.Component<TopNavigationActionProp
 
   public render(): TouchableWebElement {
     const { eva, style, icon, ...touchableProps } = this.props;
-    const evaStyle = this.getComponentStyle(eva.style);
+    const evaStyle = this.getComponentStyle(eva?.style ?? {});
 
     return (
       <TouchableWeb

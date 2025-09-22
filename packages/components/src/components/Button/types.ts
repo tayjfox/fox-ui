@@ -24,7 +24,7 @@ import {
   TouchableWebProps,
 } from '../../devsupport';
 import { StyledComponentProps } from '../../theme';
-import { TextProps } from '../text/text.component';
+import { TextProps } from '../../ui/text/text.component';
 
 type ButtonStyledProps = Overwrite<
   StyledComponentProps,

@@ -14,16 +14,6 @@ import { ButtonDemoTypes } from './ButtonDemoTypes';
 export const ButtonShowcase = () => (
   <Container className='h-full'>
 
-    <ListCustomItemShowcase />
-
-  </Container>
-);
-
-
-
-const ListCustomItemShowcase = (): React.ReactElement => {
-
-  return (
     <List
       data={ButtonDemoTypes}
       renderItem={(info: ListRenderItemInfo<ShowcaseItem>): React.ReactElement => {
@@ -39,6 +29,6 @@ const ListCustomItemShowcase = (): React.ReactElement => {
 
       }}
     />
-  );
-};
 
+  </Container>
+);

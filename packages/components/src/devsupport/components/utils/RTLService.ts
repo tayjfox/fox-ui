@@ -1,9 +1,6 @@
-import {
-  I18nManager,
-  ViewStyle,
-} from 'react-native';
+import { I18nManager, ViewStyle } from 'react-native';
 
-import { RtlFlexMap } from './Rtl_FlexMap';
+import { RtlFlexMap } from './RTLFlexMap';
 
 class RTLServiceStatic {
   /**
@@ -26,10 +23,10 @@ class RTLServiceStatic {
    * @returns {ViewStyle} - style reversed to fit RTL
    */
   public ignoreRTL(source: ViewStyle, rtl: boolean = this.isRTL()): ViewStyle {
-    const rtlStyle: ViewStyle = Object.keys(RtlFlexMap).reduce(
-      (style: ViewStyle, prop: string): ViewStyle => {
+    const rtlStyle: ViewStyle = (Object.keys(RtlFlexMap) as Array<keyof ViewStyle>).reduce(
+      (style: ViewStyle, prop: keyof ViewStyle): ViewStyle => {
         const currentStyleValue = source[prop];
-        if (currentStyleValue) {
+        if (typeof currentStyleValue === 'string') {
           const i18nStyleValue = RtlFlexMap[prop].toRTL(currentStyleValue, rtl);
           return {
             ...style,

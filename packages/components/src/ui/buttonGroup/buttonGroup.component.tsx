@@ -28,7 +28,7 @@ import {
 import {
   ButtonElement,
   ButtonProps,
-} from '../button/types';
+} from '../Button/types';
 
 type ButtonGroupStyledProps = Overwrite<StyledComponentProps, {
   appearance?: LiteralUnion<'filled' | 'outline' | 'ghost'>;

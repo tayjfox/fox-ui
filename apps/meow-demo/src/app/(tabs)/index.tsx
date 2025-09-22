@@ -23,6 +23,11 @@ interface IListItem {
 
 const data = [
   {
+    title: 'Top Navigation',
+    description: 'Top navigation bar',
+    route: '/components/top-navigation'
+  },
+  {
     title: 'Buttons',
     description: 'Different styles of buttons',
     route: '/components/button'
