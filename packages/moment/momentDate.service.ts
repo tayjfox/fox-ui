@@ -4,14 +4,14 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */
 
+import moment, { Moment } from 'moment';
+
 import {
   DateService,
   TranslationWidth,
-} from '@ui-kitten/components';
-import moment, { Moment } from 'moment';
+} from '@fox-ui/components';
 
 export class MomentDateService extends DateService<Moment> {
-
   protected localeData: {
     firstDayOfWeek: number;
     defaultFormat: string;
@@ -46,9 +46,11 @@ export class MomentDateService extends DateService<Moment> {
   }
 
   public compareDates(date1: Moment, date2: Moment): number {
-    return this.getYear(date1) - this.getYear(date2) ||
+    return (
+      this.getYear(date1) - this.getYear(date2) ||
       this.getMonth(date1) - this.getMonth(date2) ||
-      this.getDate(date1) - this.getDate(date2);
+      this.getDate(date1) - this.getDate(date2)
+    );
   }
 
   public createDate(year: number, month: number, date: number): Moment {
@@ -93,7 +95,10 @@ export class MomentDateService extends DateService<Moment> {
     return this.getMonthNameByIndex(month, style);
   }
 
-  public getMonthNameByIndex(month: number, style: TranslationWidth = TranslationWidth.SHORT): string {
+  public getMonthNameByIndex(
+    month: number,
+    style: TranslationWidth = TranslationWidth.SHORT
+  ): string {
     return this.localeData.months[style][month];
   }
 

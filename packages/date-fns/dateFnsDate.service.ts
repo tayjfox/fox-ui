@@ -4,12 +4,13 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */
 
+import dateFnsFormat from 'date-fns/format';
+import dateFnsParse from 'date-fns/parse';
+
 import {
   NativeDateService,
   NativeDateServiceOptions,
-} from '@ui-kitten/components';
-import dateFnsParse from 'date-fns/parse';
-import dateFnsFormat from 'date-fns/format';
+} from '@fox-ui/components';
 
 export interface DateFnsOptions extends NativeDateServiceOptions {
   parseOptions?: {
@@ -35,21 +36,29 @@ const DEFAULT_OPTIONS: DateFnsOptions = {
 };
 
 export class DateFnsService extends NativeDateService {
-
   constructor(locale = 'en', options?: DateFnsOptions) {
     super(locale, { ...DEFAULT_OPTIONS, ...options });
   }
 
   public format(date: Date, format: string): string {
     if (date) {
-      return dateFnsFormat(date, format || this.options.format, (this.options as DateFnsOptions).formatOptions);
+      return dateFnsFormat(
+        date,
+        format || this.options.format,
+        (this.options as DateFnsOptions).formatOptions
+      );
     }
 
     return '';
   }
 
   public parse(date: string, format: string): Date {
-    return dateFnsParse(date, format || this.options.format, new Date(), (this.options as DateFnsOptions).parseOptions);
+    return dateFnsParse(
+      date,
+      format || this.options.format,
+      new Date(),
+      (this.options as DateFnsOptions).parseOptions
+    );
   }
 
   public getId(): string {

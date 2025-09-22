@@ -1,8 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import { View, Text } from "react-native";
+import { useRouter } from 'expo-router';
+import {
+  Text,
+  View,
+} from 'react-native';
+
+import { Button } from '@fox-ui/components';
 
 const NotFoundScreen = () => {
+  const router = useRouter();
   return (
     <View
       style={{
@@ -13,10 +20,14 @@ const NotFoundScreen = () => {
       }}
     >
       <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 8 }}>
-    </Text>
+      </Text>
       <Text style={{ fontSize: 16, textAlign: "center" }}>
         The page you are looking for does not exist.
       </Text>
+
+      <Button onPress={() => {
+        router.navigate('/');
+      }} className='bg-black' appearance='ghost'>Go Home</Button>
 
     </View>
   );

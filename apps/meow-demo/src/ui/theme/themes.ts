@@ -13,7 +13,8 @@ export const themesVariables: ThemeMap = {
 };
 
 export const themes = {
-  light: vars(themesVariables.light),
+  // light: vars(themesVariables.light),
+  light: vars(themesVariables['fire-n-fox']),
   dark: vars(themesVariables.dark),
 
   'fire-n-fox': vars(themesVariables['fire-n-fox']),

@@ -6,10 +6,7 @@ const extraModules = {
   '@babel/runtime': path.resolve(__dirname, './node_modules/@babel/runtime'),
   react: path.resolve(__dirname, './node_modules/react'),
   'react-native': path.resolve(__dirname, './node_modules/react-native'),
-  'react-native-web': path.resolve(
-    __dirname,
-    './node_modules/react-native-web',
-  ),
+  'react-native-web': path.resolve(__dirname, './node_modules/react-native-web'),
 };
 
 const babelLoaderRules = {
@@ -24,10 +21,10 @@ module.exports = async function (env, argv) {
     {
       ...env,
       babel: {
-        dangerouslyAddModulePathsToTranspile: ['@meow-ui/components'],
+        dangerouslyAddModulePathsToTranspile: ['@fox-ui/components'],
       },
     },
-    argv,
+    argv
   );
 
   config.module.rules = [...config.module.rules, babelLoaderRules];
@@ -43,7 +40,7 @@ module.exports = async function (env, argv) {
     ...extraModules,
   };
 
-  config.resolve.plugins = config.resolve.plugins.filter(plugin => {
+  config.resolve.plugins = config.resolve.plugins.filter((plugin) => {
     return !(plugin instanceof ModuleScopePlugin);
   });
 

@@ -20,12 +20,12 @@ import {
   ThemesVariables,
   ThemesVariants,
 } from '@/types';
-import * as eva from '@eva-design/eva';
 import {
   ApplicationProvider,
   IconRegistry,
-} from '@ui-kitten/components';
-import { EvaIconsPack } from '@ui-kitten/eva-icons';
+} from '@fox-ui/components';
+import { EvaIconsPack } from '@fox-ui/icons';
+import * as eva from '@fox-ui/themes';
 
 import {
   furlabThemes,
@@ -51,7 +51,7 @@ const TheThemeProvider = ({ children, className, ...props }: ThemeProps) => {
   useEffect(
     useCallback(() => {
       const storedTheme = storage.getString('user-themed');
-      console.log('Stored theme:', storedTheme, typeof storedTheme);
+
       if (storedTheme === 'light' || storedTheme === 'dark') {
         setTheme(storedTheme as ThemesVariants);
         setSystemEnabled(false);
@@ -85,7 +85,7 @@ const TheThemeProvider = ({ children, className, ...props }: ThemeProps) => {
         const newTheme = colorScheme === 'light' || colorScheme === 'dark' ? colorScheme : 'light';
         setTheme(newTheme);
         setSystemTheme(newTheme);
-        setColorScheme(newTheme);
+        // setColorScheme(newTheme);
       }
     });
 
@@ -99,7 +99,7 @@ const TheThemeProvider = ({ children, className, ...props }: ThemeProps) => {
       const appScheme: 'light' | 'dark' = systemEnabled
         ? (Appearance.getColorScheme() ?? 'light')
         : (themeMapping[theme ?? 'light'] ?? 'light') as 'light' | 'dark';
-      setColorScheme(appScheme);
+      // setColorScheme(appScheme);
     };
 
     updateNativeWindColorScheme();
@@ -110,7 +110,7 @@ const TheThemeProvider = ({ children, className, ...props }: ThemeProps) => {
       theme === 'system'
         ? 'system'
         : (themeMapping[theme ?? 'light'] as 'light' | 'dark') ?? 'light';
-    setColorScheme(mappedTheme);
+    // setColorScheme(mappedTheme);
   }, [theme]);
 
   /**
@@ -185,21 +185,18 @@ const TheThemeProvider = ({ children, className, ...props }: ThemeProps) => {
     ...appTheme,
   };
 
-  console.log('Current theme:', appTheme);
-  // console.log('Current theme:', theme, systemEnabled, systemTheme, evaThemeKey);
 
-  console.log(theme === 'system'
-    ? (furlabThemes as any)[systemTheme ?? 'dark']
-    : (furlabThemes as any)[theme ?? userPreferedTheme])
 
-  return theme ? (
-    <ApplicationProvider mapping={eva.mapping as any} theme={evaTheme}>
+
+  return (
+    // <ApplicationProvider mapping={eva.mapping as any} theme={evaTheme}>
+    <ApplicationProvider {...eva as any} theme={eva.light}>
       <IconRegistry icons={EvaIconsPack} />
       <View
         style={
           theme === 'system'
             ? (furlabThemes as any)[systemTheme ?? 'dark']
-            : (furlabThemes as any)[theme]
+            : (furlabThemes as any)[theme ?? 'light']
         }
         className="flex-1"
         {...props}>
@@ -211,7 +208,7 @@ const TheThemeProvider = ({ children, className, ...props }: ThemeProps) => {
           value={{
             systemEnabled: contextValue.systemEnabled,
             systemTheme: contextValue.systemTheme,
-            theme: contextValue.theme ?? 'dark',
+            theme: contextValue.theme as ThemesVariants,
             getThemeColorByVariable,
             getThemeColorByVariableAndAlpha,
             handleThemeSwitch,
@@ -220,8 +217,7 @@ const TheThemeProvider = ({ children, className, ...props }: ThemeProps) => {
         </ThemeContext.Provider>
       </View>
     </ApplicationProvider>
-  ) : (
-    <></>
+
   );
 };
 

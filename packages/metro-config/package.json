@@ -15,8 +15,8 @@
     "ui-kitten": "./bin/ui-kitten"
   },
   "devDependencies": {
-    "@eva-design/dss": "^2.2.0",
-    "@eva-design/processor": "^2.2.0",
+    "@eva-design/dss": "*",
+    "@eva-design/processor": "*",
     "@types/lodash.merge": "ts3.7",
     "chalk": "5.6.2",
     "commander": "14.0.1",

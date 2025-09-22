@@ -1,23 +1,9 @@
 import React from 'react';
 
-import {
-  Text,
-  View,
-} from 'react-native';
+import { Redirect } from 'expo-router';
 
-const Home = () => {
-
-
-
+export default function App() {
   return (
-
-    <View className="flex-1 items-center justify-center">
-      <Text className="text-xl font-bold text-blue-500">
-        Welcome to Nativewind!
-      </Text>
-    </View>
-
-  );
-};
-
-export default Home;
+    <Redirect href="(tabs)" />
+  )
+}

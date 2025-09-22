@@ -8,9 +8,6 @@
   "icon": "./src/assets/images/app-icon.png",
   "newArchEnabled": true,
   "userInterfaceStyle": "automatic",
-  "assetBundlePatterns": [
-    "**/*"
-  ],
   "ios": {
     "supportsTablet": true,
     "bundleIdentifier": "io.vedla.foxui",
@@ -30,10 +27,11 @@
     "favicon": "./src/assets/images/favicon.png",
     "bundler": "metro"
   },
-  "extra": {},
-  "experiments": {
-    "tsconfigPaths": true,
-    "typedRoutes": true
+  "extra": {
+    "router": {},
+    "eas": {
+      "projectId": "60a6b4cf-adf4-4137-86f6-eefcd1dcc440"
+    }
   },
   "owner": "vedla",
   "runtimeVersion": {
@@ -41,7 +39,6 @@
   },
   "plugins": [
     "expo-router",
-    "expo-web-browser",
     "expo-font"
   ]
 }

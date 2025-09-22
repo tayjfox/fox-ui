@@ -1,0 +1,219 @@
+/**
+ * @license
+ * Copyright (c) 2025 Vedla Labs by Tay Fox. All Rights Reserved.
+ * Originally developed as UI Kitten by Akveo.
+ *
+ * This project is licensed under the MIT License.
+ * See the LICENSE file in the project root for full license information.
+ *
+ * @author Tay Fox <tay@vedla.ca>
+ * @description: A React Native implementation of Eva Design System's Button component.
+ * @since MeowUI 0.1.0
+ */
+
+import React from 'react';
+
+import {
+  GestureResponderEvent,
+  NativeSyntheticEvent,
+  TargetedEvent,
+} from 'react-native';
+
+import {
+  FalsyFC,
+  FalsyText,
+  TouchableWeb,
+  TouchableWebElement,
+} from '../../devsupport';
+import {
+  Interaction,
+  styled,
+  StyleType,
+} from '../../theme';
+import { ButtonProps } from './types';
+
+export { type ButtonProps };
+
+export type ButtonElement = React.ReactElement<ButtonProps>;
+
+/**
+ * Buttons allow users to take actions, and make choices, with a single tap.
+ *
+ * @extends React.Component
+ *
+ * @property {ReactElement | ReactText | (TextProps) => ReactElement} children - String, number or a function component
+ * to render within the button.
+ * If it is a function, expected to return a Text.
+ *
+ * @property {ReactElement | (ImageProps) => ReactElement} accessoryLeft - Function component
+ * to render to start of the text.
+ * Expected to return an Image.
+ *
+ * @property {ReactElement | (ImageProps) => ReactElement} accessoryRight - Function component
+ * to render to end of the text.
+ * Expected to return an Image.
+ *
+ * @property {string} appearance - Appearance of the component.
+ * Can be `filled`, `outline` or `ghost`.
+ * Defaults to *filled*.
+ *
+ * @property {string} status - Status of the component.
+ * Can be `basic`, `primary`, `success`, `info`, `warning`, `danger` or `control`.
+ * Defaults to *primary*.
+ * Use *control* status when needed to display within a contrast container.
+ *
+ * @property {string} size - Size of the component.
+ * Can be `tiny`, `small`, `medium`, `large`, or `giant`.
+ * Defaults to *medium*.
+ *
+ * @property {TouchableOpacityProps} ...TouchableOpacityProps - Any props applied to TouchableOpacity component.
+ *
+ * @overview-example ButtonSimpleUsage
+ * Default button size is `medium` and status color is `primary`.
+ *
+ * @overview-example ButtonStates
+ * Button can be disabled with `disabled` property.
+ *
+ * @overview-example ButtonAppearances
+ * Within Eva Design System, it can be `filled`, `outline` or `ghost`.
+ *
+ * @overview-example ButtonAccessories
+ * Also, it may contain inner views configured with `accessoryLeft` and `accessoryRight` properties.
+ * Within Eva it is expected to be an image or [svg icon](guides/icon-packages).
+ *
+ * @overview-example ButtonSize
+ * Buttons can be resized by using `size` property.
+ *
+ * @overview-example ButtonStatus
+ * Or marked with `status` property.
+ * An extra status is `control`, which is designed to be used on high-contrast backgrounds.
+ *
+ * @overview-example ButtonOutline
+ * Status can be combined with `outline` appearance.
+ *
+ * @overview-example ButtonGhost
+ * As well as for `ghost`.
+ *
+ * @overview-example ButtonStyling
+ * Button and it's inner views can be styled by passing them as function components.
+ * ```
+ * import { Button, Text } from '@fox-ui/components';
+ *
+ * <Button style={...}>
+ *   {evaProps => <Text {...evaProps}>BUTTON</Text>}
+ * </Button>
+ * ```
+ *
+ * @overview-example ButtonTheming
+ * In most cases this is redundant, if [custom theme is configured](guides/branding).
+ */
+
+@styled('Button')
+export class Button extends React.Component<ButtonProps> {
+
+  private onMouseEnter = (event: NativeSyntheticEvent<TargetedEvent>): void => {
+    this.props.eva?.dispatch?.([Interaction.HOVER]);
+    this.props.onMouseEnter?.(event);
+  };
+
+  private onMouseLeave = (event: NativeSyntheticEvent<TargetedEvent>): void => {
+    this.props.eva?.dispatch?.([]);
+    this.props.onMouseLeave?.(event);
+  };
+
+  private onFocus = (event: NativeSyntheticEvent<TargetedEvent>): void => {
+    this.props.eva?.dispatch?.([Interaction.FOCUSED]);
+    this.props.onFocus?.(event);
+  };
+
+  private onBlur = (event: NativeSyntheticEvent<TargetedEvent>): void => {
+    this.props.eva?.dispatch?.([]);
+    this.props.onBlur?.(event);
+  };
+
+  private onPressIn = (event: GestureResponderEvent): void => {
+    this.props.eva?.dispatch?.([Interaction.ACTIVE]);
+    this.props.onPressIn?.(event);
+  };
+
+  private onPressOut = (event: GestureResponderEvent): void => {
+    this.props.eva?.dispatch?.([]);
+    this.props.onPressOut?.(event);
+  };
+
+  private getComponentStyle = (source: StyleType): StyleType => {
+
+    // console.log(source);
+    const {
+      textColor,
+      textFontFamily,
+      textFontSize,
+      textFontWeight,
+      textMarginHorizontal,
+      iconWidth,
+      iconHeight,
+      iconTintColor,
+      iconMarginHorizontal,
+      ...containerParameters
+    } = source;
+
+    return {
+      container: containerParameters,
+      text: {
+        color: textColor,
+        fontFamily: textFontFamily,
+        fontSize: textFontSize,
+        fontWeight: textFontWeight,
+        marginHorizontal: textMarginHorizontal,
+      },
+      icon: {
+        width: iconWidth,
+        height: iconHeight,
+        tintColor: iconTintColor,
+        marginHorizontal: iconMarginHorizontal,
+      },
+    };
+  };
+
+  public render(): TouchableWebElement {
+    const { eva, style, accessoryLeft, accessoryRight, children, className, ...touchableProps } = this.props;
+
+    const evaStyle = this.getComponentStyle(eva!.style!);
+
+    const containerClassName = 'flex-row justify-center items-center';
+
+
+    // console.log(evaStyle.container);
+    // console.log(evaStyle);
+    // console.log(eva);
+
+
+    return (
+      <TouchableWeb
+        {...touchableProps}
+        className={`${containerClassName} ${className}`}
+        style={[evaStyle.container, style]}
+        onMouseEnter={this.onMouseEnter}
+        onMouseLeave={this.onMouseLeave}
+        onFocus={this.onFocus}
+        onBlur={this.onBlur}
+        onPressIn={this.onPressIn}
+        onPressOut={this.onPressOut}
+      >
+        <FalsyFC
+          style={evaStyle.icon}
+          component={accessoryLeft}
+        />
+        <FalsyText
+          style={evaStyle.text}
+          component={children}
+        />
+        <FalsyFC
+          style={evaStyle.icon}
+          component={accessoryRight}
+        />
+      </TouchableWeb>
+    );
+  }
+}
+

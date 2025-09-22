@@ -38,13 +38,10 @@
       "@/*": [
         "./src/*"
       ],
-      "@eva-design/*": [
-        "../../../eva/packages/*"
-      ],
       "@ui-kitten/*": [
         "../../packages/*"
       ],
-      "@meow-ui/*": [
+      "@fox-ui/*": [
         "../../packages/*"
       ],
       "@kitten/*": [
@@ -65,8 +62,6 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "nativewind-env.d.ts",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "nativewind-env.d.ts"
   ]
 }
