@@ -51,6 +51,7 @@ export interface ButtonProps extends ButtonBaseProps {
   className?: string;
   href?: string;
   target?: string;
+  disabled?: boolean;
 }
 
 export type ButtonElement = ReactElement<ButtonProps>;

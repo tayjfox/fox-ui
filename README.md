@@ -28,7 +28,7 @@ Need professional support? Visit [Akveo's React Native](https://www.akveo.com/se
 
 ## Starter App
 
-**Kitten Tricks** – [react-native starter kit][link:kitten-tricks] allows you to boost the development of a mobile app.
+**Kitten Tricks** - [react-native starter kit][link:kitten-tricks] allows you to boost the development of a mobile app.
 There is a huge variety of customizable layouts, use “as is” or add new blocks.
 
 **Over 40 screens in dark and light themes** give you the possibility to create a bright and exclusive app while saving your time on compiling numerous details.  Also, you can download the source code and use it for your own benefit.

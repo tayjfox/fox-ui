@@ -41,9 +41,6 @@
       "@ui-kitten/*": [
         "../../packages/*"
       ],
-      "@fox-ui/*": [
-        "../../packages/*"
-      ],
       "@kitten/*": [
         "../../packages/components/*"
       ]
@@ -62,6 +59,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "nativewind-env.d.ts"
+    "nativewind-env.d.ts",
+    "tailwind.config.ts"
   ]
 }

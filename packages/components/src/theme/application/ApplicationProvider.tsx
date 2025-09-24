@@ -113,7 +113,7 @@ export class ApplicationProvider extends React.Component<ApplicationProviderProp
     }
   }
 
-  private createStyles = (mapping: SchemaType, custom: CustomSchemaType): ThemeStyleType => {
+  private createStyles = (mapping: SchemaType, custom?: CustomSchemaType): ThemeStyleType => {
     const customizedMapping: SchemaType = merge({}, mapping, custom);
     return this.schemaProcessor.process(customizedMapping);
   };

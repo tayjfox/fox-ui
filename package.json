@@ -7,6 +7,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "build:theme": "node scripts/generate-tailwind-theme.mjs",
     "clean": "node ./scripts/clean.js",
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
@@ -23,7 +24,7 @@
   },
   "devDependencies": {
     "prettier": "^3.6.2",
-    "turbo": "^2.5.6",
+    "turbo": "^2.5.7",
     "workspace-root": "^3.3.1"
   },
   "packageManager": "yarn@4.9.4",

@@ -1,0 +1,4 @@
+[
+  { "appearance": "ghost", "state": "hover", "class": "bg-basic-transparent-100" },
+  { "appearance": "ghost", "state": "disabled", "class": "bg-basic-transparent-200" }
+]

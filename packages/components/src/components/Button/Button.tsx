@@ -14,22 +14,16 @@
 import React from 'react';
 
 import {
-  GestureResponderEvent,
-  NativeSyntheticEvent,
-  TargetedEvent,
-} from 'react-native';
-
-import {
   FalsyFC,
   FalsyText,
   TouchableWeb,
   TouchableWebElement,
 } from '../../devsupport';
 import {
-  Interaction,
-  styled,
-  StyleType,
-} from '../../theme';
+  buttonContainerVariants,
+  buttonIconVariants,
+  buttonTextVariants,
+} from './styles';
 import { ButtonProps } from './types';
 
 export { type ButtonProps };
@@ -65,6 +59,11 @@ export type ButtonElement = React.ReactElement<ButtonProps>;
  * @property {string} size - Size of the component.
  * Can be `tiny`, `small`, `medium`, `large`, or `giant`.
  * Defaults to *medium*.
+ *
+ * @property {string} className - Additional class name for button container.
+ * Can be used to pass nativewind custom styles.
+ * Example: `className="my-2 px-4 bg-red-500"`
+ *
  *
  * @property {TouchableOpacityProps} ...TouchableOpacityProps - Any props applied to TouchableOpacity component.
  *
@@ -108,112 +107,102 @@ export type ButtonElement = React.ReactElement<ButtonProps>;
  * In most cases this is redundant, if [custom theme is configured](guides/branding).
  */
 
-@styled('Button')
-export class Button extends React.Component<ButtonProps> {
-
-  private onMouseEnter = (event: NativeSyntheticEvent<TargetedEvent>): void => {
-    this.props.eva?.dispatch?.([Interaction.HOVER]);
-    this.props.onMouseEnter?.(event);
-  };
-
-  private onMouseLeave = (event: NativeSyntheticEvent<TargetedEvent>): void => {
-    this.props.eva?.dispatch?.([]);
-    this.props.onMouseLeave?.(event);
-  };
-
-  private onFocus = (event: NativeSyntheticEvent<TargetedEvent>): void => {
-    this.props.eva?.dispatch?.([Interaction.FOCUSED]);
-    this.props.onFocus?.(event);
-  };
-
-  private onBlur = (event: NativeSyntheticEvent<TargetedEvent>): void => {
-    this.props.eva?.dispatch?.([]);
-    this.props.onBlur?.(event);
-  };
-
-  private onPressIn = (event: GestureResponderEvent): void => {
-    this.props.eva?.dispatch?.([Interaction.ACTIVE]);
-    this.props.onPressIn?.(event);
-  };
-
-  private onPressOut = (event: GestureResponderEvent): void => {
-    this.props.eva?.dispatch?.([]);
-    this.props.onPressOut?.(event);
-  };
-
-  private getComponentStyle = (source: StyleType): StyleType => {
-
-    // console.log(source);
-    const {
-      textColor,
-      textFontFamily,
-      textFontSize,
-      textFontWeight,
-      textMarginHorizontal,
-      iconWidth,
-      iconHeight,
-      iconTintColor,
-      iconMarginHorizontal,
-      ...containerParameters
-    } = source;
-
-    return {
-      container: containerParameters,
-      text: {
-        color: textColor,
-        fontFamily: textFontFamily,
-        fontSize: textFontSize,
-        fontWeight: textFontWeight,
-        marginHorizontal: textMarginHorizontal,
-      },
-      icon: {
-        width: iconWidth,
-        height: iconHeight,
-        tintColor: iconTintColor,
-        marginHorizontal: iconMarginHorizontal,
-      },
+export class Button extends React.Component<ButtonProps, { interactionState: 'hover' | 'disabled' | 'active' | 'focused' | undefined }> {
+  constructor(props: ButtonProps) {
+    super(props);
+    this.state = {
+      interactionState: undefined,
     };
+  }
+
+  private handleMouseEnter = (): void => {
+    this.setState({ interactionState: 'hover' });
+  };
+
+  private handleMouseLeave = (): void => {
+    this.setState({ interactionState: undefined });
+  };
+
+  private handleFocus = (): void => {
+    this.setState({ interactionState: 'focused' });
+  };
+
+  private handleBlur = (): void => {
+    this.setState({ interactionState: undefined });
+  };
+
+  private handlePressIn = (): void => {
+    this.setState({ interactionState: 'active' });
+  };
+
+  private handlePressOut = (): void => {
+    this.setState({ interactionState: undefined });
+  };
+
+  private getClassName = (): string => {
+    const { appearance, status, size, className, disabled } = this.props;
+    const { interactionState } = this.state;
+    const state = disabled ? 'disabled' : interactionState;
+
+    return buttonContainerVariants({
+      appearance: appearance as 'filled' | 'outline' | 'ghost' | undefined,
+      status: status as 'basic' | 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'control' | undefined,
+      size: size as 'tiny' | 'small' | 'medium' | 'large' | 'giant' | undefined,
+      state,
+      className,
+    });
+  };
+
+  private getIconStyle = (): string => {
+    const { appearance, status, size, disabled } = this.props;
+    const { interactionState } = this.state;
+    const state = disabled ? 'disabled' : interactionState;
+
+    return buttonIconVariants({
+      appearance: appearance as 'filled' | 'outline' | 'ghost' | undefined,
+      status: status as 'basic' | 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'control' | undefined,
+      size: size as 'tiny' | 'small' | 'medium' | 'large' | 'giant' | undefined,
+      state,
+    });
+  };
+
+  private getTextStyle = (): string => {
+    const { appearance, status, size, disabled } = this.props;
+    const { interactionState } = this.state;
+    const state = disabled ? 'disabled' : interactionState;
+
+    return buttonTextVariants({
+      appearance: appearance as 'filled' | 'outline' | 'ghost' | undefined,
+      status: status as 'basic' | 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'control' | undefined,
+      size: size as 'tiny' | 'small' | 'medium' | 'large' | 'giant' | undefined,
+      state,
+    });
   };
 
   public render(): TouchableWebElement {
-    const { eva, style, accessoryLeft, accessoryRight, children, className, ...touchableProps } = this.props;
+    const { style, accessoryLeft, accessoryRight, children, disabled, ...touchableProps } = this.props;
 
-    const evaStyle = this.getComponentStyle(eva!.style!);
-
-    const containerClassName = 'flex-row justify-center items-center';
-
-
-    // console.log(evaStyle.container);
-    // console.log(evaStyle);
-    // console.log(eva);
-
+    const className = this.getClassName();
+    const iconStyle = this.getIconStyle();
+    const textStyle = this.getTextStyle();
 
     return (
       <TouchableWeb
         {...touchableProps}
-        className={`${containerClassName} ${className}`}
-        style={[evaStyle.container, style]}
-        onMouseEnter={this.onMouseEnter}
-        onMouseLeave={this.onMouseLeave}
-        onFocus={this.onFocus}
-        onBlur={this.onBlur}
-        onPressIn={this.onPressIn}
-        onPressOut={this.onPressOut}
+        className={className}
+        style={style}
+        disabled={disabled}
+        onMouseEnter={!disabled ? this.handleMouseEnter : undefined}
+        onMouseLeave={!disabled ? this.handleMouseLeave : undefined}
+        onFocus={!disabled ? this.handleFocus : undefined}
+        onBlur={!disabled ? this.handleBlur : undefined}
+        onPressIn={!disabled ? this.handlePressIn : undefined}
+        onPressOut={!disabled ? this.handlePressOut : undefined}
       >
-        <FalsyFC
-          style={evaStyle.icon}
-          component={accessoryLeft}
-        />
-        <FalsyText
-          style={evaStyle.text}
-          component={children}
-        />
-        <FalsyFC
-          style={evaStyle.icon}
-          component={accessoryRight}
-        />
+        <FalsyFC component={accessoryLeft} className={iconStyle} />
+        <FalsyText component={children} className={textStyle} />
+        <FalsyFC component={accessoryRight} className={iconStyle} />
       </TouchableWeb>
     );
   }
 }
-

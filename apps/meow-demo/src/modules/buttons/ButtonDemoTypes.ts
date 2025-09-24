@@ -1,5 +1,4 @@
 import {
-  ButtonAccessoriesShowcase,
   ButtonAppearancesShowcase,
   ButtonGhostShowcase,
   ButtonOutlineShowcase,
@@ -7,7 +6,6 @@ import {
   ButtonSizeShowcase,
   ButtonStatesShowcase,
   ButtonStatusShowcase,
-  ButtonThemingShowcase,
 } from './examples';
 
 export const ButtonDemoTypes = [
@@ -26,11 +24,11 @@ export const ButtonDemoTypes = [
     description: 'Button can have different appearances: filled (default), outline, ghost.',
     component: ButtonAppearancesShowcase,
   },
-  {
-    title: 'Button Accessories',
-    description: 'Button can have icon or custom component on the left or right side.',
-    component: ButtonAccessoriesShowcase,
-  },
+  // {
+  //   title: 'Button Accessories',
+  //   description: 'Button can have icon or custom component on the left or right side.',
+  //   component: ButtonAccessoriesShowcase,
+  // },
   {
     title: 'Button Sizes',
     description: 'Button can have different sizes: small, medium (default), large.',
@@ -52,9 +50,9 @@ export const ButtonDemoTypes = [
     description: 'Ghost buttons are medium size by default.',
     component: ButtonGhostShowcase,
   },
-  {
-    title: 'Button Theming',
-    description: 'Button can be themed with custom icons and loading indicator.',
-    component: ButtonThemingShowcase,
-  },
+  // {
+  //   title: 'Button Theming',
+  //   description: 'Button can be themed with custom icons and loading indicator.',
+  //   component: ButtonThemingShowcase,
+  // },
 ];
