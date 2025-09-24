@@ -1,4 +1,5 @@
 import {
+  ButtonAccessoriesShowcase,
   ButtonAppearancesShowcase,
   ButtonGhostShowcase,
   ButtonOutlineShowcase,
@@ -24,11 +25,11 @@ export const ButtonDemoTypes = [
     description: 'Button can have different appearances: filled (default), outline, ghost.',
     component: ButtonAppearancesShowcase,
   },
-  // {
-  //   title: 'Button Accessories',
-  //   description: 'Button can have icon or custom component on the left or right side.',
-  //   component: ButtonAccessoriesShowcase,
-  // },
+  {
+    title: 'Button Accessories',
+    description: 'Button can have icon or custom component on the left or right side.',
+    component: ButtonAccessoriesShowcase,
+  },
   {
     title: 'Button Sizes',
     description: 'Button can have different sizes: small, medium (default), large.',

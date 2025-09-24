@@ -3,80 +3,83 @@ import React from 'react';
 import {
   ImageProps,
   StyleSheet,
-  View,
 } from 'react-native';
 
 import {
   Button,
+  HStack,
   Icon,
   IconElement,
-  Layout,
+  IconProps,
   Spinner,
+  View,
+  VStack,
 } from '@fox-ui/components';
 
-const StarIcon = (props): IconElement => (
+const StarIcon = (props: IconProps): IconElement => (
   <Icon
     {...props}
     name='star'
   />
 );
 
-const LoadingIndicator = (props: ImageProps): React.ReactElement => (
+const LoadingIndicator = (props: Partial<ImageProps> = {}): React.ReactElement => (
   <View style={[props.style, styles.indicator]}>
     <Spinner size='small' />
   </View>
 );
 
 export const ButtonAccessoriesShowcase = (): React.ReactElement => (
-  <Layout
-    style={styles.container}
-    level='1'
-  >
+  <VStack>
+    <HStack>
 
-    <Button
-      style={styles.button}
-      status='primary'
-      accessoryLeft={StarIcon}
-    >
-      PRIMARY
-    </Button>
+      <Button
+        style={styles.button}
+        status='primary'
+        accessoryLeft={StarIcon}
+      >
+        PRIMARY
+      </Button>
 
-    <Button
-      style={styles.button}
-      status='success'
-      accessoryRight={StarIcon}
-    >
-      SUCCESS
-    </Button>
+      <Button
+        style={styles.button}
+        status='success'
+        accessoryRight={StarIcon}
+      >
+        SUCCESS
+      </Button>
 
-    <Button
-      style={styles.button}
-      status='danger'
-      accessoryLeft={StarIcon}
-    />
+      <Button
+        style={styles.button}
+        status='danger'
+        accessoryLeft={StarIcon}
+      />
+    </HStack>
+    <HStack>
+      <Button
+        style={styles.button}
+        appearance='ghost'
+        status='danger'
+        accessoryLeft={StarIcon}
+      />
 
-    <Button
-      style={styles.button}
-      appearance='ghost'
-      status='danger'
-      accessoryLeft={StarIcon}
-    />
+      <Button
+        style={styles.button}
+        appearance='outline'
+        accessoryLeft={LoadingIndicator}
+      >
+        LOADING
+      </Button>
 
-    <Button
-      style={styles.button}
-      appearance='outline'
-      accessoryLeft={LoadingIndicator}
-    >
-      LOADING
-    </Button>
-
-  </Layout>
+    </HStack>
+  </VStack>
 );
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    display: 'flex',
   },
   button: {
     margin: 2,

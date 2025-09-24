@@ -6,6 +6,7 @@ export type RenderProp<Props> = RenderFCProp<Props> | React.ReactElement;
 
 export type FalsyFCProps<Props> = Props & {
   component?: RenderProp<Props>;
+  className?: string;
   fallback?: React.ReactElement;
 };
 

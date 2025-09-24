@@ -20,9 +20,9 @@ import {
   TouchableWebElement,
 } from '../../devsupport';
 import {
-  buttonContainerVariants,
-  buttonIconVariants,
-  buttonTextVariants,
+  AccesoriesVariants,
+  ButtonStyle,
+  TextVariants,
 } from './styles';
 import { ButtonProps } from './types';
 
@@ -108,6 +108,8 @@ export type ButtonElement = React.ReactElement<ButtonProps>;
  */
 
 export class Button extends React.Component<ButtonProps, { interactionState: 'hover' | 'disabled' | 'active' | 'focused' | undefined }> {
+
+
   constructor(props: ButtonProps) {
     super(props);
     this.state = {
@@ -144,38 +146,40 @@ export class Button extends React.Component<ButtonProps, { interactionState: 'ho
     const { interactionState } = this.state;
     const state = disabled ? 'disabled' : interactionState;
 
-    return buttonContainerVariants({
-      appearance: appearance as 'filled' | 'outline' | 'ghost' | undefined,
-      status: status as 'basic' | 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'control' | undefined,
-      size: size as 'tiny' | 'small' | 'medium' | 'large' | 'giant' | undefined,
+    return ButtonStyle({
+      appearance,
+      status,
+      size,
       state,
-      className,
+      class: className,
     });
   };
 
-  private getIconStyle = (): string => {
-    const { appearance, status, size, disabled } = this.props;
+  private getAccesoryStyle = (): string => {
+    const { appearance, status, size, accesoryClassName, disabled } = this.props;
     const { interactionState } = this.state;
     const state = disabled ? 'disabled' : interactionState;
 
-    return buttonIconVariants({
-      appearance: appearance as 'filled' | 'outline' | 'ghost' | undefined,
-      status: status as 'basic' | 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'control' | undefined,
-      size: size as 'tiny' | 'small' | 'medium' | 'large' | 'giant' | undefined,
+    return AccesoriesVariants({
+      class: accesoryClassName,
+      appearance,
+      status,
+      size,
       state,
     });
   };
 
   private getTextStyle = (): string => {
-    const { appearance, status, size, disabled } = this.props;
+    const { appearance, status, size, textClassName, disabled } = this.props;
     const { interactionState } = this.state;
     const state = disabled ? 'disabled' : interactionState;
 
-    return buttonTextVariants({
-      appearance: appearance as 'filled' | 'outline' | 'ghost' | undefined,
-      status: status as 'basic' | 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'control' | undefined,
-      size: size as 'tiny' | 'small' | 'medium' | 'large' | 'giant' | undefined,
+    return TextVariants({
+      appearance,
+      status,
+      size,
       state,
+      class: textClassName,
     });
   };
 
@@ -183,7 +187,7 @@ export class Button extends React.Component<ButtonProps, { interactionState: 'ho
     const { style, accessoryLeft, accessoryRight, children, disabled, ...touchableProps } = this.props;
 
     const className = this.getClassName();
-    const iconStyle = this.getIconStyle();
+    const accesoryStyle = this.getAccesoryStyle();
     const textStyle = this.getTextStyle();
 
     return (
@@ -199,9 +203,9 @@ export class Button extends React.Component<ButtonProps, { interactionState: 'ho
         onPressIn={!disabled ? this.handlePressIn : undefined}
         onPressOut={!disabled ? this.handlePressOut : undefined}
       >
-        <FalsyFC component={accessoryLeft} className={iconStyle} />
+        <FalsyFC component={accessoryLeft} className={accesoryStyle} />
         <FalsyText component={children} className={textStyle} />
-        <FalsyFC component={accessoryRight} className={iconStyle} />
+        <FalsyFC component={accessoryRight} className={accesoryStyle} />
       </TouchableWeb>
     );
   }

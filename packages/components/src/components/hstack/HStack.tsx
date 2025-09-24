@@ -14,17 +14,17 @@ import React from 'react';
 
 import { View } from 'react-native';
 
-import { ContainerStyle } from './styles';
-import { ContainerProps } from './types';
+import { HStackStyle } from './styles';
+import { HStackProps } from './types';
 
-export { type ContainerElement, type ContainerProps } from './types';
+export { type HStackElement, type HStackProps } from './types';
 
 /**
- * Overall page container.
+ * HStack container.
  *
  * @extends React.Component
  *
- * @property {ReactNode} children - Component to render within the layout.
+ * @property {ReactNode} children - Component to render within the HStack container.
  *
  * @property {string} className - Additional class name for the container.
  * Can be used to apply nativewind custom styles.
@@ -42,14 +42,20 @@ export { type ContainerElement, type ContainerProps } from './types';
  */
 
 
-const ViewRN = View as React.ComponentType<ContainerProps>;
+const ViewRN = View as React.ComponentType<HStackProps>;
 
-export class Container extends React.Component<ContainerProps> {
+export class HStack extends React.Component<HStackProps> {
   render(): React.ReactNode {
-    const { className, ref, ...props } = this.props;
+    const { className, gap, reversed, alignment, distribution, ...props } = this.props;
 
     return (
-      <ViewRN className={ContainerStyle({ class: className })} {...props} ref={ref}>
+      <ViewRN className={HStackStyle({
+        class: className,
+        gap,
+        reversed,
+        alignment,
+        distribution
+      })} {...props}>
         {this.props.children}
       </ViewRN>
     );

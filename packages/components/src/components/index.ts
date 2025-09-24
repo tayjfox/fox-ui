@@ -1,13 +1,12 @@
 /* Buttons */
 export { Button, type ButtonElement, ButtonProps } from './Button/Button';
+
 /* Icons */
 export { Icon, type IconElement, type IconProps } from './Icon/Icon';
-export {
-  IconRegistry,
-  type IconRegistryElement,
-  type IconRegistryProps,
-} from './Icon/IconRegistry';
+export { IconRegistry, type IconRegistryProps } from './Icon/IconRegistry';
+export { type IconRegistryElement } from './Icon/IconRegistryService';
 export { type IconPack, type IconProvider, type Icons } from './Icon/type';
+
 /* TopNavigation */
 export {
   TopNavigation,
@@ -26,5 +25,9 @@ export {
  * MeowUI new exports
  *
  * */
-/* Container */
+/* Layouts */
+export { Center, type CenterElement, type CenterProps } from './Center/Center';
 export { Container, type ContainerElement, type ContainerProps } from './Container/Container';
+export { HStack, type HStackElement, type HStackProps } from './HStack/HStack';
+export { View, type ViewElement, type ViewProps } from './View/View';
+export { VStack, type VStackElement, type VStackProps } from './VStack/VStack';

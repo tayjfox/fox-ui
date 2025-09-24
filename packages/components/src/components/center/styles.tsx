@@ -3,6 +3,6 @@ import { tva } from '../../tva';
 
 const baseStyle = isWeb ? 'flex flex-col relative z-0' : '';
 
-export const centerStyle = tva({
+export const CenterStyle = tva({
   base: `justify-center items-center ${baseStyle}`,
 });

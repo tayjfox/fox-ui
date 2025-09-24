@@ -3,10 +3,9 @@ import React, {
   useState,
 } from 'react';
 
-import { View } from 'react-native';
-
 import {
   Button,
+  HStack,
   Text,
 } from '@fox-ui/components';
 
@@ -15,7 +14,7 @@ export const ButtonSimpleUsageShowcase = (): ReactElement => {
   const [counter, setCounter] = useState(0);
 
   return (
-    <View className='flex-row items-center' >
+    <HStack alignment='center' distribution='start' gap="sm">
 
       <Button onPress={() => setCounter(counter + 1)}>
         I am a button
@@ -25,7 +24,7 @@ export const ButtonSimpleUsageShowcase = (): ReactElement => {
         {`Pressed ${counter} times`}
       </Text>
 
-    </View>
+    </HStack>
   );
 };
 

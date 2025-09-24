@@ -1,11 +1,11 @@
 // styles/button.variants.ts
-import { tva } from '../../tva';
+import { tva } from '../../../tva';
 
 /**
  * Container (background + border)
  * Mirrors appearance → status → state mapping from Eva.
  */
-export const buttonContainerVariants = tva({
+export const ButtonStyle = tva({
   base: 'flex-row items-center justify-center rounded border',
   variants: {
     appearance: {
@@ -471,149 +471,6 @@ export const buttonContainerVariants = tva({
     { appearance: 'ghost', state: 'focused', class: 'bg-basic-transparent-200' },
     { appearance: 'ghost', state: 'active', class: 'bg-basic-transparent-200' },
     { appearance: 'ghost', state: 'disabled', class: 'bg-basic-transparent-200' },
-  ],
-  defaultVariants: {
-    appearance: 'filled',
-    status: 'primary',
-    size: 'medium',
-    state: 'default',
-  },
-});
-
-/**
- * Text (label) colour + size
- * Matches Eva's textColor per appearance/status/state.
- */
-export const buttonTextVariants = tva({
-  base: 'font-bold',
-  variants: {
-    appearance: {
-      filled: '',
-      outline: '',
-      ghost: '',
-    },
-    status: {
-      basic: '',
-      primary: '',
-      success: '',
-      info: '',
-      warning: '',
-      danger: '',
-      control: '',
-    },
-    size: {
-      tiny: 'text-[10px]',
-      small: 'text-[12px]',
-      medium: 'text-[14px]',
-      large: 'text-[16px]',
-      giant: 'text-[18px]',
-    },
-    state: {
-      default: '',
-      focused: '',
-      hover: '',
-      active: '',
-      disabled: '',
-    },
-  },
-  compoundVariants: [
-    // FILLED → control text unless basic/control
-    { appearance: 'filled', status: 'primary', class: 'text-white' },
-    { appearance: 'filled', status: 'success', class: 'text-white' },
-    { appearance: 'filled', status: 'info', class: 'text-white' },
-    { appearance: 'filled', status: 'warning', class: 'text-white' },
-    { appearance: 'filled', status: 'danger', class: 'text-white' },
-    { appearance: 'filled', status: 'basic', class: 'text-basic-800' },
-    { appearance: 'filled', status: 'control', class: 'text-basic-800' },
-    // outline/ghost → coloured text
-    { appearance: 'outline', status: 'primary', class: 'text-primary' },
-    { appearance: 'outline', status: 'success', class: 'text-success' },
-    { appearance: 'outline', status: 'info', class: 'text-info' },
-    { appearance: 'outline', status: 'warning', class: 'text-warning' },
-    { appearance: 'outline', status: 'danger', class: 'text-danger' },
-    { appearance: 'outline', status: 'basic', class: 'text-basic-600' },
-    { appearance: 'outline', status: 'control', class: 'text-white' },
-    { appearance: 'ghost', status: 'primary', class: 'text-primary' },
-    { appearance: 'ghost', status: 'success', class: 'text-success' },
-    { appearance: 'ghost', status: 'info', class: 'text-info' },
-    { appearance: 'ghost', status: 'warning', class: 'text-warning' },
-    { appearance: 'ghost', status: 'danger', class: 'text-danger' },
-    { appearance: 'ghost', status: 'basic', class: 'text-basic-600' },
-    { appearance: 'ghost', status: 'control', class: 'text-white' },
-    // disabled → Eva uses text-disabled-color
-    { state: 'disabled', class: 'text-[color:rgba(143,155,179,0.48)]' },
-  ],
-  defaultVariants: {
-    appearance: 'filled',
-    status: 'primary',
-    size: 'medium',
-    state: 'default',
-  },
-});
-
-/**
- * Icon tint matches text rules.
- * Use together with size-specific width/height if you want (Eva sets 12/16/20/24).
- */
-export const buttonIconVariants = tva({
-  base: '',
-  variants: {
-    appearance: {
-      filled: '',
-      outline: '',
-      ghost: '',
-    },
-    status: {
-      basic: '',
-      primary: '',
-      success: '',
-      info: '',
-      warning: '',
-      danger: '',
-      control: '',
-    },
-    size: {
-      tiny: 'w-3 h-3', // 12
-      small: 'w-4 h-4', // 16
-      medium: 'w-5 h-5', // 20
-      large: 'w-6 h-6', // 24
-      giant: 'w-6 h-6', // 24
-    },
-    state: {
-      default: '',
-      focused: '',
-      hover: '',
-      active: '',
-      disabled: '',
-    },
-  },
-  compoundVariants: [
-    { appearance: 'filled', status: 'primary', class: 'text-white' },
-    { appearance: 'filled', status: 'success', class: 'text-white' },
-    { appearance: 'filled', status: 'info', class: 'text-white' },
-    { appearance: 'filled', status: 'warning', class: 'text-white' },
-    { appearance: 'filled', status: 'danger', class: 'text-white' },
-    { appearance: 'filled', status: 'basic', class: 'text-basic-800' },
-    { appearance: 'filled', status: 'control', class: 'text-basic-800' },
-
-    { appearance: 'outline', status: 'primary', class: 'text-primary' },
-    { appearance: 'outline', status: 'success', class: 'text-success' },
-    { appearance: 'outline', status: 'info', class: 'text-info' },
-    { appearance: 'outline', status: 'warning', class: 'text-warning' },
-    { appearance: 'outline', status: 'danger', class: 'text-danger' },
-    { appearance: 'outline', status: 'basic', class: 'text-basic-600' },
-    { appearance: 'outline', status: 'control', class: 'text-white' },
-
-    { appearance: 'ghost', status: 'primary', class: 'text-primary' },
-    { appearance: 'ghost', status: 'success', class: 'text-success' },
-    { appearance: 'ghost', status: 'info', class: 'text-info' },
-    { appearance: 'ghost', status: 'warning', class: 'text-warning' },
-    { appearance: 'ghost', status: 'danger', class: 'text-danger' },
-    { appearance: 'ghost', status: 'basic', class: 'text-basic-600' },
-    { appearance: 'ghost', status: 'control', class: 'text-white' },
-
-    // disabled
-    { state: 'disabled', class: 'text-[color:rgba(143,155,179,0.48)]' },
   ],
   defaultVariants: {
     appearance: 'filled',

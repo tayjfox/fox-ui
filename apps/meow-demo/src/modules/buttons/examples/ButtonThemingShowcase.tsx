@@ -10,19 +10,20 @@ import {
   Button,
   Icon,
   IconElement,
+  IconProps,
   Layout,
   Spinner,
 } from '@fox-ui/components';
 
-const StarIcon = (props): IconElement => (
+const StarIcon = (props: IconProps): IconElement => (
   <Icon
     {...props}
     name='star'
   />
 );
 
-const LoadingIndicator = (props: ImageProps): React.ReactElement => (
-  <View style={[props.style, styles.indicator]}>
+const LoadingIndicator = (props?: Partial<ImageProps>): React.ReactElement => (
+  <View style={[props?.style, styles.indicator]}>
     <Spinner size='small' />
   </View>
 );

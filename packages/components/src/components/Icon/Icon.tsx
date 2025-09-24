@@ -1,19 +1,15 @@
 /**
  * @license
- * Copyright (c) 2025 Vedla Labs by Tay Fox. All Rights Reserved.
- * Originally developed as UI Kitten by Akveo.
- *
- * This project is licensed under the MIT License.
- * See the LICENSE file in the project root for full license information.
- *
- * @author Tay Fox <tay@vedla.ca>
- * @description: A React Native implementation of Eva Design System's Button component.
- * @since MeowUI 0.1.0
+ * Copyright Akveo. All Rights Reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
  */
 
 import React from 'react';
 
-import { Animated } from 'react-native';
+import {
+  Animated,
+  View,
+} from 'react-native';
 
 import { AnimationConfig } from '../../ui/animation';
 import {
@@ -24,16 +20,18 @@ import {
 import {
   IconRegistryService,
   RegisteredIcon,
-} from './IconRegistry';
+} from './IconRegistryService';
 
 // This is basically needed to avoid generics in required props
-// In general, could be SVGProps if using @fox-ui/icons or ImageProps if using Image.
+// In general, could be SVGProps if using @ui-kitten/eva-icons or ImageProps if using Image.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type WrappedElementProps = any;
 
 export type IconProps<T = WrappedElementProps> = T & {
   name: string;
   pack?: string;
+  style?: Animated.WithAnimatedValue<React.ComponentProps<any>['style']>;
+  className?: string;
   animation?: keyof IconAnimationRegistry | null;
   animationConfig?: AnimationConfig;
 };
@@ -61,7 +59,7 @@ export type IconElement<T = WrappedElementProps> = React.ReactElement<IconProps<
  *
  * @property {any} ...props - Accepts any props
  * depending on the component registered in IconRegistry for a given `name` property.
- * In case of using `@fox-ui/icons` package, Icon accepts any props for react-native-svg component.
+ * In case of using `@ui-kitten/eva-icons` package, Icon accepts any props for react-native-svg component.
  *
  * @overview-example IconSimpleUsage
  * Icon component provides a simple way to render image by requesting it from an icon set.
@@ -83,10 +81,22 @@ export type IconElement<T = WrappedElementProps> = React.ReactElement<IconProps<
  *
  * In most cases this is redundant, if [custom theme is configured](guides/branding).
  */
-export class Icon<T> extends React.Component<IconProps<T>> {
 
+
+type AnimatedViewProps = React.ComponentProps<typeof View> & {
+  className?: string;
+};
+
+const AnimatedViewBase = Animated.createAnimatedComponent(View) as React.ComponentType<Animated.AnimatedProps<AnimatedViewProps>>;
+
+export const AnimatedView: React.FC<AnimatedViewProps> = ({ className, ...rest }) => {
+
+  return <AnimatedViewBase {...rest} className={className} />;
+};
+export class Icon<T> extends React.Component<IconProps<T>> {
   static defaultProps: Partial<IconProps> = {
     animation: 'zoom',
+    className: undefined,
   };
 
   private readonly animation: IconAnimation | null;
@@ -108,19 +118,21 @@ export class Icon<T> extends React.Component<IconProps<T>> {
     this.animation?.stop();
   };
 
-  public render(): React.ReactElement {
-    const { name, pack, animation, animationConfig, ...iconProps } = this.props;
+  public render(): React.ReactNode {
+    const { name, pack, animation, animationConfig, className, ...iconProps } = this.props;
     const registeredIcon: RegisteredIcon<T> = IconRegistryService.getIcon(name, pack);
-    const iconElement = registeredIcon.icon.toReactElement(iconProps as IconProps);
+    const iconElement = registeredIcon.icon.toReactElement({
+      ...iconProps,
+      className,
+    } as IconProps);
 
     if (!this.animation) {
-      return iconElement;
+      return React.cloneElement(iconElement);
     }
-
     return (
-      <Animated.View {...this.animation.toProps()}>
+      <AnimatedView {...this.animation.toProps()} className={className}>
         {iconElement}
-      </Animated.View>
+      </AnimatedView>
     );
   }
 }

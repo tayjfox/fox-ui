@@ -5,10 +5,10 @@ const baseStyle = isWeb
   ? 'flex relative z-0 box-border border-0 list-none min-w-0 min-h-0 bg-transparent items-stretch m-0 p-0 text-decoration-none'
   : '';
 
-export const hstackStyle = tva({
+export const HStackStyle = tva({
   base: `flex-row ${baseStyle}`,
   variants: {
-    space: {
+    gap: {
       xs: 'gap-1',
       sm: 'gap-2',
       md: 'gap-3',
@@ -21,5 +21,26 @@ export const hstackStyle = tva({
     reversed: {
       true: 'flex-row-reverse',
     },
+    alignment: {
+      start: 'items-start',
+      center: 'items-center',
+      end: 'items-end',
+      stretch: 'items-stretch',
+      baseline: 'items-baseline',
+    },
+    distribution: {
+      start: 'justify-start',
+      center: 'justify-center',
+      end: 'justify-end',
+      between: 'justify-between',
+      around: 'justify-around',
+      evenly: 'justify-evenly',
+    },
+  },
+  defaultVariants: {
+    gap: 'md',
+    reversed: false,
+    alignment: 'start',
+    distribution: 'start',
   },
 });

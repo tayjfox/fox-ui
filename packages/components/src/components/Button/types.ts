@@ -15,40 +15,22 @@ import React, { ReactElement } from 'react';
 
 import { ImageProps } from 'react-native';
 
-import {
-  EvaSize,
-  EvaStatus,
-  LiteralUnion,
-  Overwrite,
-  RenderProp,
-  TouchableWebProps,
-} from '../../devsupport';
-import { StyledComponentProps } from '../../theme';
+import { RenderProp, TouchableWebProps } from '../../devsupport';
 import { TextProps } from '../../ui/text/text.component';
-
-type ButtonStyledProps = Overwrite<
-  StyledComponentProps,
-  {
-    appearance?: LiteralUnion<'filled' | 'outline' | 'ghost'>;
-  }
->;
+import { Sizes, Status } from '../shared/types';
 
 type TouchableWebPropsWithoutChildren = Omit<TouchableWebProps, 'children'>;
 
-interface ButtonBaseProps extends TouchableWebPropsWithoutChildren, ButtonStyledProps {
+export interface ButtonProps extends TouchableWebPropsWithoutChildren {
   children?: RenderProp<TextProps> | React.ReactNode;
   accessoryLeft?: RenderProp<Partial<ImageProps>>;
   accessoryRight?: RenderProp<Partial<ImageProps>>;
-  status?: EvaStatus;
-  size?: EvaSize;
-}
-
-/**
- * Additional props introduced in MeowUI. v0.1.0
- * @since MeowUI 0.1.0
- */
-export interface ButtonProps extends ButtonBaseProps {
+  appearance?: 'filled' | 'outline' | 'ghost';
+  status?: Status;
+  size?: Sizes;
   className?: string;
+  textClassName?: string;
+  accesoryClassName?: string;
   href?: string;
   target?: string;
   disabled?: boolean;

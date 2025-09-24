@@ -1,48 +1,24 @@
 import React from 'react';
 
-import { StyleSheet } from 'react-native';
-
 import {
   Button,
-  Layout,
+  HStack,
 } from '@fox-ui/components';
 
 export const ButtonAppearancesShowcase = (): React.ReactElement => (
-  <Layout
-    style={styles.container}
-    level='1'
-  >
+  <HStack alignment='center' distribution='start' gap="sm">
 
-    <Button
-      style={styles.button}
-      appearance='filled'
-    >
+    <Button appearance='filled'>
       FILLED
     </Button>
 
-    <Button
-      style={styles.button}
-      appearance='outline'
-    >
+    <Button appearance='outline'>
       OUTLINE
     </Button>
 
-    <Button
-      style={styles.button}
-      appearance='ghost'
-    >
+    <Button appearance='ghost'>
       GHOST
     </Button>
 
-  </Layout>
+  </HStack>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
-  button: {
-    margin: 2,
-  },
-});
