@@ -13,7 +13,6 @@ import {
   IconProps,
   Spinner,
   View,
-  VStack,
 } from '@fox-ui/components';
 
 const StarIcon = (props: IconProps): IconElement => (
@@ -30,8 +29,8 @@ const LoadingIndicator = (props: Partial<ImageProps> = {}): React.ReactElement =
 );
 
 export const ButtonAccessoriesShowcase = (): React.ReactElement => (
-  <VStack>
-    <HStack>
+  <View>
+    <HStack className='flex-wrap'>
 
       <Button
         style={styles.button}
@@ -72,7 +71,7 @@ export const ButtonAccessoriesShowcase = (): React.ReactElement => (
       </Button>
 
     </HStack>
-  </VStack>
+  </View>
 );
 
 const styles = StyleSheet.create({

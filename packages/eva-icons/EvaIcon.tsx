@@ -1,9 +1,16 @@
 import React from 'react';
 
-import { StyleSheet } from 'react-native';
-import { SvgProps } from 'react-native-svg';
+import { cssInterop } from 'nativewind';
+import { SvgProps as SvgPropsBase } from 'react-native-svg';
 
-import { IconProvider } from '@fox-ui/components';
+import {
+  IconProvider,
+  isMobile,
+} from '@fox-ui/components';
+
+interface SvgProps extends SvgPropsBase {
+  className?: string;
+}
 
 type IconElement = React.ReactElement<SvgProps>;
 type IconComponent = React.ComponentType<SvgProps>;
@@ -17,14 +24,37 @@ export class EvaIcon implements IconProvider<SvgProps> {
     const Icon: IconComponent = this.content;
 
     const { style, ...svgProps } = props;
-    // @ts-ignore - UI Kitten components pass here `tintColor`
-    const fillColor: string = StyleSheet.flatten(style || {}).tintColor;
+
+    // cssInterop(Icon, {
+    //   // className: 'style',
+    //   iconClassName: {
+    //     target: false,
+    //     nativeStyleToProp: {
+    //       color: 'fill',
+    //       width: 'width',
+    //       height: 'height',
+
+    //     },
+
+    //   },
+    // });
+
+    if (isMobile) {
+      cssInterop(Icon, {
+        className: {
+          target: false,
+          nativeStyleToProp: { fill: true }
+        },
+      });
+    }
 
     return (
       <Icon
-        style={props.style}
-        fill={fillColor}
+        className={props.className}
+        fill={'currentColor'}
         {...svgProps}
+        style={style}
+
       />
     );
   }

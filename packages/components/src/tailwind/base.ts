@@ -214,9 +214,10 @@ export default {
         textHint: '#8F9BB3',
         outline: 'rgba(143, 155, 179, 0.16)',
       },
-      // Optional: make 10/12/14/16/18px easy
+
       fontSize: {
-        '10px': '10px',
+        tiny: ['10px', '12px'],
+        '10px': '10',
         '12px': '12px',
         '14px': '14px',
         '16px': '16px',

@@ -23,11 +23,11 @@ export const ButtonStyle = tva({
       control: '',
     },
     size: {
-      tiny: 'px-[6px] py-[6px]',
-      small: 'px-2 py-2',
-      medium: 'px-[10px] py-3',
-      large: 'px-[10px] py-[14px]',
-      giant: 'px-3 py-4',
+      tiny: 'min-w-6 min-h-6 p-1.5',
+      small: 'min-w-8 min-h-8 p-2',
+      medium: 'min-w-10 min-h-10 px-[10px] py-[12px]',
+      large: 'min-w-12 min-h-12 px-2.5 py-3.5',
+      giant: 'min-w-14 min-h-14 px-3 py-4',
     },
     state: {
       default: '',

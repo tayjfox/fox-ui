@@ -23,11 +23,11 @@ export const TextVariants = tva({
       control: '',
     },
     size: {
-      tiny: 'px-[6px] py-[6px]',
-      small: 'px-2 py-2',
-      medium: 'px-[10px] py-3',
-      large: 'px-[10px] py-[14px]',
-      giant: 'px-3 py-4',
+      tiny: 'text-[10px] mx-1.5',
+      small: 'text-[12px] mx-2',
+      medium: 'text-[14px] mx-[10px]',
+      large: 'text-[16px] mx-2.5',
+      giant: 'text-[18px] mx-3',
     },
     state: {
       default: '',
@@ -40,6 +40,7 @@ export const TextVariants = tva({
   compoundVariants: [
     { appearance: 'filled', status: 'basic', class: 'text-basic-800' },
     { appearance: 'filled', status: 'control', class: 'text-basic-800' },
+    // { appearance: 'filled', status: 'primary', class: 'text-white' },
 
     { appearance: 'outline', status: 'basic', class: 'text-basic-700' },
     { appearance: 'outline', status: 'primary', class: 'text-primary' },
