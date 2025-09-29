@@ -27,10 +27,15 @@
     "tailwindcss": "^4.1.13"
   },
   "peerDependencies": {
+    "@shopify/flash-list": ">=1.8.0",
     "@types/hoist-non-react-statics": "^3.3.7",
     "nativewind": "^5.0.0-preview.1",
-    "react-native-reanimated": "~4.1.0",
-    "react-native-svg": "15.12.1"
+    "react": ">=19.0.0",
+    "react-dom": ">=19.1.0",
+    "react-native": ">=0.70.0",
+    "react-native-reanimated": ">=4.1.0",
+    "react-native-svg": ">=15.12.1",
+    "react-native-web": ">=0.21.1"
   },
   "publishConfig": {
     "access": "public"

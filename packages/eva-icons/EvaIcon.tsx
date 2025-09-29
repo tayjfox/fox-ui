@@ -4,7 +4,10 @@ import React from 'react';
 import { styled } from 'nativewind';
 import { SvgProps as SvgPropsBase } from 'react-native-svg';
 
-import { IconProvider } from '@fox-ui/components';
+import {
+  IconProvider,
+  isWeb,
+} from '@fox-ui/components';
 
 export interface SvgProps extends SvgPropsBase {
   className?: string;
@@ -19,20 +22,29 @@ export class EvaIcon implements IconProvider<SvgProps> {
   }
 
   public toReactElement(props: SvgProps): IconElement {
-    const Icon: IconComponent = styled(this.content, {
-      className: {
-        target: 'style',
-        nativeStyleToProp: { color: true, fill: true }
-      },
-    });
 
-    const { style, ...svgProps } = props;
+    if (!isWeb) {
+      const Icon: IconComponent = styled(this.content, {
+        className: {
+          target: 'style',
+          nativeStyleToProp: { color: true, fill: true }
+        },
+      });
 
-    return (
-      <Icon
-        {...svgProps}
+      const { style, ...svgProps } = props;
 
-      />
-    );
+      return (
+        <Icon
+          {...svgProps}
+          style={style}
+        />
+      );
+    } else {
+      const Icon: IconComponent = this.content;
+      const { style, ...svgProps } = props;
+
+      return <Icon {...svgProps}
+        style={style} />;
+    }
   }
 }

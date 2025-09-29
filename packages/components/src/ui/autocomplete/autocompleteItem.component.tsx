@@ -10,7 +10,7 @@ import {
   ListItem,
   type ListItemElement,
   type ListItemProps,
-} from '../list/listItem.component';
+} from '../../components/List/ListItem';
 
 export type AutocompleteItemProps = ListItemProps;
 export type AutocompleteItemElement = React.ReactElement<AutocompleteItemProps>;

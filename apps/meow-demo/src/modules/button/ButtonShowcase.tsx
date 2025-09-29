@@ -1,14 +1,11 @@
 import React from 'react';
 
-import { ListRenderItemInfo } from 'react-native';
-
 import {
   Container,
   List,
 } from '@fox-ui/components';
 
 import ShowcaseCard from '../showcase/ShowcaseCard';
-import { ShowcaseItem } from '../showcase/types';
 import { ButtonDemoTypes } from './ButtonDemoTypes';
 
 export const ButtonShowcase = () => (
@@ -18,7 +15,7 @@ export const ButtonShowcase = () => (
 
     <List
       data={ButtonDemoTypes}
-      renderItem={(info: ListRenderItemInfo<ShowcaseItem>): React.ReactElement => {
+      renderItem={(info) => {
 
         const CardContent = info.item.component;
 

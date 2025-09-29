@@ -1,14 +1,16 @@
 import React from 'react';
 
-import { FlatList, FlatListProps, ImageProps, ViewProps } from 'react-native';
+import { ImageProps, ViewProps } from 'react-native';
+
+import { FlashList, FlashListProps } from '@shopify/flash-list';
 
 import { RenderProp, TouchableWebProps } from '../../devsupport';
 import { TextProps } from '../../ui/text/text.component';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export interface ListProps<ItemT = any> extends FlatListProps<ItemT> {
+export interface ListProps<ItemT = any> extends FlashListProps<ItemT> {
   className?: string;
-  ref?: React.Ref<React.ComponentRef<typeof FlatList>>;
+  ref?: React.Ref<React.ComponentRef<typeof FlashList>>;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -43,4 +45,4 @@ export interface ListItemProps extends TouchableWebProps {
   descriptionClassName?: string;
 }
 
-export type ListItemElement = React.ReactElement<ListItemProps>;
+export type ListItemElement = React.ReactElement<ListProps>;

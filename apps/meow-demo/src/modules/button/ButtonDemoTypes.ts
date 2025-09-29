@@ -7,6 +7,7 @@ import {
   ButtonSizeShowcase,
   ButtonStatesShowcase,
   ButtonStatusShowcase,
+  ButtonThemingShowcase,
 } from './examples';
 
 export const ButtonDemoTypes = [
@@ -51,9 +52,9 @@ export const ButtonDemoTypes = [
     description: 'Ghost buttons are medium size by default.',
     component: ButtonGhostShowcase,
   },
-  // {
-  //   title: 'Button Theming',
-  //   description: 'Button can be themed with custom icons and loading indicator.',
-  //   component: ButtonThemingShowcase,
-  // },
+  {
+    title: 'Button Theming',
+    description: 'Button can be themed with custom icons and loading indicator.',
+    component: ButtonThemingShowcase,
+  },
 ];

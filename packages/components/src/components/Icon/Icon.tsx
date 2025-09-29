@@ -127,13 +127,12 @@ export class Icon<T> extends React.Component<IconProps<T>> {
     } as IconProps);
 
     if (!this.animation) {
-      console.log('iconElement', iconElement);
       return React.cloneElement(iconElement);
     }
 
-    console.log('AnimatedView className', className);
+
     return (
-      <AnimatedView {...this.animation.toProps()}>
+      <AnimatedView {...this.animation.toProps()} className={className}>
         {iconElement}
       </AnimatedView>
     );

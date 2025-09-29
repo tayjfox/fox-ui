@@ -12,6 +12,7 @@ import {
   TouchableWeb,
   TouchableWebElement,
 } from '../../devsupport';
+import { ActiveState } from '../shared/types';
 import { View } from '../View/View';
 import {
   ContainerStyle,
@@ -23,8 +24,6 @@ import {
   type ListItemElement,
   type ListItemProps,
 } from './types';
-
-export { type ListItemElement, type ListItemProps };
 
 /**
  * A single item rendered in List.
@@ -69,7 +68,7 @@ export { type ListItemElement, type ListItemProps };
  * ```
  */
 
-export class ListItem extends React.Component<ListItemProps> {
+class ListItem extends React.Component<ListItemProps, ActiveState> {
 
   constructor(props: ListItemProps) {
     super(props);
@@ -88,9 +87,12 @@ export class ListItem extends React.Component<ListItemProps> {
 
   private getClassName = (): string => {
     const { className } = this.props;
+    const { interactionState } = this.state;
+    const state = interactionState;
 
     return ContainerStyle({
       class: className,
+      state,
     });
   };
 
@@ -153,14 +155,7 @@ export class ListItem extends React.Component<ListItemProps> {
 
   public render(): TouchableWebElement {
     const {
-
-      style,
       children,
-      title,
-      description,
-      accessoryLeft,
-      accessoryRight,
-
       ...touchableProps
     } = this.props;
 
@@ -168,9 +163,8 @@ export class ListItem extends React.Component<ListItemProps> {
 
     return (
       <TouchableWeb
-        {...touchableProps}
-        style={[style]}
         className={className}
+        {...touchableProps}
         onPressIn={this.onPressIn}
         onPressOut={this.onPressOut}
       >
@@ -179,3 +173,5 @@ export class ListItem extends React.Component<ListItemProps> {
     );
   }
 }
+
+export { ListItem, type ListItemElement, type ListItemProps };

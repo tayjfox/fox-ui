@@ -21,6 +21,7 @@ import {
   ViewProps,
 } from 'react-native';
 
+import { List } from '../../components/List/List';
 import {
   ChildrenWithProps,
   EvaInputSize,
@@ -41,7 +42,6 @@ import {
   StyledComponentProps,
   StyleType,
 } from '../../theme';
-import { List } from '../list/list.component';
 import { Popover } from '../popover/popover.component';
 import { ChevronDown } from '../shared/chevronDown.component';
 import {

@@ -223,13 +223,13 @@ export const ButtonStyle = tva({
       appearance: 'filled',
       status: 'control',
       state: 'default',
-      class: 'bg-control-default border-basic-transparent-100',
+      class: 'bg-basic-100 border-basic-100',
     },
     {
       appearance: 'filled',
       status: 'control',
       state: 'focused',
-      class: 'bg-control-focus border-basic-500',
+      class: 'bg-basic-300 border-basic-500',
     },
     {
       appearance: 'filled',

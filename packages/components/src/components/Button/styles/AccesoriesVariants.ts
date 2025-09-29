@@ -25,8 +25,8 @@ export const AccesoriesVariants = tva({
     size: {
       tiny: 'w-3 h-3 mx-1.5',
       small: 'w-4 h-4 mx-2',
-      medium: 'w-5 h-5 mx-2.5', // 20px
-      large: 'w-6 h-6 mx-2.5',
+      medium: 'w-5 h-5 mx-2',
+      large: 'w-6 h-6 mx-2',
       giant: 'w-6 h-6 mx-3',
     },
     state: {

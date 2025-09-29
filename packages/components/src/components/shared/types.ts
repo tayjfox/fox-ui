@@ -47,3 +47,7 @@ export type InputSizeStrict = InputSizeToken;
 export interface PressState {
   interactionState: 'hover' | 'disabled' | 'active' | 'focused' | undefined;
 }
+
+export interface ActiveState {
+  interactionState: 'active' | undefined;
+}

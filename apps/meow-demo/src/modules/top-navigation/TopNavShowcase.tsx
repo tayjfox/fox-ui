@@ -1,9 +1,6 @@
 import React from 'react';
 
-import {
-  ListRenderItemInfo,
-  View,
-} from 'react-native';
+import { View } from 'react-native';
 
 import {
   Container,
@@ -11,7 +8,6 @@ import {
   Text,
 } from '@fox-ui/components';
 
-import { ShowcaseItem } from '../showcase/types';
 import { TopNavDemoTypes } from './TopNavDemoTypes';
 
 export const TopNavShowcase = () => (
@@ -19,7 +15,7 @@ export const TopNavShowcase = () => (
 
   <List
     data={TopNavDemoTypes}
-    renderItem={(info: ListRenderItemInfo<ShowcaseItem>): React.ReactElement => {
+    renderItem={(info) => {
 
       const CardContent = info.item.component;
 

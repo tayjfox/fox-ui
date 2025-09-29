@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-import { FlatList } from 'react-native';
+import { FlashList } from '@shopify/flash-list';
 
 import {
   BaseScrollParams,
@@ -15,39 +15,11 @@ import {
   ScrollToOffsetParams,
 } from './types';
 
-export { type ListElement, type ListProps } from './types';
-
-/**
- * Performant interface for rendering simple, flat lists.
- *
- * @extends React.Component
- *
- * @property {any[]} data - An array of anything to be rendered within the list
- *
- * @property {(ListRenderItemInfo<ItemT>) => ReactElement} renderItem - Takes an
- * item from *data* and renders it into the list.
- *
- * @property {FlatListProps} ...FlatListProps - Any props applied to FlatList component.
- *
- * @overview-example ListSimpleUsage
- * Lists should render ListItem components by providing them through `renderItem` property
- * to provide a useful component.
- *
- * @overview-example ListDividers
- * It is a good idea to separate items with `Divider` component.
- *
- * @overview-example ListAccessories
- * Items may contain inner views configured with `accessoryLeft` and `accessoryRight` properties.
- *
- * @overview-example ListCustomItem
- * Using ListItem is helpful for basic lists, but not required. For example, `Card` may be used.
- */
-
-const FlatListRN = FlatList as React.ComponentType<ListProps>;
+const FlashListRN = FlashList as unknown as typeof FlashList;
 
 export class List<ItemT = any> extends React.Component<ListProps<ItemT>> {
 
-  private listRef = React.createRef<FlatList>();
+  private listRef = React.createRef<FlashList<ItemT>>();
 
   public scrollToEnd = (params?: BaseScrollParams): void => {
     this.listRef.current?.scrollToEnd(params);
@@ -66,11 +38,19 @@ export class List<ItemT = any> extends React.Component<ListProps<ItemT>> {
   };
 
   public render(): React.ReactElement {
-    const { style, ref, className, keyExtractor, ...flatListProps } = this.props;
+    const { style, className, keyExtractor, ...flatListProps } = this.props;
+
+
+    const DataCount = flatListProps.data ? flatListProps.data.length : 0;
+    // FlashList requires estimatedItemSize if the data is not empty
+    if (DataCount > 0 && !flatListProps.estimatedItemSize) {
+      // Default to 100 if not provided
+      flatListProps.estimatedItemSize = 100;
+    }
 
     return (
-      <FlatListRN
-        className={className}
+      <FlashListRN
+
         keyExtractor={keyExtractor || this.keyExtractor}
         {...flatListProps}
         ref={this.listRef}

@@ -38,6 +38,7 @@ export const ButtonThemingShowcase = (): React.ReactElement => (
       style={styles.button}
       status='primary'
       accessoryLeft={StarIcon}
+      className='bg-teal-700 border-teal-700'
     >
       PRIMARY
     </Button>
@@ -46,6 +47,7 @@ export const ButtonThemingShowcase = (): React.ReactElement => (
       style={styles.button}
       status='success'
       accessoryRight={StarIcon}
+      className='bg-cyan-500 border-cyan-500'
     >
       SUCCESS
     </Button>
@@ -67,6 +69,9 @@ export const ButtonThemingShowcase = (): React.ReactElement => (
       style={styles.button}
       appearance='outline'
       accessoryLeft={LoadingIndicator}
+      className='bg-danger-200 border-danger-400 '
+      textClassName='text-danger-800'
+      accesoryClassName='fill-danger-800 text-danger-800'
     >
       LOADING
     </Button>

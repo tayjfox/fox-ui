@@ -42,7 +42,7 @@ export const TextVariants = tva({
     { appearance: 'filled', status: 'control', class: 'text-basic-800' },
     // { appearance: 'filled', status: 'primary', class: 'text-white' },
 
-    { appearance: 'outline', status: 'basic', class: 'text-basic-700' },
+    { appearance: 'outline', status: 'basic', class: 'text-basic-600' },
     { appearance: 'outline', status: 'primary', class: 'text-primary' },
     { appearance: 'outline', status: 'success', class: 'text-success' },
     { appearance: 'outline', status: 'info', class: 'text-info' },
@@ -50,7 +50,7 @@ export const TextVariants = tva({
     { appearance: 'outline', status: 'danger', class: 'text-danger' },
     { appearance: 'outline', status: 'control', class: 'text-white' },
 
-    { appearance: 'ghost', status: 'basic', class: 'text-basic-700' },
+    { appearance: 'ghost', status: 'basic', class: 'text-basic-600' },
     { appearance: 'ghost', status: 'primary', class: 'text-primary' },
     { appearance: 'ghost', status: 'success', class: 'text-success' },
     { appearance: 'ghost', status: 'info', class: 'text-info' },

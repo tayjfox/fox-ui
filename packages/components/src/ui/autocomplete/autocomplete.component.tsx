@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+
 import {
   ListRenderItemInfo,
   NativeSyntheticEvent,
@@ -13,13 +14,14 @@ import {
   TextInputSubmitEditingEventData,
   View,
 } from 'react-native';
+
+import { List } from '../../components/List/List';
 import { ChildrenWithProps } from '../../devsupport';
 import {
   Input,
   InputElement,
   InputProps,
 } from '../input/input.component';
-import { List } from '../list/list.component';
 import {
   Popover,
   PopoverElement,

@@ -20,7 +20,8 @@ export {
 } from './TopNavigation/TopNavigationAction';
 
 /* List */
-export { List, type ListElement, type ListProps } from './List/List';
+export { List } from './List/List';
+export { type ListElement, type ListProps } from './List/types';
 export { ListItem, type ListItemElement, type ListItemProps } from './List/ListItem';
 /*
  *

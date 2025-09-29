@@ -136,6 +136,8 @@ export class TopNavigation extends React.Component<TopNavigationProps> {
       ...containerParameters
     } = source;
 
+
+
     return {
       container: containerParameters,
       title: {
@@ -160,6 +162,8 @@ export class TopNavigation extends React.Component<TopNavigationProps> {
 
     const evaStyles = this.getComponentStyle(eva?.style ?? {});
     const alignmentStyles = this.getAlignmentDependentStyles(alignment);
+
+
 
     return (
       <View

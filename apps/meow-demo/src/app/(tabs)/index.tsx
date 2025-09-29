@@ -71,10 +71,10 @@ export const ListAccessoriesShowcase = (): React.ReactElement => {
   );
 
   return (
-    <View className='p-safe'>
+    <View className='p-safe h-full'>
 
       <List
-
+        className='h-full bg-amber-500 flex'
         data={data}
         ItemSeparatorComponent={Divider}
         renderItem={renderItem}

@@ -1,6 +1,7 @@
 export * from './ButtonAccessoriesShowcase';
 export * from './ButtonAppearancesShowcase';
 export * from './ButtonGhostShowcase';
+export * from '../../button-group/examples/ButtonGroupSimpleUsageShowcase';
 export * from './ButtonOutlineShowcase';
 export * from './ButtonSimpleUsageShowcase';
 export * from './ButtonSizeShowcase';

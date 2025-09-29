@@ -16,7 +16,7 @@ import {
 } from '@fox-ui/components';
 
 const StarIcon = (props: IconProps): IconElement => {
-  console.log('props', props);
+
   return (<Icon
     {...props}
     name='star'

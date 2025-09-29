@@ -1,36 +1,16 @@
-/* @import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/preflight.css" layer(base);
-@import "tailwindcss/utilities.css"; */
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css';
 
-@import 'tailwindcss';
 @import 'nativewind/theme';
-/* @import './../../../packages/components/'; */
 
-/* @config '../tailwind.config.ts'; */
-
-@source './../../../packages/components/';
-@source './../../../packages/eva-icons/';
-/* @source '@fox-ui/components/'; */
-
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
-}
+@source './../../../packages/components/src/';
 
 @theme {
+  --text-xs: 13;
+  --text-sm: 14;
+  --text-base: 15;
+
   --color-primary-100: #f2f6ff;
   --color-primary-200: #d9e4ff;
   --color-primary-300: #a6c1ff;
@@ -48,11 +28,13 @@
   --color-primary-transparent-500: rgba(51, 102, 255, 0.4);
   --color-primary-transparent-600: rgba(51, 102, 255, 0.48);
 
-  --color-primary-hover:
-    '#598BFF', --color-primary-focus: '#274BDB', --color-primary-active: '#274BDB',
-    --color-primary-disabled: 'rgba(143, 155, 179, 0.24)',
-    /* --color-primary: "#3366ff"; */ --color-primary-hover: #598bff;
-  --color-primary: '#3366ff';
+  --color-primary-hover: #598bff;
+  --color-primary-focus: #274bdb;
+  --color-primary-active: #274bdb;
+  --color-primary-disabled: rgba(143, 155, 179, 0.24);
+  --color-primary: #3366ff;
+  --color-primary-hover: #598bff;
+  --color-primary: #3366ff;
   --color-primary-focus: #274bdb;
   --color-primary-active: #274bdb;
   --color-primary-disabled: rgba(143, 155, 179, 0.24);
