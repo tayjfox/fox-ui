@@ -1,14 +1,12 @@
 import React from 'react';
 
-import { cssInterop } from 'nativewind';
+// @ts-ignore: styled is not recognized
+import { styled } from 'nativewind';
 import { SvgProps as SvgPropsBase } from 'react-native-svg';
 
-import {
-  IconProvider,
-  isMobile,
-} from '@fox-ui/components';
+import { IconProvider } from '@fox-ui/components';
 
-interface SvgProps extends SvgPropsBase {
+export interface SvgProps extends SvgPropsBase {
   className?: string;
 }
 
@@ -21,39 +19,18 @@ export class EvaIcon implements IconProvider<SvgProps> {
   }
 
   public toReactElement(props: SvgProps): IconElement {
-    const Icon: IconComponent = this.content;
+    const Icon: IconComponent = styled(this.content, {
+      className: {
+        target: 'style',
+        nativeStyleToProp: { color: true, fill: true }
+      },
+    });
 
     const { style, ...svgProps } = props;
 
-    // cssInterop(Icon, {
-    //   // className: 'style',
-    //   iconClassName: {
-    //     target: false,
-    //     nativeStyleToProp: {
-    //       color: 'fill',
-    //       width: 'width',
-    //       height: 'height',
-
-    //     },
-
-    //   },
-    // });
-
-    if (isMobile) {
-      cssInterop(Icon, {
-        className: {
-          target: false,
-          nativeStyleToProp: { fill: true }
-        },
-      });
-    }
-
     return (
       <Icon
-        className={props.className}
-        fill={'currentColor'}
         {...svgProps}
-        style={style}
 
       />
     );

@@ -15,12 +15,13 @@ import {
   View,
 } from '@fox-ui/components';
 
-const StarIcon = (props: IconProps): IconElement => (
-  <Icon
+const StarIcon = (props: IconProps): IconElement => {
+  console.log('props', props);
+  return (<Icon
     {...props}
     name='star'
-  />
-);
+  />)
+};
 
 const LoadingIndicator = (props: Partial<ImageProps> = {}): React.ReactElement => (
   <View style={[props.style, styles.indicator]}>

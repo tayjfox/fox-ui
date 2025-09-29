@@ -9,6 +9,7 @@
 /* @config '../tailwind.config.ts'; */
 
 @source './../../../packages/components/';
+@source './../../../packages/eva-icons/';
 /* @source '@fox-ui/components/'; */
 
 /*

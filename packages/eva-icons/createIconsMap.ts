@@ -1,7 +1,5 @@
-import { SvgProps } from 'react-native-svg';
-
 import { IconProvider } from '../components';
-import { EvaIcon } from './EvaIcon';
+import { EvaIcon, SvgProps } from './EvaIcon';
 import { findIconByName } from './icons';
 import NotFound from './icons/NotFound';
 

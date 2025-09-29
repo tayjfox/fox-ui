@@ -4,7 +4,6 @@ import {
   Animated,
   ViewProps,
 } from 'react-native';
-import { SvgProps } from 'react-native-svg';
 
 import { IconPack } from '../components';
 import {
@@ -14,6 +13,7 @@ import {
   IconAnimationRegistry,
 } from './animation';
 import { createIconsMap } from './createIconsMap';
+import { SvgProps } from './EvaIcon';
 import {
   SvgIcon,
   SvgIconProps,
