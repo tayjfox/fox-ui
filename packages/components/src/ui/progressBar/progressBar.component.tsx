@@ -16,17 +16,16 @@ import {
 } from 'react-native';
 
 import {
-  styled,
-  StyledComponentProps,
-  StyleType,
-} from '@fox-ui/components';
-import {
   EvaSize,
   EvaStatus,
   LiteralUnion,
   Overwrite,
-} from '@fox-ui/components/devsupport';
-
+} from '../../devsupport';
+import {
+  styled,
+  StyledComponentProps,
+  StyleType,
+} from '../../theme';
 import {
   ProgressBarAnimation,
   ProgressBarAnimationConfig,

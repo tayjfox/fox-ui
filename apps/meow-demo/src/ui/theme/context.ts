@@ -1,7 +1,5 @@
 import { createContext, useContext } from 'react';
 
-import { Appearance } from 'react-native';
-
 import { ThemeContextProps } from '@/types';
 
 /**
@@ -9,8 +7,6 @@ import { ThemeContextProps } from '@/types';
  */
 export const ThemeContext = createContext<ThemeContextProps>({
   theme: 'light',
-  systemTheme: Appearance.getColorScheme() === 'light' ? 'light' : 'dark',
-  systemEnabled: true,
 } as ThemeContextProps);
 
 /**

@@ -1,9 +1,4 @@
 export * from './theme/ThemeProvider';
-export * from './theme/colors/bigBadWolf';
-export * from './theme/colors/dark';
-export * from './theme/colors/fireNFox';
-export * from './theme/colors/midnightDog';
-export * from './theme/colors/lightCat';
+
 export * from './theme/context';
 export * from './theme/helper';
-export * from './theme/themes';

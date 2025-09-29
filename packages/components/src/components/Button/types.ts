@@ -17,7 +17,7 @@ import { ImageProps } from 'react-native';
 
 import { RenderProp, TouchableWebProps } from '../../devsupport';
 import { TextProps } from '../../ui/text/text.component';
-import { Sizes, Status } from '../shared/types';
+import { ButtonStatus, Sizes } from '../shared/types';
 
 type TouchableWebPropsWithoutChildren = Omit<TouchableWebProps, 'children'>;
 
@@ -26,7 +26,7 @@ export interface ButtonProps extends TouchableWebPropsWithoutChildren {
   accessoryLeft?: RenderProp<Partial<ImageProps>>;
   accessoryRight?: RenderProp<Partial<ImageProps>>;
   appearance?: 'filled' | 'outline' | 'ghost';
-  status?: Status;
+  status?: ButtonStatus;
   size?: Sizes;
   className?: string;
   textClassName?: string;

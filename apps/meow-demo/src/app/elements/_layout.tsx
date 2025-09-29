@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Stack } from 'expo-router';
 
-export default function ShowcaseLayout() {
+export default function ComponentsLayout() {
   return (
     <Stack screenOptions={{ headerShown: false }} />
   );

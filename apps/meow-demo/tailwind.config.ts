@@ -238,9 +238,7 @@ export default {
     },
   },
   plugins: [],
-  corePlugin: {
-    backgroundOpacity: true,
-  },
+
 } satisfies Config;
 
 function initFoxUI($config: Config) {

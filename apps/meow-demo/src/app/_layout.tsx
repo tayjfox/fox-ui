@@ -59,9 +59,8 @@ function AppProviders() {
     <View className="h-full flex-1">
       <Stack screenOptions={SCREEN_OPTIONS}>
         <Stack.Screen name="(tabs)" />
-        {/* <Stack.Screen name="showcase/(components)" /> */}
+        <Stack.Screen name="elements" />
 
-        {/* <Stack.Screen name="modal" options={{ presentation: 'modal' }} /> */}
       </Stack>
 
     </View>

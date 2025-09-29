@@ -14,8 +14,8 @@ import {
   Card,
   List,
   ListElement,
-  ListItemElement,
-  ListProps,
+  type ListItemElement,
+  type ListProps,
   Text,
 } from '@fox-ui/components';
 

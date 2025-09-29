@@ -45,9 +45,9 @@ export type ThemeContextProps = {
   theme: ThemesVariants;
   systemTheme: SystemThemesVariants;
   systemEnabled: boolean;
-  handleThemeSwitch: (newTheme: ThemesVariants) => void;
-  getThemeColorByVariable: (colorKey: ThemesVariables) => string;
-  getThemeColorByVariableAndAlpha: (colorKey: ThemesVariables, alpha: number) => string;
+  handleThemeSwitch?: (newTheme: ThemesVariants) => void;
+  getThemeColorByVariable?: (colorKey: ThemesVariables) => string;
+  getThemeColorByVariableAndAlpha?: (colorKey: ThemesVariables, alpha: number) => string;
 };
 
 export type ThemeProps = ViewProps & {

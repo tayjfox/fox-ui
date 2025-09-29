@@ -1,10 +1,7 @@
 import React from 'react';
 
 import { useRouter } from 'expo-router';
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
+import { View } from 'react-native';
 
 import {
   Button,
@@ -25,17 +22,17 @@ const data = [
   {
     title: 'Top Navigation',
     description: 'Top navigation bar',
-    route: '/components/top-navigation'
+    route: '/elements/top-navigation'
   },
   {
     title: 'Buttons',
     description: 'Different styles of buttons',
-    route: '/components/button'
+    route: '/elements/button'
   },
   {
     title: 'Button Group',
     description: 'Group of buttons',
-    route: '/components/button/group'
+    route: '/elements/button/group'
   }
 ];
 
@@ -77,7 +74,7 @@ export const ListAccessoriesShowcase = (): React.ReactElement => {
     <View className='p-safe'>
 
       <List
-        style={styles.container}
+
         data={data}
         ItemSeparatorComponent={Divider}
         renderItem={renderItem}
@@ -86,10 +83,6 @@ export const ListAccessoriesShowcase = (): React.ReactElement => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    maxHeight: 192,
-  },
-});
+
 
 export default ListAccessoriesShowcase;

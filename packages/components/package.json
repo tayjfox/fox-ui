@@ -24,11 +24,11 @@
     "hoist-non-react-statics": "^3.3.2",
     "lodash.merge": "^4.6.2",
     "tailwind-variants": "0.1.20",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.1.13"
   },
   "peerDependencies": {
     "@types/hoist-non-react-statics": "^3.3.7",
-    "nativewind": "^4.2.1",
+    "nativewind": "^5.0.0-preview.1",
     "react-native-reanimated": "~4.1.0",
     "react-native-svg": "15.12.1"
   },

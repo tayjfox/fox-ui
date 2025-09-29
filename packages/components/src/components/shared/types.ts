@@ -33,7 +33,7 @@ export const STATUSES = [
   'control',
 ] as const;
 export type StatusToken = TokenOf<typeof STATUSES>;
-export type Status = TokenOf<typeof STATUSES>;
+export type ButtonStatus = TokenOf<typeof STATUSES>;
 
 // Size
 export const SIZES = ['tiny', 'small', 'medium', 'large', 'giant'] as const;
@@ -43,3 +43,7 @@ export type Sizes = TokenOf<typeof SIZES>;
 export const INPUT_SIZES = ['small', 'medium', 'large'] as const;
 export type InputSizeToken = TokenOf<typeof INPUT_SIZES>;
 export type InputSizeStrict = InputSizeToken;
+
+export interface PressState {
+  interactionState: 'hover' | 'disabled' | 'active' | 'focused' | undefined;
+}

@@ -16,6 +16,7 @@ import {
   ViewStyle,
 } from 'react-native';
 
+import { IconProps } from '../../components/Icon/Icon';
 import {
   EvaSize,
   EvaStatus,
@@ -30,10 +31,7 @@ import {
   StyledComponentProps,
   StyleType,
 } from '../../theme';
-import {
-  IconProps,
-  Text,
-} from '../../ui';
+import { Text } from '../../ui/text/text.component';
 import {
   CircularProgressBarAnimation,
   CircularProgressBarAnimationConfig,

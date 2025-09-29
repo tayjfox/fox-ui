@@ -74,8 +74,7 @@ export {
 
 export { Input, type InputElement, type InputProps } from './input/input.component';
 export { Layout, type LayoutElement, type LayoutProps } from './layout/layout.component';
-export { List, type ListElement, type ListProps } from './list/list.component';
-export { ListItem, type ListItemElement, type ListItemProps } from './list/listItem.component';
+
 export { Menu, type MenuElement, type MenuProps } from './menu/menu.component';
 export { MenuGroup, type MenuGroupElement, type MenuGroupProps } from './menu/menuGroup.component';
 export { MenuItem, type MenuItemElement, type MenuItemProps } from './menu/menuItem.component';

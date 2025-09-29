@@ -19,12 +19,13 @@ import {
   TouchableWeb,
   TouchableWebElement,
 } from '../../devsupport';
+import { PressState } from '../shared/types';
 import {
   AccesoriesVariants,
   ButtonStyle,
   TextVariants,
 } from './styles';
-import { ButtonProps } from './types';
+import { type ButtonProps } from './types';
 
 export { type ButtonProps };
 
@@ -107,7 +108,9 @@ export type ButtonElement = React.ReactElement<ButtonProps>;
  * In most cases this is redundant, if [custom theme is configured](guides/branding).
  */
 
-export class Button extends React.Component<ButtonProps, { interactionState: 'hover' | 'disabled' | 'active' | 'focused' | undefined }> {
+
+
+export class Button extends React.Component<ButtonProps, PressState> {
 
 
   constructor(props: ButtonProps) {
@@ -117,27 +120,27 @@ export class Button extends React.Component<ButtonProps, { interactionState: 'ho
     };
   }
 
-  private handleMouseEnter = (): void => {
+  private onMouseEnter = (): void => {
     this.setState({ interactionState: 'hover' });
   };
 
-  private handleMouseLeave = (): void => {
+  private onMouseLeave = (): void => {
     this.setState({ interactionState: undefined });
   };
 
-  private handleFocus = (): void => {
+  private onFocus = (): void => {
     this.setState({ interactionState: 'focused' });
   };
 
-  private handleBlur = (): void => {
+  private onBlur = (): void => {
     this.setState({ interactionState: undefined });
   };
 
-  private handlePressIn = (): void => {
+  private onPressIn = (): void => {
     this.setState({ interactionState: 'active' });
   };
 
-  private handlePressOut = (): void => {
+  private onPressOut = (): void => {
     this.setState({ interactionState: undefined });
   };
 
@@ -196,12 +199,12 @@ export class Button extends React.Component<ButtonProps, { interactionState: 'ho
         className={className}
         style={style}
         disabled={disabled}
-        onMouseEnter={!disabled ? this.handleMouseEnter : undefined}
-        onMouseLeave={!disabled ? this.handleMouseLeave : undefined}
-        onFocus={!disabled ? this.handleFocus : undefined}
-        onBlur={!disabled ? this.handleBlur : undefined}
-        onPressIn={!disabled ? this.handlePressIn : undefined}
-        onPressOut={!disabled ? this.handlePressOut : undefined}
+        onMouseEnter={!disabled ? this.onMouseEnter : undefined}
+        onMouseLeave={!disabled ? this.onMouseLeave : undefined}
+        onFocus={!disabled ? this.onFocus : undefined}
+        onBlur={!disabled ? this.onBlur : undefined}
+        onPressIn={!disabled ? this.onPressIn : undefined}
+        onPressOut={!disabled ? this.onPressOut : undefined}
       >
         <FalsyFC component={accessoryLeft} className={accesoryStyle} />
         <FalsyText component={children} className={textStyle} />

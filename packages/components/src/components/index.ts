@@ -1,5 +1,5 @@
 /* Buttons */
-export { Button, type ButtonElement, ButtonProps } from './Button/Button';
+export { Button, type ButtonElement, type ButtonProps } from './Button/Button';
 
 /* Icons */
 export { Icon, type IconElement, type IconProps } from './Icon/Icon';
@@ -19,6 +19,9 @@ export {
   type TopNavigationActionProps,
 } from './TopNavigation/TopNavigationAction';
 
+/* List */
+export { List, type ListElement, type ListProps } from './List/List';
+export { ListItem, type ListItemElement, type ListItemProps } from './List/ListItem';
 /*
  *
  *

@@ -5,10 +5,11 @@
  */
 
 import React from 'react';
+
 import {
   ListItem,
-  ListItemElement,
-  ListItemProps,
+  type ListItemElement,
+  type ListItemProps,
 } from '../list/listItem.component';
 
 export type AutocompleteItemProps = ListItemProps;
