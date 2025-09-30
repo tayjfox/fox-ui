@@ -69,15 +69,22 @@ import { TextProps } from './types';
 const TextRN = TextBase as React.ComponentType<TextProps>;
 export class Text extends React.Component<TextProps> {
 
-  public render(): React.ReactElement<TextProps> {
-    const { style, appearance, category, status, className, ...textProps } = this.props;
 
-    const TextClassName = TextStyle({
+  private getClassName = (): string => {
+    const { appearance, status, category, className, } = this.props;
+
+
+    return TextStyle({
       class: className,
       appearance,
       status,
       category,
     });
+  };
+  public render(): React.ReactElement<TextProps> {
+    const { style, appearance, category, status, className, ...textProps } = this.props;
+
+    const TextClassName = this.getClassName();
 
     return (
       <TextRN

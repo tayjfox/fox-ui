@@ -1,11 +1,6 @@
-// styles/button.variants.ts
-import { tva } from '../../../tva';
+import { tv } from 'tailwind-variants';
 
-/**
- * Container (background + border)
- * Mirrors appearance → status → state mapping from Eva.
- */
-export const ButtonStyle = tva({
+export const ButtonStyle = tv({
   base: 'flex-row items-center justify-center rounded border',
   variants: {
     appearance: {

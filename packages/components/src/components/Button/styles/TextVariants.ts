@@ -1,11 +1,6 @@
-// styles/button.variants.ts
-import { tva } from '../../../tva';
+import { tv } from 'tailwind-variants';
 
-/**
- * Text (label) colour + size
- * Matches Eva's textColor per appearance/status/state.
- */
-export const TextVariants = tva({
+export const TextVariants = tv({
   base: 'font-bold',
   variants: {
     appearance: {

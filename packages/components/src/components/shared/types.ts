@@ -15,6 +15,7 @@ export type TokenOf<T extends readonly string[]> = T[number];
 
 export const GAP = ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'] as const;
 export type GapToken = TokenOf<typeof GAP>;
+export type ItemSize = GapToken | number;
 
 export const ALIGNMENT = ['start', 'center', 'end', 'stretch', 'baseline'] as const;
 export type Alignment = TokenOf<typeof ALIGNMENT>;

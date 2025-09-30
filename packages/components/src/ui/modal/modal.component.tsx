@@ -17,17 +17,16 @@ import {
 } from 'react-native';
 
 import {
-  Backdrop,
-  BackdropPresentingConfig,
-} from '@fox-ui/components/src/theme/backdrop/backdrop.component';
-
-import {
   Frame,
   MeasureElement,
   MeasuringElement,
   Point,
 } from '../../devsupport';
 import { ModalService } from '../../theme';
+import {
+  Backdrop,
+  BackdropPresentingConfig,
+} from '../../theme/backdrop/backdrop.component';
 
 export type RNModalProps =
   Pick<ReactNativeModalProps, 'animationType' | 'hardwareAccelerated' | 'supportedOrientations' | 'onShow'>;

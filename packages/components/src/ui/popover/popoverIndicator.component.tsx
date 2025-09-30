@@ -14,7 +14,7 @@ import {
   ViewStyle,
 } from 'react-native';
 
-import { StyleType } from '@fox-ui/components';
+import { StyleType } from '../../theme/';
 
 export type PopoverIndicatorProps = ViewProps;
 export type PopoverIndicatorElement = React.ReactElement<PopoverIndicatorProps>;

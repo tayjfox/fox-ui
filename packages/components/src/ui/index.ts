@@ -92,7 +92,7 @@ export {
   type RadioGroupElement,
   type RadioGroupProps,
 } from './radioGroup/radioGroup.component';
-export { Divider, type DividerElement, type DividerProps } from './divider/divider.component';
+
 export {
   ProgressBar,
   type ProgressBarElement,

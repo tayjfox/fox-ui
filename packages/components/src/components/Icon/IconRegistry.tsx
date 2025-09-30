@@ -14,7 +14,7 @@
 import React from 'react';
 
 import { IconRegistryService } from './IconRegistryService';
-import { IconPack } from './type';
+import { IconPack } from './types';
 
 type IconsProp = IconPack<unknown> | IconPack<unknown>[];
 

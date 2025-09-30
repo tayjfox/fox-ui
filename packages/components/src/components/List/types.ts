@@ -6,8 +6,8 @@ import {
 } from 'react-native';
 
 import {
-  FlashList,
   FlashListProps,
+  FlashListRef,
 } from '@shopify/flash-list';
 
 import { TextProps } from '../../components';
@@ -19,7 +19,7 @@ import {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export interface ListProps<ItemT = any> extends FlashListProps<ItemT> {
   className?: string;
-  ref?: React.Ref<React.ComponentRef<typeof FlashList>>;
+  ref?: React.Ref<FlashListRef<ItemT>>;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -18,8 +18,7 @@ import {
   ScrollToOffsetParams,
 } from './types';
 
-const FlashListRN = FlashList as unknown as typeof FlashList;
-
+const FlashListRN = FlashList as React.ComponentType<ListProps>;
 export class List<ItemT = any> extends React.Component<ListProps<ItemT>> {
 
   private listRef = React.createRef<FlashListRef<ItemT>>();
@@ -46,6 +45,7 @@ export class List<ItemT = any> extends React.Component<ListProps<ItemT>> {
 
     return (
       <FlashListRN
+        className={className}
 
         keyExtractor={keyExtractor || this.keyExtractor}
         {...flatListProps}

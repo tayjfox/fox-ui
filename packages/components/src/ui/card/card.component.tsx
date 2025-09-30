@@ -13,6 +13,7 @@ import {
   ViewProps,
 } from 'react-native';
 
+import { Divider } from '../../components/Divider/Divider';
 import {
   EvaStatus,
   FalsyFC,
@@ -29,7 +30,6 @@ import {
   StyledComponentProps,
   StyleType,
 } from '../../theme';
-import { Divider } from '../divider/divider.component';
 
 type CardStyledProps = Overwrite<StyledComponentProps, {
   appearance?: LiteralUnion<'filled' | 'outline'>;

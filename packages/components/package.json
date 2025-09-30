@@ -1,32 +1,22 @@
 {
   "name": "@fox-ui/components",
-  "version": "5.3.1",
+  "version": "1.0.0",
   "description": "React Native components based on Eva Design System",
-  "keywords": [
-    "react-native",
-    "ui-kitten",
-    "ui-kit"
-  ],
-  "homepage": "https://github.com/akveo/react-native-ui-kitten#readme",
-  "bugs": {
-    "url": "https://github.com/akveo/react-native-/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/akveo/react-native-ui-kitten.git"
-  },
-  "license": "MIT",
-  "author": "akveo <contact@akveo.com>",
   "dependencies": {
     "@eva-design/dss": "*",
     "@eva-design/processor": "*",
     "fecha": "4.2.3",
     "hoist-non-react-statics": "^3.3.2",
     "lodash.merge": "^4.6.2",
-    "tailwind-variants": "0.1.20",
+    "tailwind-merge": "3.3.1",
+    "tailwind-variants": "3.1.1",
     "tailwindcss": "^4.1.13"
   },
+  "devDependencies": {
+    "tsup": "8.5.0"
+  },
   "peerDependencies": {
+    "@fox-ui/typescript-config": "*",
     "@shopify/flash-list": ">2.0.0",
     "@types/hoist-non-react-statics": "^3.3.7",
     "nativewind": "^5.0.0-preview.1",
@@ -36,8 +26,5 @@
     "react-native-reanimated": ">=4.1.0",
     "react-native-svg": ">=15.12.1",
     "react-native-web": ">=0.21.1"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

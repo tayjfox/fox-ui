@@ -10,7 +10,7 @@ import {
   Button,
   Divider,
   Text,
-} from '@ui-kitten/components';
+} from '@fox-ui/components';
 
 export const DividerSimpleUsageShowcase = (): React.ReactElement => (
   <>

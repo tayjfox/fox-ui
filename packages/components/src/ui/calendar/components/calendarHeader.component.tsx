@@ -17,16 +17,15 @@ import {
 import { SvgProps } from 'react-native-svg';
 
 import {
-  CalendarViewModeId,
-  CalendarViewModes,
-} from '@fox-ui/components/src/ui/calendar/type';
-
-import {
   Text,
   TextProps,
 } from '../../../components';
 import { Button } from '../../../components/Button/Button';
 import { RTLService } from '../../../devsupport';
+import {
+  CalendarViewModeId,
+  CalendarViewModes,
+} from '../../calendar/type';
 import {
   ChevronDown,
   ChevronDownElement,

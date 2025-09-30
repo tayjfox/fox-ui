@@ -1,11 +1,10 @@
-// styles/button.variants.ts
-import { tva } from '../../../tva';
+import { tv } from 'tailwind-variants';
 
 /**
  * Icon tint matches text rules.
  * Use together with size-specific width/height if you want (Eva sets 12/16/20/24).
  */
-export const AccesoriesVariants = tva({
+export const AccesoriesVariants = tv({
   base: '',
   variants: {
     appearance: {

@@ -47,7 +47,7 @@ interface State {
  * @property {SchemaType} mapping - Mapping for UI Kitten components.
  * This is designed to be provided from any `@eva-design/*` package.
  * If provided, will be merged with *customMapping* and compiled into styles during the runtime.
- * Can be improved with build-time processing with `@ui-kitten/metro-config` package.
+ * Can be improved with build-time processing with `@fox-ui/metro-config` package.
  *
  * @property {CustomSchemaType} customMapping - Customized mapping.
  *
@@ -56,7 +56,7 @@ interface State {
  *
  * @property {ThemeStyleType} styles - Styles compiled by bootstrapping Eva packages.
  * If provided, will replace runtime styles processing.
- * Usually, can be provided by `@ui-kitten/metro-config` package.
+ * Usually, can be provided by `@fox-ui/metro-config` package.
  *
  * @overview-example Simple Usage
  * ApplicationProvider is designed to be the root component of the application.

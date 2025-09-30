@@ -1,4 +1,5 @@
 {
+  // "extends": "@fox-ui/typescript-config/react-native-library",
   "compilerOptions": {
     "outDir": "./dist/tsc-out",
     "baseUrl": ".",
@@ -19,6 +20,15 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "paths": {
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@/dev/*": [
+        "./src/devsupport/*"
+      ],
+      "@theme/*": [
+        "./src/theme/*"
+      ],
       "@/*": [
         "./src/*"
       ]

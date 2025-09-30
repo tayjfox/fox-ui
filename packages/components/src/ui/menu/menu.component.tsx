@@ -11,6 +11,7 @@ import {
   ListRenderItemInfo,
 } from 'react-native';
 
+import { Divider } from '../../components/Divider/Divider';
 import {
   List,
   ListElement,
@@ -23,7 +24,6 @@ import {
   Overwrite,
 } from '../../devsupport';
 import { styled } from '../../theme';
-import { Divider } from '../divider/divider.component';
 import {
   MenuItemDescriptor,
   MenuService,

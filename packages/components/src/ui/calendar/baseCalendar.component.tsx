@@ -11,11 +11,11 @@ import {
   ViewProps,
 } from 'react-native';
 
+import { Divider } from '../../components/Divider/Divider';
 import {
   EvaProp,
   StyleType,
 } from '../../theme';
-import { Divider } from '../divider/divider.component';
 import {
   CalendarDateContent,
   CalendarDateContentElement,

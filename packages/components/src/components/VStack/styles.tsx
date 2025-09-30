@@ -1,11 +1,12 @@
+import { tv } from 'tailwind-variants';
+
 import { isWeb } from '../../platform';
-import { tva } from '../../tva';
 
 const baseStyle = isWeb
   ? 'flex flex-col relative z-0 box-border border-0 list-none min-w-0 min-h-0 bg-transparent items-stretch m-0 p-0 text-decoration-none'
   : '';
 
-export const VStackStyle = tva({
+export const VStackStyle = tv({
   base: `flex-col ${baseStyle}`,
   variants: {
     gap: {

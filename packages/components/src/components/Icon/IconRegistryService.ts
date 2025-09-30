@@ -13,7 +13,10 @@
 
 import React from 'react';
 
-import { IconPack, IconProvider } from './type';
+import {
+  IconPack,
+  IconProvider,
+} from './types';
 
 type IconsProp = IconPack<unknown> | IconPack<unknown>[];
 

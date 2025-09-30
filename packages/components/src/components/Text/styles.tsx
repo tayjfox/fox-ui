@@ -1,11 +1,12 @@
+import { tv } from 'tailwind-variants';
+
 import { isWeb } from '../../platform';
-import { tva } from '../../tva';
 
 const baseStyle = isWeb
   ? ''
   : '';
 
-export const TextStyle = tva({
+export const TextStyle = tv({
   base: `${baseStyle}`,
   variants: {
     appearance: {

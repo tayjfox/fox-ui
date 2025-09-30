@@ -1,9 +1,10 @@
+import { tv } from 'tailwind-variants';
+
 import { isWeb } from '../../platform';
-import { tva } from '../../tva';
 
 const baseStyle = isWeb ? 'outline-0' : '';
 
-export const ContainerStyle = tva({
+export const ContainerStyle = tv({
   base: `${baseStyle} flex-row items-center px-2 py-3 bg-basic-100`,
   variants: {
     state: {
@@ -12,14 +13,14 @@ export const ContainerStyle = tva({
   },
 });
 
-export const TitleStyle = tva({
+export const TitleStyle = tv({
   base: 'mx-2 text-base font-semibold text-basic-800 text-left',
 });
 
-export const DescriptionStyle = tva({
+export const DescriptionStyle = tv({
   base: 'mx-2 text-left text-sm font-normal text-basic-600',
 });
 
-export const IconStyle = tva({
+export const IconStyle = tv({
   base: 'w-6 h-6 mx-2 text-basic-600 fill-basic-600',
 });

@@ -22,11 +22,11 @@ export class IndexPath {
   ) {}
 
   get groupIndex(): IndexPath {
-    return this.section >= 0 && new IndexPath(this.row);
+    return this.section !== undefined && this.section >= 0 ? new IndexPath(this.row) : this;
   }
 
   public toString(): string {
-    if (this.section >= 0) {
+    if (this.section !== undefined && this.section >= 0) {
       return `${this.section + 1}.${this.row + 1}`;
     }
     return (this.row + 1).toString();

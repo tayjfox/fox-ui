@@ -4,7 +4,7 @@ import {
   Divider,
   Text,
   VStack,
-} from '@ui-kitten/components';
+} from '@fox-ui/components';
 
 export const DividerHightShowcase = (): React.ReactElement => (
   <VStack gap="md">
@@ -13,6 +13,7 @@ export const DividerHightShowcase = (): React.ReactElement => (
     <Text>
       This divider has the default height of 1 pixel.
     </Text>
+    <Divider />
     <Divider style={{ height: 8 }} />
     <Text>
       This divider has a height of 8 pixels.

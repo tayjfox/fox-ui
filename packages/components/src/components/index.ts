@@ -3,13 +3,19 @@ export { Text } from './Text/Text';
 export { type TextElement, type TextProps } from './Text/types';
 
 /* Buttons */
-export { Button, type ButtonElement, type ButtonProps } from './Button/Button';
+export { Button } from './Button/Button';
+export { type ButtonElement, type ButtonProps } from './Button/types';
+
+/* Divider */
+export { Divider } from './Divider/Divider';
+export { type DividerElement, type DividerProps } from './Divider/types';
 
 /* Icons */
 export { Icon, type IconElement, type IconProps } from './Icon/Icon';
+export { type IconPack, type IconProvider, type Icons } from './Icon/types';
+
 export { IconRegistry, type IconRegistryProps } from './Icon/IconRegistry';
 export { type IconRegistryElement } from './Icon/IconRegistryService';
-export { type IconPack, type IconProvider, type Icons } from './Icon/type';
 
 /* TopNavigation */
 export {
