@@ -19,6 +19,7 @@ import {
   ViewProps,
 } from 'react-native';
 
+import { TextProps } from '../../components';
 import {
   FalsyFC,
   FalsyText,
@@ -31,7 +32,6 @@ import {
   StyledComponentProps,
   StyleType,
 } from '../../theme';
-import { TextProps } from '../../ui/text/text.component';
 
 type TopNavigationStyledProps = Overwrite<StyledComponentProps, {
   appearance?: LiteralUnion<'default' | 'control'>;

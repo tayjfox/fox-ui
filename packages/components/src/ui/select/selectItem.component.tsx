@@ -14,6 +14,7 @@ import {
   TargetedEvent,
 } from 'react-native';
 
+import { TextProps } from '../../components';
 import {
   FalsyFC,
   FalsyText,
@@ -35,7 +36,6 @@ import {
   CheckBox,
   CheckBoxElement,
 } from '../checkbox/checkbox.component';
-import { TextProps } from '../text/text.component';
 import { SelectItemDescriptor } from './select.service';
 
 type SelectItemStyledProps = Overwrite<StyledComponentProps, {

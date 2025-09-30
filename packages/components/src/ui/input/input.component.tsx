@@ -21,6 +21,7 @@ import {
   ViewStyle,
 } from 'react-native';
 
+import { TextProps } from '../../components';
 import {
   EvaSize,
   EvaStatus,
@@ -42,7 +43,6 @@ import {
   StyledComponentProps,
   StyleType,
 } from '../../theme';
-import { TextProps } from '../text/text.component';
 
 type InputStyledProps = Overwrite<StyledComponentProps, {
   appearance?: LiteralUnion<'default'>;

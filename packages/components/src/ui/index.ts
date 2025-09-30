@@ -107,7 +107,7 @@ export { Spinner, type SpinnerElement, type SpinnerProps } from './spinner/spinn
 export { TabView, type TabViewElement, type TabViewProps } from './tab/tabView.component';
 export { TabBar, type TabBarElement, type TabBarProps } from './tab/tabBar.component';
 export { Tab, type TabElement, type TabProps } from './tab/tab.component';
-export { Text, type TextElement, type TextProps } from './text/text.component';
+
 export { Toggle, type ToggleElement, type ToggleProps } from './toggle/toggle.component';
 export { Tooltip, type TooltipElement, type TooltipProps } from './tooltip/tooltip.component';
 

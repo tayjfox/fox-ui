@@ -13,6 +13,7 @@ import {
   ViewProps,
 } from 'react-native';
 
+import { TextProps } from '../../components';
 import {
   FalsyFC,
   FalsyText,
@@ -29,7 +30,6 @@ import {
   PopoverProps,
 } from '../popover/popover.component';
 import { PopoverIndicator } from '../popover/popoverIndicator.component';
-import { TextProps } from '../text/text.component';
 
 type TooltipPopoverProps = Overwrite<PopoverProps, {
   children: RenderProp<TextProps> | React.ReactText;

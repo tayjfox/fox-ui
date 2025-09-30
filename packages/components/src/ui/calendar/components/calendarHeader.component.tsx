@@ -21,6 +21,10 @@ import {
   CalendarViewModes,
 } from '@fox-ui/components/src/ui/calendar/type';
 
+import {
+  Text,
+  TextProps,
+} from '../../../components';
 import { Button } from '../../../components/Button/Button';
 import { RTLService } from '../../../devsupport';
 import {
@@ -35,10 +39,6 @@ import {
   ChevronRight,
   ChevronRightElement,
 } from '../../shared/chevronRight.component';
-import {
-  Text,
-  TextProps,
-} from '../../text/text.component';
 
 interface IconStyle extends ImageStyle {
   tintColor?: string;

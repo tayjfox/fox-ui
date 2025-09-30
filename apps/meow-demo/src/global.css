@@ -7,9 +7,17 @@
 @source './../../../packages/components/src/';
 
 @theme {
+  --text-xxs: 12;
   --text-xs: 13;
   --text-sm: 14;
   --text-base: 15;
+  --text-lg: 18;
+  --text-xl: 22;
+  --text-2xl: 26;
+  --text-3xl: 30;
+  --text-4xl: 32;
+  --text-5xl: 36;
+  --text-6xl: 48;
 
   --color-primary-100: #f2f6ff;
   --color-primary-200: #d9e4ff;

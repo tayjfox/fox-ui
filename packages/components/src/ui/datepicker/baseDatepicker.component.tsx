@@ -17,6 +17,7 @@ import {
   ViewStyle,
 } from 'react-native';
 
+import { TextProps } from '../../components';
 import {
   EvaInputSize,
   EvaStatus,
@@ -39,7 +40,6 @@ import {
   PopoverPlacement,
   PopoverPlacements,
 } from '../popover/type';
-import { TextProps } from '../text/text.component';
 
 export interface BaseDatepickerProps<D = Date> extends StyledComponentProps,
   TouchableOpacityProps,

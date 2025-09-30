@@ -6,6 +6,7 @@
 
 import React from 'react';
 
+import { TextProps } from '../../components';
 import { RenderProp } from '../../devsupport';
 import { styled } from '../../theme';
 import {
@@ -13,7 +14,6 @@ import {
   CalendarElement,
   CalendarProps,
 } from '../calendar/calendar.component';
-import { TextProps } from '../text/text.component';
 import {
   BaseDatepickerComponent,
   BaseDatepickerProps,

@@ -3,7 +3,7 @@ import React from 'react';
 import {
   Text,
   TextProps,
-} from '../ui/text/text.component';
+} from '../components';
 import { RenderProp } from './FalsyFC';
 
 export interface FalsyTextProps extends Omit<TextProps, 'children'> {

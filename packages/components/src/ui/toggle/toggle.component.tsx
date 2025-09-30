@@ -21,6 +21,7 @@ import {
   ViewProps,
 } from 'react-native';
 
+import { TextProps } from '../../components';
 import {
   EvaStatus,
   FalsyText,
@@ -38,7 +39,6 @@ import {
   StyleType,
 } from '../../theme';
 import { CheckMark } from '../shared/checkmark.component';
-import { TextProps } from '../text/text.component';
 
 type ToggleStyledProps = Overwrite<StyledComponentProps, {
   appearance?: LiteralUnion<'default'>;

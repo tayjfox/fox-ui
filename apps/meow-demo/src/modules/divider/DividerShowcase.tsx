@@ -6,13 +6,13 @@ import {
 } from '@fox-ui/components';
 
 import ShowcaseCard from '../showcase/ShowcaseCard';
-import { ButtonDemoTypes } from './ButtonDemoTypes';
+import { DividerDemoTypes } from './DividerDemoTypes';
 
-export const ButtonShowcase = () => (
+export const DividerShowcase = () => (
   <Container className='h-full'>
 
     <List
-      data={ButtonDemoTypes}
+      data={DividerDemoTypes}
       renderItem={(info) => {
 
         const CardContent = info.item.component;

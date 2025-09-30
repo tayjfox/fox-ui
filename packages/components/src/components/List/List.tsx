@@ -6,7 +6,10 @@
 
 import React from 'react';
 
-import { FlashList } from '@shopify/flash-list';
+import {
+  FlashList,
+  FlashListRef,
+} from '@shopify/flash-list';
 
 import {
   BaseScrollParams,
@@ -19,7 +22,7 @@ const FlashListRN = FlashList as unknown as typeof FlashList;
 
 export class List<ItemT = any> extends React.Component<ListProps<ItemT>> {
 
-  private listRef = React.createRef<FlashList<ItemT>>();
+  private listRef = React.createRef<FlashListRef<ItemT>>();
 
   public scrollToEnd = (params?: BaseScrollParams): void => {
     this.listRef.current?.scrollToEnd(params);
@@ -40,13 +43,6 @@ export class List<ItemT = any> extends React.Component<ListProps<ItemT>> {
   public render(): React.ReactElement {
     const { style, className, keyExtractor, ...flatListProps } = this.props;
 
-
-    const DataCount = flatListProps.data ? flatListProps.data.length : 0;
-    // FlashList requires estimatedItemSize if the data is not empty
-    if (DataCount > 0 && !flatListProps.estimatedItemSize) {
-      // Default to 100 if not provided
-      flatListProps.estimatedItemSize = 100;
-    }
 
     return (
       <FlashListRN

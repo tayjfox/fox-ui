@@ -34,6 +34,7 @@ export const STATUSES = [
 ] as const;
 export type StatusToken = TokenOf<typeof STATUSES>;
 export type ButtonStatus = TokenOf<typeof STATUSES>;
+export type ComponentStatus = TokenOf<typeof STATUSES>;
 
 // Size
 export const SIZES = ['tiny', 'small', 'medium', 'large', 'giant'] as const;

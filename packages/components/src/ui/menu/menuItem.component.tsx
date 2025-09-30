@@ -15,6 +15,7 @@ import {
   View,
 } from 'react-native';
 
+import { TextProps } from '../../components';
 import {
   FalsyFC,
   FalsyText,
@@ -31,7 +32,6 @@ import {
   StyledComponentProps,
   StyleType,
 } from '../../theme';
-import { TextProps } from '../text/text.component';
 import { MenuItemDescriptor } from './menu.service';
 
 type MenuItemStyledProps = Overwrite<StyledComponentProps, {

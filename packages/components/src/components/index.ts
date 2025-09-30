@@ -1,3 +1,7 @@
+/* Text */
+export { Text } from './Text/Text';
+export { type TextElement, type TextProps } from './Text/types';
+
 /* Buttons */
 export { Button, type ButtonElement, type ButtonProps } from './Button/Button';
 
@@ -23,12 +27,7 @@ export {
 export { List } from './List/List';
 export { type ListElement, type ListProps } from './List/types';
 export { ListItem, type ListItemElement, type ListItemProps } from './List/ListItem';
-/*
- *
- *
- * MeowUI new exports
- *
- * */
+
 /* Layouts */
 export { Center, type CenterElement, type CenterProps } from './Center/Center';
 export { Container, type ContainerElement, type ContainerProps } from './Container/Container';

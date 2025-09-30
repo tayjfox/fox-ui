@@ -20,18 +20,28 @@ interface IListItem {
 
 const data = [
   {
+    title: 'Text',
+    description: 'Text. Self explanatory right?',
+    route: '/elements/text'
+  },
+  {
+    title: 'Divider',
+    description: 'A divider is a thin line.',
+    route: '/elements/divider'
+  },
+  {
     title: 'Top Navigation',
-    description: 'Top navigation bar',
+    description: 'The thing at the top of the screen',
     route: '/elements/top-navigation'
   },
   {
     title: 'Buttons',
-    description: 'Different styles of buttons',
+    description: 'Tappable thingies',
     route: '/elements/button'
   },
   {
     title: 'Button Group',
-    description: 'Group of buttons',
+    description: 'Group of tappable thingies',
     route: '/elements/button/group'
   }
 ];
@@ -72,9 +82,7 @@ export const ListAccessoriesShowcase = (): React.ReactElement => {
 
   return (
     <View className='p-safe h-full'>
-
       <List
-        className='h-full bg-amber-500 flex'
         data={data}
         ItemSeparatorComponent={Divider}
         renderItem={renderItem}

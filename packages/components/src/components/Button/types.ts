@@ -15,9 +15,15 @@ import React, { ReactElement } from 'react';
 
 import { ImageProps } from 'react-native';
 
-import { RenderProp, TouchableWebProps } from '../../devsupport';
-import { TextProps } from '../../ui/text/text.component';
-import { ButtonStatus, Sizes } from '../shared/types';
+import { TextProps } from '../../components';
+import {
+  RenderProp,
+  TouchableWebProps,
+} from '../../devsupport';
+import {
+  ButtonStatus,
+  Sizes,
+} from '../shared/types';
 
 type TouchableWebPropsWithoutChildren = Omit<TouchableWebProps, 'children'>;
 

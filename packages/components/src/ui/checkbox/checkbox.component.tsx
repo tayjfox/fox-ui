@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 import { SvgProps } from 'react-native-svg';
 
+import { TextProps } from '../../components';
 import {
   EvaStatus,
   FalsyText,
@@ -39,7 +40,6 @@ import {
   Minus,
   MinusProps,
 } from '../shared/minus.component';
-import { TextProps } from '../text/text.component';
 
 type CheckBoxStyledProps = Overwrite<StyledComponentProps, {
   appearance?: LiteralUnion<'default' | string>;

@@ -1,37 +1,22 @@
 /**
  * @license
- * Copyright Akveo. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
+ * Copyright (c) 2025 Vedla Labs by Tay Fox. All Rights Reserved.
+ * Originally developed as UI Kitten by Akveo.
+ *
+ * This project is licensed under the MIT License.
+ * See the LICENSE file in the project root for full license information.
+ *
+ * @author Tay Fox <tay@vedla.ca>
+ * @description: A React Native implementation of Eva Design System's Button component.
+ * @since MeowUI 0.1.0
  */
 
 import React from 'react';
 
-import {
-  Text as RNText,
-  TextProps as RNTextProps,
-} from 'react-native';
+import { Text as TextBase } from 'react-native';
 
-import {
-  EvaStatus,
-  LiteralUnion,
-  Overwrite,
-} from '../../devsupport';
-import { StyledComponentProps } from '../../theme';
-
-type TextStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: LiteralUnion<'default' | 'alternative' | 'hint'>;
-}>;
-
-type ChildElement = string | number | TextElement;
-
-export interface TextProps extends RNTextProps, TextStyledProps {
-  children?: ChildElement | ChildElement[];
-  category?: LiteralUnion<'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 's1' | 's2' | 'p1' | 'p2' | 'c1' | 'c2' | 'label'>;
-  className?: string;
-  status?: EvaStatus;
-}
-
-export type TextElement = React.ReactElement<TextProps>;
+import { TextStyle } from './styles';
+import { TextProps } from './types';
 
 /**
  * Basic text writing.
@@ -80,16 +65,25 @@ export type TextElement = React.ReactElement<TextProps>;
  * <Text style={...}>Place your Text</Text>
  * ```
  */
-// @styled('Text')
+
+const TextRN = TextBase as React.ComponentType<TextProps>;
 export class Text extends React.Component<TextProps> {
 
-  public render(): React.ReactElement<RNTextProps> {
-    const { eva, style, ...textProps } = this.props;
+  public render(): React.ReactElement<TextProps> {
+    const { style, appearance, category, status, className, ...textProps } = this.props;
+
+    const TextClassName = TextStyle({
+      class: className,
+      appearance,
+      status,
+      category,
+    });
 
     return (
-      <RNText
+      <TextRN
+        className={TextClassName}
         {...textProps}
-        style={[eva?.style, style]}
+        style={[style]}
       />
     );
   }

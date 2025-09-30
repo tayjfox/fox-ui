@@ -14,6 +14,7 @@ import {
   View,
 } from 'react-native';
 
+import { TextProps } from '../../components';
 import {
   EvaStatus,
   FalsyText,
@@ -30,7 +31,6 @@ import {
   StyledComponentProps,
   StyleType,
 } from '../../theme';
-import { TextProps } from '../text/text.component';
 
 type RadioStyledProps = Overwrite<StyledComponentProps, {
   appearance?: LiteralUnion<'default'>;

@@ -13,6 +13,7 @@ import {
   TargetedEvent,
 } from 'react-native';
 
+import { TextProps } from '../../components';
 import {
   FalsyFC,
   FalsyText,
@@ -29,7 +30,6 @@ import {
   StyledComponentProps,
   StyleType,
 } from '../../theme';
-import { TextProps } from '../text/text.component';
 
 type BottomNavigationTabStyledProps = Overwrite<StyledComponentProps, {
   appearance?: LiteralUnion<'default' | string>;

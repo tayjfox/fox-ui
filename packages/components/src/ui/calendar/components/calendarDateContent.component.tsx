@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+
 import {
   StyleProp,
   StyleSheet,
@@ -12,7 +13,8 @@ import {
   View,
   ViewProps,
 } from 'react-native';
-import { Text } from '../../text/text.component';
+
+import { Text } from '../../../components';
 
 export interface CalendarDateContentProps extends ViewProps {
   textStyle?: StyleProp<TextStyle>;
