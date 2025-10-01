@@ -12,14 +12,20 @@
     "supportsTablet": true,
     "bundleIdentifier": "io.vedla.foxui",
     "buildNumber": "1",
-    "icon": "./src/assets/images/app-icon.png",
+    "icon": "./src/assets/images/fox-ui.icon",
     "config": {
       "usesNonExemptEncryption": false
     }
   },
   "android": {
     "edgeToEdgeEnabled": true,
-    "icon": "./src/assets/images/app-icon.png",
+    "icon": "./src/assets/images/android-icon.png",
+    "adaptiveIcon": {
+      "foregroundImage": "./src/assets/images/android-icon.png",
+      "monochromeImage": "./src/assets/images/android-icon-monochrome.png",
+      "backgroundImage": "./src/assets/images/android-icon-background.png",
+      "backgroundColor": "#5a2c72"
+    },
     "versionCode": 1,
     "package": "io.vedla.foxui"
   },
@@ -39,6 +45,14 @@
   },
   "plugins": [
     "expo-router",
-    "expo-font"
+    "expo-font",
+    [
+      "expo-splash-screen",
+      {
+        "backgroundColor": "#5a2c72",
+        "image": "./src/assets/images/splash.png",
+        "imageWidth": 400
+      }
+    ]
   ]
 }
