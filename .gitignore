@@ -27,6 +27,7 @@ src/showcases/web-build/
 .expo
 dist
 
+*.ipa
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies

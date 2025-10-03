@@ -11,7 +11,6 @@
   "ios": {
     "supportsTablet": true,
     "bundleIdentifier": "io.vedla.foxui",
-    "buildNumber": "1",
     "icon": "./src/assets/images/fox-ui.icon",
     "config": {
       "usesNonExemptEncryption": false
@@ -33,16 +32,7 @@
     "favicon": "./src/assets/images/favicon.png",
     "bundler": "metro"
   },
-  "extra": {
-    "router": {},
-    "eas": {
-      "projectId": "60a6b4cf-adf4-4137-86f6-eefcd1dcc440"
-    }
-  },
   "owner": "vedla",
-  "runtimeVersion": {
-    "policy": "appVersion"
-  },
   "plugins": [
     "expo-router",
     "expo-font",
@@ -50,9 +40,16 @@
       "expo-splash-screen",
       {
         "backgroundColor": "#5a2c72",
-        "image": "./src/assets/images/splash.png",
-        "imageWidth": 400
+        "image": "./src/assets/images/splash-logo.png",
+        "imageWidth": 120
       }
-    ]
-  ]
+    ],
+    "expo-web-browser"
+  ],
+  "extra": {
+    "router": {},
+    "eas": {
+      "projectId": "60a6b4cf-adf4-4137-86f6-eefcd1dcc440"
+    }
+  }
 }

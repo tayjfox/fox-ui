@@ -1,0 +1,39 @@
+{
+  "cli": {
+    "version": ">= 16.19.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "base": {
+      "node": "22.19.0",
+      "yarn": "4.9.4",
+      "corepack": true
+    },
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "node": "22.19.0",
+      "yarn": "4.9.4",
+      "corepack": true
+    },
+    "simulator": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "node": "22.19.0",
+      "yarn": "4.9.4",
+      "corepack": true
+    },
+    "production": {
+      "autoIncrement": true
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

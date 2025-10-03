@@ -18,9 +18,12 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   return (
     <ThemeProvider>
+
+
       <SafeAreaProvider>
         <AppLayout />
       </SafeAreaProvider>
+
     </ThemeProvider>
   );
 }
@@ -53,12 +56,13 @@ export function AppLayout() {
 
 function AppProviders() {
 
-  const SCREEN_OPTIONS = { headerShown: true } as const;
+  const SCREEN_OPTIONS = { headerShown: true, headerBackButtonDisplayMode: "minimal" } as const;
 
   return (
     <View className="h-full flex-1">
       <Stack screenOptions={SCREEN_OPTIONS}>
-        <Stack.Screen name="(tabs)" />
+        <Stack.Screen name="index" />
+        <Stack.Screen name="demos" />
         <Stack.Screen name="elements" />
 
       </Stack>
