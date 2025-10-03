@@ -31,12 +31,27 @@ export {
 
 /* List */
 export { List } from './List/List';
-export { type ListElement, type ListProps } from './List/types';
-export { ListItem, type ListItemElement, type ListItemProps } from './List/ListItem';
+export { ListItem } from './List/ListItem';
+export { ListSectionHeader } from './List/ListSectionHeader';
+export {
+  type ListElement,
+  type ListItemElement,
+  type ListItemProps,
+  type ListProps,
+  type ListSectionHeaderElement,
+  type ListSectionHeaderProps,
+} from './List/types';
 
 /* Layouts */
-export { Center, type CenterElement, type CenterProps } from './Center/Center';
-export { Container, type ContainerElement, type ContainerProps } from './Container/Container';
-export { HStack, type HStackElement, type HStackProps } from './HStack/HStack';
-export { View, type ViewElement, type ViewProps } from './View/View';
-export { VStack, type VStackElement, type VStackProps } from './VStack/VStack';
+export { Layout } from './Layout/Layout';
+export { type LayoutElement, type LayoutProps } from './Layout/types';
+export { Center } from './Center/Center';
+export { type CenterElement, type CenterProps } from './Center/types';
+export { Container } from './Container/Container';
+export { type ContainerElement, type ContainerProps } from './Container/types';
+export { HStack } from './HStack/HStack';
+export { type HStackElement, type HStackProps } from './HStack/types';
+export { View } from './View/View';
+export { type ViewElement, type ViewProps } from './View/types';
+export { VStack } from './VStack/VStack';
+export { type VStackElement, type VStackProps } from './VStack/types';

@@ -16,10 +16,11 @@ import {
   TouchableWebProps,
 } from '../../devsupport';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export interface ListProps<ItemT = any> extends FlashListProps<ItemT> {
+export interface ListProps<ItemT = any> extends Omit<FlashListProps<ItemT>, 'data'> {
   className?: string;
   ref?: React.Ref<FlashListRef<ItemT>>;
+  sectionHeaderItem?: ({ item, index }: { item: any; index: number }) => React.ReactElement | null;
+  data: ItemT[] | any[];
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -55,3 +56,7 @@ export interface ListItemProps extends TouchableWebProps {
 }
 
 export type ListItemElement = React.ReactElement<ListProps>;
+
+export interface ListSectionHeaderProps extends ListItemProps {}
+
+export type ListSectionHeaderElement = React.ReactElement<ListProps>;

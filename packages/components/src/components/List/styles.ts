@@ -24,3 +24,19 @@ export const DescriptionStyle = tv({
 export const IconStyle = tv({
   base: 'w-6 h-6 mx-2 text-basic-600 fill-basic-600',
 });
+
+export const HeaderStyle = tv({
+  base: `${baseStyle}  px-2 py-2 bg-basic-200`,
+});
+
+export const HeaderTitleStyle = tv({
+  base: 'mx-2 text-sm font-semibold text-basic-600 text-left',
+});
+
+export const HeaderDescriptionStyle = tv({
+  base: 'mx-2 text-left text-xs font-normal text-basic-500',
+});
+
+export const HeaderIconStyle = tv({
+  base: 'w-5 h-5 mx-2 text-basic-500 fill-basic-500',
+});

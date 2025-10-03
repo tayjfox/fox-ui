@@ -13,6 +13,7 @@ import {
   IconElement,
   List,
   ListItem,
+  ListSectionHeader,
 } from '@fox-ui/components';
 
 interface IListItem {
@@ -21,31 +22,66 @@ interface IListItem {
   route: string
 }
 
-const data = [
+
+
+const dataSection = [
   {
-    title: 'Text',
-    description: 'Text. Self explanatory right?',
-    route: '/elements/text'
+    title: "Global",
+    items: [
+      {
+        title: 'Layout',
+        description: 'Separate content with hirarchy.',
+        route: '/components/global/layout'
+      },
+      {
+        title: 'Text',
+        description: 'Text. Self explanatory right?',
+        route: '/components/global/text'
+      },
+      {
+        title: 'Divider',
+        description: 'A divider is a thin line.',
+        route: '/components/global/divider'
+      },
+      {
+        title: 'Icon',
+        description: 'Icons are used to enhance the UI.',
+        route: '/components/global/icon'
+      },
+      {
+        title: 'Card',
+        description: 'Cards are used to display content.',
+        route: '/components/global/card'
+      }, {
+        title: 'List',
+        description: 'List renders a scrollable list of items.',
+        route: '/components/global/list'
+      },
+    ]
   },
   {
-    title: 'Divider',
-    description: 'A divider is a thin line.',
-    route: '/elements/divider'
+    title: "Navigation",
+    items: [
+      {
+        title: 'Top Navigation',
+        description: 'The thing at the top of the screen',
+        route: '/components/navigation/top-navigation'
+      }]
   },
   {
-    title: 'Top Navigation',
-    description: 'The thing at the top of the screen',
-    route: '/elements/top-navigation'
-  },
-  {
-    title: 'Buttons',
-    description: 'Tappable thingies',
-    route: '/elements/button'
-  },
-  {
-    title: 'Button Group',
-    description: 'Group of tappable thingies',
-    route: '/elements/button/group'
+    title: "Form",
+    items: [
+      {
+        title: 'Buttons',
+        description: 'Tappable thingies',
+        route: '/components/form/button'
+      },
+      {
+        title: 'Button Group',
+        description: 'Group of tappable thingies',
+        route: '/components/form/button/group'
+      }
+    ]
   }
 ];
 
@@ -88,12 +124,20 @@ export const ListAccessoriesShowcase = (): React.ReactElement => {
     />
   );
 
+  const titleItem = ({ item, index }: { item: IListItem; index: number }): React.ReactElement => {
+
+    return (
+      <ListSectionHeader title={item.title} />
+    )
+  };
+
   return (
     <View className='p-safe h-full'>
       <List
-        data={data}
+        data={dataSection}
         ItemSeparatorComponent={Divider}
         renderItem={renderItem}
+        sectionHeaderItem={titleItem}
       />
     </View>
   );

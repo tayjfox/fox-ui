@@ -5,29 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "radon-ide",
-      "request": "launch",
-      "name": "Radon IDE",
-      "appRoot": "./apps/meow-demo",
-      "env": {},
-      "ios": {
-        "configuration": "Debug"
-      },
-      "android": {
-        "buildType": "debug"
-      }
+      "type": "expo",
+      "request": "attach",
+      "name": "Debug Expo app",
+      "projectRoot": "${workspaceFolder}/apps/meow-demo",
+      "bundlerPort": "8081",
+      "bundlerHost": "127.0.0.1"
     },
-    {
-      "type": "radon-ide",
-      "request": "launch",
-      "name": "Radon IDE panel",
-      "env": {},
-      "ios": {
-        "configuration": "Debug"
-      },
-      "android": {
-        "buildType": "debug"
-      }
-    }
   ]
 }

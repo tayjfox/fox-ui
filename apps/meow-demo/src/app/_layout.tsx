@@ -63,7 +63,7 @@ function AppProviders() {
       <Stack screenOptions={SCREEN_OPTIONS}>
         <Stack.Screen name="index" />
         <Stack.Screen name="demos" />
-        <Stack.Screen name="elements" />
+        <Stack.Screen name="components" />
 
       </Stack>
 

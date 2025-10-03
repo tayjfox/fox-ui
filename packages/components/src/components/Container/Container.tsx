@@ -17,8 +17,6 @@ import { View } from 'react-native';
 import { ContainerStyle } from './styles';
 import { ContainerProps } from './types';
 
-export { type ContainerElement, type ContainerProps } from './types';
-
 /**
  * Overall page container.
  *

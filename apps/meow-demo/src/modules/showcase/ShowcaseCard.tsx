@@ -9,7 +9,7 @@ import {
 
 import { ShowcaseCardProps } from './types';
 
-const ShowcaseCard = (props: ShowcaseCardProps): React.ReactElement => {
+export const ShowcaseCard = (props: ShowcaseCardProps): React.ReactElement => {
 
   const { title, description, children } = props;
   return (

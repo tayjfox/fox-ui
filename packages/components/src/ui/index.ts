@@ -73,7 +73,6 @@ export {
 } from './select/selectItem.component';
 
 export { Input, type InputElement, type InputProps } from './input/input.component';
-export { Layout, type LayoutElement, type LayoutProps } from './layout/layout.component';
 
 export { Menu, type MenuElement, type MenuProps } from './menu/menu.component';
 export { MenuGroup, type MenuGroupElement, type MenuGroupProps } from './menu/menuGroup.component';
