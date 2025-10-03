@@ -26,3 +26,5 @@ src/showcases/web-build/
 
 .expo
 dist
+
+.vscode/mcp.json
