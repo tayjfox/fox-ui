@@ -1,93 +1,86 @@
+# FoxUI (A UI-Kitten Fork) [![npm][badge:license]]()
 
-# UI Kitten [<img src="https://i.imgur.com/oMcxwZ0.png" alt="Eva Design System" height="20px" />][link:eva] [![npm][badge:license]]() [![Build Status][badge:github-actions]][link:github-actions] [![Coverage Status][badge:coveralls]][link:coveralls]
 
-[Documentation][link:doc-homepage]
+<img src="apps/meow-demo/src/assets/images/splash-logo.png" alt="foxUI Logo" width="200"/>
 
-UI Kitten is a React Native UI Library that allows you creating stunning multi-brand cross-platform mobile applications.
+#### Developed by:
+
+Me! @tayjfox under
+<img src="https://mydinosaurlife.com/img/logo-vedla.svg" alt="foxUI Logo" width="120"/>
+
+
+### Work in Progress · Not Stable
+
+FoxUI is still in **early development**. I don't recommend using it in any project just yet.
+Docs and examples will roll out as things settle. So… stay tuned!
+
+---
+
+## Beyond Eva Design
+
+UI-Kitten was tightly coupled with the Eva Design System. While that gave us a neat way to create custom themes, it wasn't exactly friendly when you wanted to bring in third-party components. (Yes, custom mapping was a thing—but honestly, who had the time?)
+
+FoxUI takes a modern approach. At its core, Tailwind gives you powerful, familiar theming options while keeping components flexible enough to play nice with whatever styling method you prefer—styled components, utility classes, or even an old-school stylesheet if that's your vibe.
+
+That flexibility also lets FoxUI step outside React Native. You can use it with other React frameworks like Next.js or Vite too (though fair warning: not every component is available there… yet).
+
+FoxUI also introduces a modular approach. Pull in the full package, or cherry-pick just the components you need to keep your bundle light.
+
+And while the foundation would be (almost) completely rewritten, the goal is to make migration painless. With ```foxui-cli```, you can even convert your existing Eva themes into Tailwind-compatible ones*.
+
+*Some manual tweaks may still be needed.
+
+## Compatibility & Roadmap
+
+The first release will ship with all the same components as UI-Kitten, fully rewritten for modern React Native.
+
+However, the RN ecosystem has moved a lot since UI-Kitten last saw love. Future FoxUI releases will deprecate some legacy components while introducing fresh ones. (Version 1 will already sneak in a few new goodies.)
+
+I'll support all "UI-Kitten era" components until June 2027. After that, they'll still work, but I won't patch or maintain them. You're totally welcome to fork and fix stuff though. I'll happily merge contributions if they keep things running.
+
+### Why bother keeping UI-Kitten alive?
+
+Because… why not?
+
+But for real—when I first picked up React Native, UI-Kitten was the library I went with. At the time, a lot of the other options were either outdated or basically abandoned. UI-Kitten stuck around, and I got comfortable with it.
+
+Fast forward a bit: I was working on an app that used UI-Kitten, but the frontend was built in Next.js with Tailwind. To keep things consistent, I hacked UI-Kitten to play nice with Tailwind and a Tailwind theme.
+
+At some point I realized… I was already doing most of the heavy lifting. So why not clean it up, polish it, and put it out into the world as something new?
+
+
+
+---
+### This section comes from the original UI-Kitten docs:
+
+UI-Kitten is a React Native UI Library that allows you creating stunning multi-brand cross-platform mobile applications.
 The library is based on Eva Design System which brings consistency and scalability in the design and development process.
 It contains a set of general purpose UI components styled in a similar way.
 And the most awesome thing: the themes can be changed in the runtime, with no need to reload the application.
 
 100% Free and Open Source!
 
-![link:doc-homepage](https://user-images.githubusercontent.com/1452064/115417233-212a0100-a201-11eb-8bcf-0a60cca2e081.png)
-
-Need professional support? Visit [Akveo's React Native](https://www.akveo.com/services/mobile-application-development/react-native) experts to scale your solutions.
-
 ## What's included
 
-- **25+ general-purpose components** designed and tested to save your time.
-
-- **Comprehensive clear documentation** with the tons of examples.
-
-- **Theming System -** Use Light and modern Dark themes and create your own.
-
-- **SVG Eva Icons support -** 480+ general purpose icons
-
-- **Eva Design System Support -** Construct an interface using basic components following Eva specifications and it will always have a stunning design.
-
-## Starter App
-
-**Kitten Tricks** – [react-native starter kit][link:kitten-tricks] allows you to boost the development of a mobile app.
-There is a huge variety of customizable layouts, use “as is” or add new blocks.
-
-**Over 40 screens in dark and light themes** give you the possibility to create a bright and exclusive app while saving your time on compiling numerous details.  Also, you can download the source code and use it for your own benefit.
+- **Right now?** not much.
 
 ## Quick Start
 
-Start a new app with UI Kitten template from a scratch:
-
-```bash
-npx react-native init MyApp --template @ui-kitten/template-js
-```
-
-Or, if you want to init with TypeScript:
-
-```bash
-npx react-native init MyApp --template @ui-kitten/template-ts
-```
-
-This will setup a new React Native application configured with UI Kitten.
-Refer to the [Documentation][link:doc-where-start] for more options to start.
-
-## UI Bakery
-
-Need to quickly build an admin panel for your mobile app? Check out UI builder [UI Bakery](https://uibakery.io).
-
-<a href="https://uibakery.io"><img src="https://storage.uibakery.io/video-assets/landing/Logo/UIB%20400x150.png" height="80" /></a>
+Soon™
 
 ## How can I support the developers?
-- Star our GitHub repo :star:
-- Create pull requests, submit bugs, suggest new features or documentation updates :wrench:
-- Read us on [Medium][link:akveo-medium]
-- Follow us on [Twitter][link:akveo-twitter]
-- Like our page on [Facebook][link:akveo-facebook]
+- Send coffee
 
 ## License
 [MIT](LICENSE.txt) license.
 
-## More from Akveo
-- [Eva Icons][link:eva-icons] - 480+ beautiful Open Source icons
-
 ## From Developers
-Made with :heart: by [Akveo team][link:akveo-homepage]. Follow us on [Twitter][link:akveo-twitter] to get the latest news first!
-We're always happy to receive your feedback!
+Forked from UI-Kitten :heart: by [Akveo team][link:akveo-homepage]. Follow them on [Twitter][link:akveo-twitter] to get the latest news first!
+
+Contact me with any questions at code@vedla.ca
 
 [badge:license]: https://img.shields.io/npm/l/react-native-ui-kitten.svg
-[badge:github-actions]: https://github.com/akveo/react-native-ui-kitten/workflows/Build/badge.svg
-[badge:coveralls]: https://coveralls.io/repos/github/akveo/react-native-ui-kitten/badge.svg?branch=master
 
-[link:eva]: https://eva.design?utm_campaign=eva_design%20-%20home%20-%20ui_kitten%20github&utm_source=ui_kitten&utm_medium=referral&utm_content=kitten_github_readme
-[link:github-actions]: https://github.com/akveo/react-native-ui-kitten/actions
-[link:coveralls]: https://coveralls.io/github/akveo/react-native-ui-kitten?branch=master
-[link:doc-homepage]: https://akveo.github.io/react-native-ui-kitten?utm_campaign=ui_kitten%20-%20home%20-%20ui_kitten%20github%20readme&utm_source=ui_kitten&utm_medium=referral&utm_content=homepage_link
-[link:doc-where-start]: https://akveo.github.io/react-native-ui-kitten/docs/getting-started/where-to-start?utm_campaign=ui_kitten%20-%20home%20-%20ui_kitten%20github%20readme&utm_source=ui_kitten&utm_medium=referral&utm_content=where_to_start_docs_link
-[link:kitten-tricks]: https://github.com/akveo/kittenTricks
-[link:eva-icons]: https://github.com/akveo/eva-icons
-[link:akveo-homepage]: https://www.akveo.com?utm_campaign=services%20-%20homepage%20-%20ui_kitten%20github%20readme&utm_source=ui_kitten&utm_medium=referral&utm_content=ui_kitten_readme
-[link:akveo-medium]: https://medium.com/akveo-engineering
+[link:akveo-homepage]: https://www.akveo.com
+
 [link:akveo-twitter]: https://twitter.com/akveo
-[link:akveo-facebook]: https://www.facebook.com/akveo
-[link:ui-kitten-bundles]: https://store.akveo.com/collections/mobile-bundles?utm_campaign=akveo_store%20-%20mobile%20bundles%20-%20ui_kitten%20github%20readme&utm_source=ui_kitten&utm_medium=banner&utm_content=mobile_bundles_banner
-[link:ui-kitten-bundle-java]: https://store.akveo.com/products/java-mobile-starter-bundle?utm_campaign=akveo_store%20-%20mobile%20bundles%20-%20ui_kitten%20github%20readme&utm_source=ui_kitten&utm_medium=referral&utm_content=java_bundle_link
-[link:ui-kitten-bundle-dotnet-core]: https://store.akveo.com/products/net-core-mobile-starter-bundle?utm_campaign=akveo_store%20-%20mobile%20bundles%20-%20ui_kitten%20github%20readme&utm_source=ui_kitten&utm_medium=referral&utm_content=dotnet_bundle_link
