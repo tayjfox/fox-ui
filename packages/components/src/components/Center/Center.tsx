@@ -7,7 +7,7 @@
  *
  * @author Tay Fox <tay@vedla.ca>
  * @description: A React Native implementation of a Center component.
- * @since MeowUI 0.1.0
+ * @since foxUI 1.0.0
  */
 
 import React from 'react';

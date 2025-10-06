@@ -1,7 +1,7 @@
 # FoxUI (A UI-Kitten Fork) [![npm][badge:license]]()
 
 
-<img src="apps/meow-demo/src/assets/images/splash-logo.png" alt="foxUI Logo" width="200"/>
+<img src="apps/foxui-demo/src/assets/images/splash-logo.png" alt="foxUI Logo" width="200"/>
 
 #### Developed by:
 
