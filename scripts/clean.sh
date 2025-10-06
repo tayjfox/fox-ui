@@ -1,4 +1,4 @@
-rm -rf .cache .turbo dist node_modules || echo "Warning: Failed to remove directories"
+rm -rf .cache .nx dist node_modules || echo "Warning: Failed to remove directories"
 echo "Finished removing directories"
 
 # Remove all node_modules directories recursively in subfolders
