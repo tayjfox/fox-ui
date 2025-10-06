@@ -12,7 +12,7 @@
       "cache": false,
       "persistent": true
     },
-     "ios": {
+    "ios": {
       "cache": false,
       "persistent": true
     },
@@ -30,5 +30,4 @@
     "VERCEL_URL",
     "npm_lifecycle_event"
   ]
-
 }

@@ -12,6 +12,8 @@
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
     "ios": "turbo run ios",
+    "storybook": "cd apps/storybook && cross-env EXPO_PUBLIC_STORYBOOK_ENABLED='true' expo start",
+    "storybook:ios": "cd apps/storybook && cross-env EXPO_PUBLIC_STORYBOOK_ENABLED='true' expo start --ios",
     "turbo:clean": "turbo run clean && rm -rf node_modules"
   },
   "resolutions": {
@@ -23,11 +25,12 @@
     "typescript": "~5.9.2"
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "prettier": "^3.6.2",
     "turbo": "^2.5.8",
     "workspace-root": "^3.3.1"
   },
-  "packageManager": "yarn@4.9.4",
+  "packageManager": "yarn@4.10.3",
   "engines": {
     "node": ">=22"
   }

@@ -7,33 +7,53 @@
     "base": {
       "node": "22.19.0",
       "yarn": "4.9.4",
-      "corepack": true
+      "corepack": true,
+      "android": {
+        "image": "auto",
+        "env": {
+          "PLATFORM": "android"
+        }
+      },
+      "ios": {
+        "image": "latest",
+        "env": {
+          "PLATFORM": "ios"
+        }
+      }
     },
     "development": {
+      "extends": "base",
       "developmentClient": true,
       "distribution": "internal",
-      "node": "22.19.0",
-      "yarn": "4.9.4",
-      "corepack": true
+      "env": {
+        "ENVIRONMENT": "development"
+      }
     },
     "simulator": {
+      "extends": "base",
       "developmentClient": true,
       "distribution": "internal",
+      "env": {
+        "ENVIRONMENT": "development"
+      },
       "ios": {
         "simulator": true
       }
     },
     "preview": {
+      "extends": "base",
       "distribution": "internal",
-      "node": "22.19.0",
-      "yarn": "4.9.4",
-      "corepack": true
+      "corepack": true,
+      "env": {
+        "ENVIRONMENT": "preview"
+      }
     },
     "production": {
-      "autoIncrement": true
+      "extends": "base",
+      "autoIncrement": true,
+      "env": {
+        "ENVIRONMENT": "production"
+      }
     }
-  },
-  "submit": {
-    "production": {}
   }
 }

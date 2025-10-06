@@ -41,7 +41,7 @@
       {
         "backgroundColor": "#5a2c72",
         "image": "./src/assets/images/splash-logo.png",
-        "imageWidth": 120
+        "imageWidth": 235
       }
     ],
     "expo-web-browser"
