@@ -1,7 +1,7 @@
 # FoxUI (A UI-Kitten Fork) [![npm][badge:license]]()
 
 
-<img src="https://github.com/tayjfox/react-native-ui-kitten/raw/nativewind-5/apps/meow-demo/src/assets/images/splash-logo.png" alt="foxUI Logo" width="200"/>
+<img src="apps/foxui-demo/src/assets/images/splash-logo.png" alt="foxUI Logo" width="200"/>
 
 #### Developed by:
 
@@ -81,6 +81,17 @@ Contact me with any questions at code@vedla.ca
 
 [badge:license]: https://img.shields.io/npm/l/react-native-ui-kitten.svg
 
+[link:eva]: https://eva.design
+[link:github-actions]: https://github.com/akveo/react-native-ui-kitten/actions
+[link:coveralls]: https://coveralls.io/github/akveo/react-native-ui-kitten?branch=master
+[link:doc-homepage]: https://akveo.github.io/react-native-ui-kitten
+[link:doc-where-start]: https://akveo.github.io/react-native-ui-kitten/docs/getting-started/where-to-start
+[link:kitten-tricks]: https://github.com/akveo/kittenTricks
+[link:eva-icons]: https://github.com/akveo/eva-icons
 [link:akveo-homepage]: https://www.akveo.com
-
+[link:akveo-medium]: https://medium.com/akveo-engineering
 [link:akveo-twitter]: https://twitter.com/akveo
+[link:akveo-facebook]: https://www.facebook.com/akveo
+[link:ui-kitten-bundles]: https://store.akveo.com/collections/mobile-bundles
+[link:ui-kitten-bundle-java]: https://store.akveo.com/products/java-mobile-starter-bundle
+[link:ui-kitten-bundle-dotnet-core]: https://store.akveo.com/products/net-core-mobile-starter-bundle

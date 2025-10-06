@@ -1,0 +1,31 @@
+{
+  "version": "5.3.1",
+  "description": "UI Kitten config for Metro Bundler",
+  "homepage": "https://github.com/akveo/react-native-ui-kitten#readme",
+  "bugs": {
+    "url": "https://github.com/akveo/react-native-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akveo/react-native-ui-kitten.git"
+  },
+  "license": "MIT",
+  "author": "akveo <contact@akveo.com>",
+  "bin": {
+    "ui-kitten": "./bin/ui-kitten"
+  },
+  "devDependencies": {
+    "@eva-design/dss": "*",
+    "@eva-design/processor": "*",
+    "@types/lodash.merge": "ts3.7",
+    "chalk": "5.6.2",
+    "commander": "14.0.1",
+    "lodash.merge": "^4.6.2"
+  },
+  "peerDependencies": {
+    "metro-config": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
