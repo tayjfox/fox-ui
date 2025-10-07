@@ -1,0 +1,27 @@
+{
+  "name": "@fox-ui/date-fns",
+  "version": "5.3.1",
+  "description": "date-fns services for UI Kitten",
+  "keywords": [
+    "react-native",
+    "ui-kitten",
+    "date-fns"
+  ],
+  "homepage": "https://github.com/akveo/react-native-ui-kitten#readme",
+  "bugs": {
+    "url": "https://github.com/akveo/react-native-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akveo/react-native-ui-kitten.git"
+  },
+  "license": "MIT",
+  "author": "akveo <contact@akveo.com>",
+  "sideEffects": false,
+  "devDependencies": {
+    "date-fns": "4.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

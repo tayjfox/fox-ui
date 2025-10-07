@@ -1,0 +1,59 @@
+{
+  "cli": {
+    "version": ">= 16.19.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "base": {
+      "node": "22.19.0",
+      "yarn": "4.9.4",
+      "corepack": true,
+      "android": {
+        "image": "auto",
+        "env": {
+          "PLATFORM": "android"
+        }
+      },
+      "ios": {
+        "image": "latest",
+        "env": {
+          "PLATFORM": "ios"
+        }
+      }
+    },
+    "development": {
+      "extends": "base",
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "ENVIRONMENT": "development"
+      }
+    },
+    "simulator": {
+      "extends": "base",
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "ENVIRONMENT": "development"
+      },
+      "ios": {
+        "simulator": true
+      }
+    },
+    "preview": {
+      "extends": "base",
+      "distribution": "internal",
+      "corepack": true,
+      "env": {
+        "ENVIRONMENT": "preview"
+      }
+    },
+    "production": {
+      "extends": "base",
+      "autoIncrement": true,
+      "env": {
+        "ENVIRONMENT": "production"
+      }
+    }
+  }
+}

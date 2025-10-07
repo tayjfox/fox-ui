@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "strict": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@ui-kitten/*": [
+        "../../packages/*"
+      ],
+      "@kitten/*": [
+        "../../packages/components/*"
+      ]
+    }
+  },
+  "exclude": [
+    "./node_modules",
+    "build",
+    "dist",
+  ],
+  "extends": "expo/tsconfig.base",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "nativewind-env.d.ts",
+  ]
+}

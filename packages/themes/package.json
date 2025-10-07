@@ -1,0 +1,12 @@
+{
+  "name": "@fox-ui/themes",
+  "version": "2.2.0",
+  "description": "Eva Design System",
+  "homepage": "https://github.com/eva-design/eva#readme",
+  "bugs": {
+    "url": "https://github.com/eva-design/eva/issues"
+  },
+  "repository": "git+https://github.com/eva-design/eva.git",
+  "license": "MIT",
+  "author": "akveo <contact@akveo.com>"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@fox-ui/components",
+  "version": "1.0.0",
+  "description": "React Native components based on Eva Design System",
+  "dependencies": {
+    "@eva-design/dss": "*",
+    "@eva-design/processor": "*",
+    "fecha": "4.2.3",
+    "hoist-non-react-statics": "^3.3.2",
+    "lodash.merge": "^4.6.2",
+    "tailwind-merge": "3.3.1",
+    "tailwind-variants": "3.1.1",
+    "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "tsup": "8.5.0"
+  },
+  "peerDependencies": {
+    "@fox-ui/typescript-config": "*",
+    "@shopify/flash-list": ">2.0.0",
+    "@types/hoist-non-react-statics": "^3.3.7",
+    "nativewind": "^5.0.0-preview.1",
+    "react": ">=19.0.0",
+    "react-dom": ">=19.1.0",
+    "react-native": ">=0.70.0",
+    "react-native-reanimated": ">=4.1.0",
+    "react-native-svg": ">=15.12.1",
+    "react-native-web": ">=0.21.1"
+  }
+}
