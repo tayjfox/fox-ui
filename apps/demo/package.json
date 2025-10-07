@@ -76,7 +76,7 @@
   "devDependencies": {
     "@babel/core": "^7.28.4",
     "@babel/runtime": "^7.28.4",
-    "@fox-ui/typescript-config": "*",
+    "@fox-ui/tsconfig": "*",
     "@tailwindcss/postcss": "^4.1.14",
     "@types/hoist-non-react-statics": "^3.3.7",
     "@types/react": "~19.1.10",
