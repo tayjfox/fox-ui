@@ -3,7 +3,7 @@ import React from 'react';
 import {
   Button,
   HStack,
-} from '@fox-ui/components';
+} from '@fox-ui/components-legacy';
 
 export const ButtonAppearancesShowcase = (): React.ReactElement => (
   <HStack alignment='center' distribution='start' gap="sm">

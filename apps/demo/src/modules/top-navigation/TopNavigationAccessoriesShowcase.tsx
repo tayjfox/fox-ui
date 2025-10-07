@@ -11,8 +11,8 @@ import {
   OverflowMenu,
   TopNavigation,
   TopNavigationAction,
-} from '@fox-ui/components';
-import { TouchableWebElement } from '@fox-ui/components/src/devsupport';
+} from '@fox-ui/components-legacy';
+import { TouchableWebElement } from '@fox-ui/components-legacy/src/devsupport';
 
 const BackIcon = (props: IconProps): IconElement => (
   <Icon

@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native';
 import {
   Icon,
   IconElement,
-} from '@fox-ui/components';
+} from '@fox-ui/components-legacy';
 
 export const IconSimpleUsageShowcase = (): IconElement => (
   <Icon

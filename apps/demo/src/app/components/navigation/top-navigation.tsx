@@ -11,7 +11,7 @@ import {
   Container,
   List,
   Text,
-} from '@fox-ui/components';
+} from '@fox-ui/components-legacy';
 
 export default function TopNavigationScreen() {
   const navigation = useNavigation();

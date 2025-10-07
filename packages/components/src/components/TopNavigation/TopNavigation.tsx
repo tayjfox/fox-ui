@@ -97,7 +97,7 @@ type AlignmentProp = 'start' | 'center';
  *
  * In most cases, this is redundant, if [custom theme is configured](guides/branding).
  * ```
- * import { TopNavigation, Text } from '@fox-ui/components';
+ * import { TopNavigation, Text } from '@fox-ui/components-legacy';
  *
  * <TopNavigation
  *   title={evaProps => <Text {...evaProps}>Title</Text>}

@@ -63,7 +63,7 @@ interface State {
  * It should be rendered **once**, to provide Eva styles for nested components.
  * ```
  * import React from 'react';
- * import { ApplicationProvider, Layout, Text } from '@fox-ui/components';
+ * import { ApplicationProvider, Layout, Text } from '@fox-ui/components-legacy';
  * import * as eva from '@eva-design/eva';
  *
  * export default () => (
@@ -80,7 +80,7 @@ interface State {
  * to provide a highly customizable, design system based application.
  * ```
  * import React from 'react';
- * import { ApplicationProvider, IconRegistry, Layout, Text } from '@fox-ui/components';
+ * import { ApplicationProvider, IconRegistry, Layout, Text } from '@fox-ui/components-legacy';
  * import { EvaIconsPack } from '@fox-ui/icons';
  * import * as eva from '@eva-design/eva';
  *

@@ -14,7 +14,7 @@ import {
   List,
   ListItem,
   ListSectionHeader,
-} from '@fox-ui/components';
+} from '@fox-ui/components-legacy';
 
 interface IListItem {
   title: string;

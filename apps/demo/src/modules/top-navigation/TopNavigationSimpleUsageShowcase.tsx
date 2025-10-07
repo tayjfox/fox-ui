@@ -6,7 +6,7 @@ import {
   IconProps,
   TopNavigation,
   TopNavigationAction,
-} from '@fox-ui/components';
+} from '@fox-ui/components-legacy';
 
 const BackIcon = (props: IconProps): IconElement => (
   <Icon

@@ -198,7 +198,7 @@ const CHEVRON_ANIM_DURATION = 200;
  * @overview-example SelectStyling
  * Select and it's inner views can be styled by passing them as function components.
  * ```
- * import { Select, SelectItem, Text } from '@fox-ui/components';
+ * import { Select, SelectItem, Text } from '@fox-ui/components-legacy';
  *
  * <Select
  *   label={evaProps => <Text {...evaProps}>Label</Text>}

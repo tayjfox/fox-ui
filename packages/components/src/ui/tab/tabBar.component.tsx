@@ -69,7 +69,7 @@ export type TabBarElement = React.ReactElement<TabBarProps>;
  * import React from 'react';
  * import { NavigationContainer } from '@react-navigation/native';
  * import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
- * import { TabBar, Tab, Layout, Text } from '@fox-ui/components';
+ * import { TabBar, Tab, Layout, Text } from '@fox-ui/components-legacy';
  *
  * const { Navigator, Screen } = createMaterialTopTabNavigator();
  *
@@ -114,7 +114,7 @@ export type TabBarElement = React.ReactElement<TabBarProps>;
  * @overview-example TabStyling
  * Tab and it's inner views can be styled by passing them as function components.
  * ```
- * import { Tab, Text } from '@fox-ui/components';
+ * import { Tab, Text } from '@fox-ui/components-legacy';
  *
  * <Tab
  *   title={evaProps => <Text {...evaProps}>USERS</Text>}

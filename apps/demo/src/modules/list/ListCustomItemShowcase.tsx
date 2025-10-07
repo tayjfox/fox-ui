@@ -10,7 +10,7 @@ import {
   Card,
   List,
   Text,
-} from '@fox-ui/components';
+} from '@fox-ui/components-legacy';
 
 const data = new Array(8).fill({
   title: 'Item',

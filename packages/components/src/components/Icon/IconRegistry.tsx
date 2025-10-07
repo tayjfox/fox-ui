@@ -37,7 +37,7 @@ export interface IconRegistryProps {
  * ```
  * import React from 'react';
  * import * as eva from '@eva-design/eva';
- * import { ApplicationProvider, IconRegistry, Layout, Text, Icon, Button } from '@fox-ui/components';
+ * import { ApplicationProvider, IconRegistry, Layout, Text, Icon, Button } from '@fox-ui/components-legacy';
  * import { EvaIconsPack } from '@fox-ui/icons'; // <-- Make sure it is installed. npm i @fox-ui/icons
  *
  * const LikeIcon = (props) => (

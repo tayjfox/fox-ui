@@ -128,7 +128,7 @@ export type InputElement = React.ReactElement<InputProps>;
  * @overview-example InputStyling
  * Input and it's inner views can be styled by passing them as function components.
  * ```
- * import { Input, Text } from '@fox-ui/components';
+ * import { Input, Text } from '@fox-ui/components-legacy';
  *
  * <Input
  *   textStyle={{ ... }}

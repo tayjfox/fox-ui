@@ -60,7 +60,7 @@ import { TextProps } from './types';
  * Text can be styled with `style` property.
  * In most cases this is redundant, if [custom theme is configured](guides/branding).
  * ```
- * import { Text } from '@fox-ui/components';
+ * import { Text } from '@fox-ui/components-legacy';
  *
  * <Text style={...}>Place your Text</Text>
  * ```

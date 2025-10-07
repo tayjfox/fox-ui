@@ -1,5 +1,5 @@
 {
-  "name": "@fox-ui/components",
+  "name": "@fox-ui/components-legacy",
   "version": "1.0.0",
   "description": "React Native components based on Eva Design System",
   "dependencies": {

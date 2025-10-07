@@ -9,7 +9,7 @@ import {
   Icon,
   IconElement,
   IconProps,
-} from '@fox-ui/components';
+} from '@fox-ui/components-legacy';
 
 export const IconAnimationShowcase = (): React.ReactElement => {
 

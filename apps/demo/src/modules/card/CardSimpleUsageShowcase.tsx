@@ -3,7 +3,7 @@ import React from 'react';
 import {
   Card,
   Text,
-} from '@fox-ui/components';
+} from '@fox-ui/components-legacy';
 
 export const CardSimpleUsageShowcase = (): React.ReactElement => (
   <Card>

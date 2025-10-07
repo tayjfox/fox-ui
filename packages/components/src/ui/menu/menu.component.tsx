@@ -101,7 +101,7 @@ export type MenuElement = React.ReactElement<MenuProps>;
  * @overview-example MenuStyling
  * Menu and it's inner views can be styled by passing them as function components.
  * ```
- * import { MenuItem, Text } from '@fox-ui/components';
+ * import { MenuItem, Text } from '@fox-ui/components-legacy';
  *
  * <MenuItem
  *   title={evaProps => <Text {...evaProps}>USERS</Text>}>

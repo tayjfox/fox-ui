@@ -11,7 +11,7 @@ import {
 import {
   Container,
   List,
-} from '@fox-ui/components';
+} from '@fox-ui/components-legacy';
 
 export default function DividerScreen() {
   const navigation = useNavigation();

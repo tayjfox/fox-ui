@@ -6,7 +6,7 @@ import {
   Layout,
   Text,
   View,
-} from '@fox-ui/components';
+} from '@fox-ui/components-legacy';
 
 export const LayoutLevelShowcase = (): React.ReactElement => (
   <View>

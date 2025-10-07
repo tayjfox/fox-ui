@@ -13,7 +13,7 @@ import {
   IconProps,
   Spinner,
   View,
-} from '@fox-ui/components';
+} from '@fox-ui/components-legacy';
 
 const StarIcon = (props: IconProps): IconElement => {
 

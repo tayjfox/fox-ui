@@ -4,7 +4,7 @@ import {
   Divider,
   Text,
   VStack,
-} from '@fox-ui/components';
+} from '@fox-ui/components-legacy';
 
 export const DividerHightShowcase = (): React.ReactElement => (
   <VStack >

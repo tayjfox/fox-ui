@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native';
 
-import { Text } from '@fox-ui/components';
+import { Text } from '@fox-ui/components-legacy';
 
 export const TextCategoriesShowcase = (): React.ReactElement => (
   <>

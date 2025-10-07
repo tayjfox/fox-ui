@@ -101,7 +101,7 @@ export type CheckBoxElement = React.ReactElement<CheckBoxProps>;
  * @overview-example CheckboxStyling
  * CheckBox and it's inner views can be styled by passing them as function components.
  * ```
- * import { CheckBox, Text } from '@fox-ui/components';
+ * import { CheckBox, Text } from '@fox-ui/components-legacy';
  *
  * <CheckBox>
  *   {evaProps => <Text {...evaProps}>Place your Text</Text>}

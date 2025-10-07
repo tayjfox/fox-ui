@@ -7,10 +7,7 @@
 import dateFnsFormat from 'date-fns/format';
 import dateFnsParse from 'date-fns/parse';
 
-import {
-  NativeDateService,
-  NativeDateServiceOptions,
-} from '@fox-ui/components';
+import { NativeDateService, NativeDateServiceOptions } from '@fox-ui/components-legacy';
 
 export interface DateFnsOptions extends NativeDateServiceOptions {
   parseOptions?: {
