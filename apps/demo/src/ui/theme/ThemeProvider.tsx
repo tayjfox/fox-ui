@@ -16,7 +16,7 @@ import {
 import {
   ApplicationProvider,
   IconRegistry,
-} from '@fox-ui/components-legacy';
+} from '@fox-ui/components';
 import { EvaIconsPack } from '@fox-ui/icons';
 import * as eva from '@fox-ui/themes';
 

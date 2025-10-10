@@ -8,13 +8,14 @@ import { View } from 'react-native';
 
 import {
   Button,
+  Container,
   Divider,
   Icon,
   IconElement,
   List,
   ListItem,
   ListSectionHeader,
-} from '@fox-ui/components-legacy';
+} from '@fox-ui/components';
 
 interface IListItem {
   title: string;
@@ -130,6 +131,13 @@ export const ListAccessoriesShowcase = (): React.ReactElement => {
       <ListSectionHeader title={item.title} />
     )
   };
+
+  return (
+    <View className='p-safe h-full pt-15'>
+      <Container>
+        <Button onPress={() => { console.log('Back pressed'); }}>I am a button</Button>
+      </Container>
+    </View>);
 
   return (
     <View className='p-safe h-full'>

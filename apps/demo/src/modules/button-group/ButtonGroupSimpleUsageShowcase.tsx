@@ -7,7 +7,7 @@ import {
   ButtonGroup,
   Layout,
   Text,
-} from '@fox-ui/components-legacy';
+} from '@fox-ui/components';
 
 export const ButtonGroupSimpleUsageShowcase = (): React.ReactElement => {
 

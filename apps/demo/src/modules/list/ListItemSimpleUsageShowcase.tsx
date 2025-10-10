@@ -9,7 +9,7 @@ import {
   Avatar,
   Button,
   ListItem,
-} from '@fox-ui/components-legacy';
+} from '@fox-ui/components';
 
 const InstallButton = (): React.ReactElement => (
   <Button size='tiny'>

@@ -12,7 +12,7 @@ import {
   HStack,
   Text,
   VStack,
-} from '@fox-ui/components-legacy';
+} from '@fox-ui/components';
 
 export const DividerSimpleUsageShowcase = (): React.ReactElement => (
   <View>

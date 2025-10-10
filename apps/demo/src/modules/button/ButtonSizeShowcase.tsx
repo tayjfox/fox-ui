@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native';
 import {
   Button,
   Layout,
-} from '@fox-ui/components-legacy';
+} from '@fox-ui/components';
 
 export const ButtonSizeShowcase = (): React.ReactElement => {
   const styles = StyleSheet.create({

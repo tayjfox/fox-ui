@@ -1,0 +1,10 @@
+{
+  "aliases": {
+    "": "src",
+
+    "button": "src/Button",
+    "text": "src/Text",
+    "touchable": "src/Touchable",
+    "renderable": "src/Renderable"
+  }
+}

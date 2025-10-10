@@ -11,7 +11,7 @@ import {
   Card,
   Layout,
   Text,
-} from '@fox-ui/components-legacy';
+} from '@fox-ui/components';
 
 const Header = (props: ViewProps = {}): React.ReactElement => (
   <View {...props}>

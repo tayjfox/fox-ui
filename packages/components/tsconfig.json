@@ -1,44 +1,19 @@
 {
-  // "extends": "@fox-ui/tsconfig/react-native-library",
+  "extends": "@fox-ui/tsconfig/react-native-library",
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "dist",
+    "build",
+    "node_modules"
+  ],
   "compilerOptions": {
-    "outDir": "./dist/tsc-out",
-    "baseUrl": ".",
-    "declaration": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "jsx": "preserve",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noImplicitAny": true,
-    "noEmit": true,
     "strict": true,
-    "target": "esnext",
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
     "paths": {
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@/dev/*": [
-        "./src/devsupport/*"
-      ],
-      "@theme/*": [
-        "./src/theme/*"
-      ],
       "@/*": [
         "./src/*"
       ]
     }
-  },
-  "include": [
-    "./src",
-  ],
-  "exclude": [
-    "node_modules",
-    "nativewind-env.d.ts"
-  ]
+  }
 }

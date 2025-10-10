@@ -6,7 +6,7 @@ import {
   Card,
   Layout,
   Text,
-} from '@fox-ui/components-legacy';
+} from '@fox-ui/components';
 
 export const CardStatusesShowcase = (): React.ReactElement => (
   <Layout

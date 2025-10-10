@@ -11,7 +11,7 @@ import {
   IconElement,
   IconProps,
   Layout,
-} from '@fox-ui/components-legacy';
+} from '@fox-ui/components';
 
 export const IconThemingShowcase = (): React.ReactElement => {
 

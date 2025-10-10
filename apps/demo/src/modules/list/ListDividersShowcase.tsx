@@ -6,7 +6,7 @@ import {
   Divider,
   List,
   ListItem,
-} from '@fox-ui/components-legacy';
+} from '@fox-ui/components';
 
 interface IListItem {
   title: string;

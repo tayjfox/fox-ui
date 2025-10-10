@@ -4,6 +4,8 @@
 
 @import 'nativewind/theme';
 
+/* @source './app/'; */
+@source './../../../legacy-packages/components/src/';
 @source './../../../packages/components/src/';
 
 @theme {

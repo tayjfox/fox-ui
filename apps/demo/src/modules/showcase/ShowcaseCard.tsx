@@ -5,7 +5,7 @@ import { View } from 'react-native';
 import {
   Card,
   Text,
-} from '@fox-ui/components-legacy';
+} from '@fox-ui/components';
 
 import { ShowcaseCardProps } from './types';
 

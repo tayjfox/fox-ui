@@ -8,7 +8,7 @@ import {
   IconElement,
   List,
   ListItem,
-} from '@fox-ui/components-legacy';
+} from '@fox-ui/components';
 
 interface IListItem {
   title: string;

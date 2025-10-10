@@ -2,29 +2,61 @@
   "name": "@fox-ui/components",
   "version": "1.0.0",
   "description": "React Native components based on Eva Design System",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    },
+    "./button": {
+      "import": "./src/Button/index.ts",
+      "types": "./dist/Button/index.d.ts",
+      "require": "./src/Button/index.cjs",
+      "default": "./src/Button/index.ts"
+    },
+    "./text": {
+      "import": "./src/Text/index.ts",
+      "types": "./dist/Text/index.d.ts",
+      "require": "./src/Text/index.cjs",
+      "default": "./src/Text/index.ts"
+    },
+    "./Renderable": {
+      "import": "./src/Renderable/index.ts",
+      "types": "./dist/Renderable/index.d.ts",
+      "require": "./src/Renderable/index.cjs",
+      "default": "./src/Renderable/index.ts"
+    },
+    "./touchable": {
+      "import": "./src/Touchable/index.ts",
+      "types": "./dist/Touchable/index.d.ts",
+      "require": "./src/Touchable/index.cjs",
+      "default": "./src/Touchable/index.ts"
+    }
+  },
+  "main": "./src/index.tsx",
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist",
+    "dev": "tsup --watch"
+  },
   "dependencies": {
-    "@eva-design/dss": "*",
-    "@eva-design/processor": "*",
     "fecha": "4.2.3",
-    "hoist-non-react-statics": "^3.3.2",
-    "lodash.merge": "^4.6.2",
-    "tailwind-merge": "3.3.1",
-    "tailwind-variants": "3.1.1",
-    "tailwindcss": "^4.1.14"
+    "hoist-non-react-statics": "^3.3.2"
   },
   "devDependencies": {
     "tsup": "8.5.0"
   },
   "peerDependencies": {
-    "@fox-ui/tsconfig": "*",
+    "@fox-ui/utils": "*",
     "@shopify/flash-list": ">2.0.0",
     "@types/hoist-non-react-statics": "^3.3.7",
-    "nativewind": "^5.0.0-preview.1",
     "react": ">=19.0.0",
     "react-dom": ">=19.1.0",
     "react-native": ">=0.70.0",
     "react-native-reanimated": ">=4.1.0",
     "react-native-svg": ">=15.12.1",
-    "react-native-web": ">=0.21.1"
+    "react-native-web": ">=0.21.1",
+    "tailwindcss": "^4.1.14"
   }
 }

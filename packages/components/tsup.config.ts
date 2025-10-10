@@ -1,32 +1,31 @@
-import {
-  defineConfig,
-  Options,
-} from 'tsup';
+import { defineConfig } from 'tsup';
 
-export default defineConfig((options: Options) => ({
-  entry: {
-    index: './src/components/index.ts',
-  },
+export default defineConfig({
+  entry: [
+    './src/index.ts',
+    './src/Button/index.ts',
+    './src/Text/index.ts',
+    './src/Renderable/index.ts',
+    './src/Touchable/index.ts',
+  ],
   banner: {
     js: "'use client'",
   },
   clean: true,
   format: ['cjs', 'esm'],
-  external: [
-    'react',
-    'expo-router',
-    '@ui-kitten',
-    '@eva-design/eva',
-    'react-native-markdown-display',
+  outDir: 'dist',
+  splitting: false,
 
-    // Node built-ins (forcefully mark them external)
-    'process',
-    'util',
-    'readline',
-    'tty',
-    'fs',
-    'path',
-  ],
+  noExternal: [],
+  external: ['*'],
+
   dts: true,
-  ...options,
-}));
+  loader: {
+    '.js': 'jsx',
+    '.ts': 'tsx',
+    '.tsx': 'tsx',
+    '.svg': 'file',
+  },
+
+  watch: ['src', './src/**/*.ts', './src/**/*.tsx', './src/**/*.js', './src/**/*.jsx'],
+});
