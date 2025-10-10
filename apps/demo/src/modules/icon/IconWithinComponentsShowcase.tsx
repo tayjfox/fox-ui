@@ -10,15 +10,17 @@ import {
   Icon,
   IconElement,
   IconProps,
+  Layout,
+} from '@fox-ui/components';
+import {
   IndexPath,
   Input,
-  Layout,
   MenuItem,
   OverflowMenu,
   Select,
   SelectItem,
   Tooltip,
-} from '@fox-ui/components';
+} from '@fox-ui/components-legacy';
 
 const StarIcon = (props: IconProps): IconElement => (
   <Icon

@@ -4,10 +4,10 @@ import { StyleSheet } from 'react-native';
 
 import {
   Button,
-  ButtonGroup,
   Layout,
   Text,
 } from '@fox-ui/components';
+import { ButtonGroup } from '@fox-ui/components-legacy';
 
 export const ButtonGroupSimpleUsageShowcase = (): React.ReactElement => {
 

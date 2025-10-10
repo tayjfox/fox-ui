@@ -20,22 +20,29 @@ export { Divider } from './Divider';
 export { type DividerElement, type DividerProps } from './Divider/types';
 
 // /* Icons */
-export { Icon, type IconElement, type IconProps } from './Icon/Icon';
-export { type IconPack, type IconProvider, type Icons } from './Icon/types';
-export { IconRegistry, type IconRegistryProps } from './Icon/IconRegistry';
-export { type IconRegistryElement } from './Icon/IconRegistryService';
+export * from './Icon';
+export {
+  type IconElement,
+  type IconPack,
+  type IconProps,
+  type IconProvider,
+  type IconRegistryElement,
+  type IconRegistryProps,
+  type Icons,
+} from './Icon/types';
 
 /* TopNavigation */
-// export {
-//   TopNavigation,
-//   type TopNavigationElement,
-//   type TopNavigationProps,
-// } from './TopNavigation/TopNavigation';
-// export {
-//   TopNavigationAction,
-//   type TopNavigationActionElement,
-//   type TopNavigationActionProps,
-// } from './TopNavigation/TopNavigationAction';
+export {
+  TopNavigation,
+  type TopNavigationElement,
+  type TopNavigationProps,
+} from './TopNavigation/TopNavigation';
+export {
+  TopNavigationAction,
+  type TopNavigationActionElement,
+  type TopNavigationActionProps,
+} from './TopNavigation/TopNavigationAction';
+
 // /* List */
 export { List } from './List/List';
 export { ListItem } from './List/ListItem';

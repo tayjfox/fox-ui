@@ -5,14 +5,14 @@ import {
   ViewProps,
 } from 'react-native';
 
-import { IconPack } from '@fox-ui/components';
-
 import {
-  AnimationConfig,
   getIconAnimation,
   IconAnimation,
   IconAnimationRegistry,
-} from './animation';
+  IconPack,
+} from '@fox-ui/components';
+import { AnimationConfig } from '@fox-ui/utils';
+
 import { createIconsMap } from './createIconsMap';
 import { SvgProps } from './EvaIcon';
 import {

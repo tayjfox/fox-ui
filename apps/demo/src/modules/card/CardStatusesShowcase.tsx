@@ -3,10 +3,10 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 
 import {
-  Card,
   Layout,
   Text,
 } from '@fox-ui/components';
+import { Card } from '@fox-ui/components-legacy';
 
 export const CardStatusesShowcase = (): React.ReactElement => (
   <Layout

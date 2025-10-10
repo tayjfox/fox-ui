@@ -1,13 +1,7 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: [
-    './src/index.ts',
-    './src/Button/index.ts',
-    './src/Text/index.ts',
-    './src/Renderable/index.ts',
-    './src/Touchable/index.ts',
-  ],
+  entry: ['./src/index.ts', './src/*/index.ts'],
   banner: {
     js: "'use client'",
   },

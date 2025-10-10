@@ -8,7 +8,6 @@ import { View } from 'react-native';
 
 import {
   Button,
-  Container,
   Divider,
   Icon,
   IconElement,
@@ -132,12 +131,12 @@ export const ListAccessoriesShowcase = (): React.ReactElement => {
     )
   };
 
-  return (
-    <View className='p-safe h-full pt-15'>
-      <Container>
-        <Button onPress={() => { console.log('Back pressed'); }}>I am a button</Button>
-      </Container>
-    </View>);
+  // return (
+  //   <View className='p-safe h-full pt-15'>
+  //     <Container>
+  //       <Button onPress={() => { console.log('Back pressed'); }}>I am a button</Button>
+  //     </Container>
+  //   </View>);
 
   return (
     <View className='p-safe h-full'>

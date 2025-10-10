@@ -13,6 +13,31 @@
 
 import React from 'react';
 
+import {
+  Animated,
+  View,
+} from 'react-native';
+
+import { AnimationConfig } from '@fox-ui/utils';
+
+import { IconAnimationRegistry } from './IconAnimation';
+
+// This is basically needed to avoid generics in required props
+// In general, could be SVGProps if using @fox-ui/eva-icons or ImageProps if using Image.
+
+type WrappedElementProps = any;
+
+export type IconProps<T = WrappedElementProps> = T & {
+  name: string;
+  pack?: string;
+  style?: Animated.WithAnimatedValue<React.ComponentProps<any>['style']>;
+  className?: string;
+  animation?: keyof IconAnimationRegistry | null;
+  animationConfig?: AnimationConfig;
+};
+
+export type IconElement<T = WrappedElementProps> = React.ReactElement<IconProps<T>>;
+
 export interface Icons<T> {
   [key: string]: IconProvider<T>;
 }
@@ -25,3 +50,15 @@ export interface IconPack<T> {
 export interface IconProvider<T> {
   toReactElement(props?: T): React.ReactElement<T>;
 }
+
+export type IconsProp = IconPack<unknown> | IconPack<unknown>[];
+export type IconRegistryElement = React.ReactElement<IconRegistryProps>;
+
+export interface IconRegistryProps {
+  icons: IconsProp;
+  defaultIcons?: string;
+}
+
+export type AnimatedViewProps = React.ComponentProps<typeof View> & {
+  className?: string;
+};

@@ -11,21 +11,10 @@
  * @since foxUI 1.0.0
  */
 
-import React from 'react';
-
 import {
   IconPack,
   IconProvider,
 } from './types';
-
-type IconsProp = IconPack<unknown> | IconPack<unknown>[];
-
-export interface IconRegistryProps {
-  icons: IconsProp;
-  defaultIcons?: string;
-}
-
-export type IconRegistryElement = React.ReactElement<IconRegistryProps>;
 
 function throwPackNotFoundError(name: string): void {
   const docRoot = 'https://akveo.github.io/react-native-ui-kitten/docs';

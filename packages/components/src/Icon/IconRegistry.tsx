@@ -14,14 +14,11 @@
 import React from 'react';
 
 import { IconRegistryService } from './IconRegistryService';
-import { IconPack } from './types';
-
-type IconsProp = IconPack<unknown> | IconPack<unknown>[];
-
-export interface IconRegistryProps {
-  icons: IconsProp;
-  defaultIcons?: string;
-}
+import {
+  IconPack,
+  IconRegistryProps,
+  IconsProp,
+} from './types';
 
 /**
  * Registers one or more icon packs for later usage in Icon component.

@@ -4,12 +4,12 @@ import { StyleSheet } from 'react-native';
 
 import {
   Button,
-  ButtonGroup,
   Icon,
   IconElement,
   IconProps,
   Layout,
 } from '@fox-ui/components';
+import { ButtonGroup } from '@fox-ui/components-legacy';
 
 const StarIcon = (props: IconProps): IconElement => (
   <Icon

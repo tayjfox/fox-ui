@@ -6,13 +6,13 @@ import {
 } from 'react-native';
 
 import {
-  Avatar,
   Button,
   Divider,
   HStack,
   Text,
   VStack,
 } from '@fox-ui/components';
+import { Avatar } from '@fox-ui/components-legacy';
 
 export const DividerSimpleUsageShowcase = (): React.ReactElement => (
   <View>

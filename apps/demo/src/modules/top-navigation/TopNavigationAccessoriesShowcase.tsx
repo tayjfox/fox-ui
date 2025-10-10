@@ -7,12 +7,14 @@ import {
   IconElement,
   IconProps,
   Layout,
-  MenuItem,
-  OverflowMenu,
   TopNavigation,
   TopNavigationAction,
+  TouchableWebElement,
 } from '@fox-ui/components';
-import { TouchableWebElement } from '@fox-ui/components/src/devsupport';
+import {
+  MenuItem,
+  OverflowMenu,
+} from '@fox-ui/components-legacy';
 
 const BackIcon = (props: IconProps): IconElement => (
   <Icon

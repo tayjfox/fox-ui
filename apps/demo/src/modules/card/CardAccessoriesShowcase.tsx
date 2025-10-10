@@ -8,10 +8,10 @@ import {
 
 import {
   Button,
-  Card,
   Layout,
   Text,
 } from '@fox-ui/components';
+import { Card } from '@fox-ui/components-legacy';
 
 const Header = (props: ViewProps = {}): React.ReactElement => (
   <View {...props}>

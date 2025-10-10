@@ -9,41 +9,11 @@
       "require": "./dist/index.cjs",
       "default": "./dist/index.js"
     },
-    "./Button": {
-      "import": "./src/Button/index.ts",
-      "types": "./dist/Button/index.d.ts",
-      "require": "./src/Button/index.cjs",
-      "default": "./src/Button/index.ts"
-    },
-    "./Text": {
-      "import": "./src/Text/index.ts",
-      "types": "./dist/Text/index.d.ts",
-      "require": "./src/Text/index.cjs",
-      "default": "./src/Text/index.ts"
-    },
-    "./Renderable": {
-      "import": "./src/Renderable/index.ts",
-      "types": "./dist/Renderable/index.d.ts",
-      "require": "./src/Renderable/index.cjs",
-      "default": "./src/Renderable/index.ts"
-    },
-    "./Touchable": {
-      "import": "./src/Touchable/index.ts",
-      "types": "./dist/Touchable/index.d.ts",
-      "require": "./src/Touchable/index.cjs",
-      "default": "./src/Touchable/index.ts"
-    },
-    "./Icon": {
-      "import": "./src/Icon/index.ts",
-      "types": "./dist/Icon/index.d.ts",
-      "require": "./src/Icon/index.cjs",
-      "default": "./src/Icon/index.ts"
-    },
-    "./Layout": {
-      "import": "./src/Layout/index.ts",
-      "types": "./dist/Layout/index.d.ts",
-      "require": "./src/Layout/index.cjs",
-      "default": "./src/Layout/index.ts"
+    "./*": {
+      "import": "./src/*/index.ts",
+      "types": "./dist/*/index.d.ts",
+      "require": "./src/*/index.cjs",
+      "default": "./src/*/index.ts"
     }
   },
   "main": "./src/index.tsx",

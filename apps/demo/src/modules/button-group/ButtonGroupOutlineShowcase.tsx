@@ -7,9 +7,9 @@ import {
 
 import {
   Button,
-  ButtonGroup,
   Layout,
 } from '@fox-ui/components';
+import { ButtonGroup } from '@fox-ui/components-legacy';
 
 export const ButtonGroupOutlineShowcase = (): React.ReactElement => (
   <Layout

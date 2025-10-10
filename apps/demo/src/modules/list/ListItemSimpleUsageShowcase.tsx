@@ -6,10 +6,10 @@ import {
 } from 'react-native';
 
 import {
-  Avatar,
   Button,
   ListItem,
 } from '@fox-ui/components';
+import { Avatar } from '@fox-ui/components-legacy';
 
 const InstallButton = (): React.ReactElement => (
   <Button size='tiny'>

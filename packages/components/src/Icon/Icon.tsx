@@ -11,33 +11,20 @@ import {
   View,
 } from 'react-native';
 
-import { AnimationConfig } from '@fox-ui/utils';
-
 import {
   getIconAnimation,
   IconAnimation,
-  IconAnimationRegistry,
 } from './IconAnimation';
 import {
   IconRegistryService,
   RegisteredIcon,
 } from './IconRegistryService';
-
 // This is basically needed to avoid generics in required props
 // In general, could be SVGProps if using @fox-ui/eva-icons or ImageProps if using Image.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type WrappedElementProps = any;
-
-export type IconProps<T = WrappedElementProps> = T & {
-  name: string;
-  pack?: string;
-  style?: Animated.WithAnimatedValue<React.ComponentProps<any>['style']>;
-  className?: string;
-  animation?: keyof IconAnimationRegistry | null;
-  animationConfig?: AnimationConfig;
-};
-
-export type IconElement<T = WrappedElementProps> = React.ReactElement<IconProps<T>>;
+import type {
+  AnimatedViewProps,
+  IconProps,
+} from './types';
 
 /**
  * Animated Icon component.
@@ -83,17 +70,13 @@ export type IconElement<T = WrappedElementProps> = React.ReactElement<IconProps<
  * In most cases this is redundant, if [custom theme is configured](guides/branding).
  */
 
-
-type AnimatedViewProps = React.ComponentProps<typeof View> & {
-  className?: string;
-};
-
 const AnimatedViewBase = Animated.createAnimatedComponent(View) as React.ComponentType<Animated.AnimatedProps<AnimatedViewProps>>;
 
 export const AnimatedView: React.FC<AnimatedViewProps> = ({ className, ...rest }) => {
 
   return <AnimatedViewBase {...rest} className={className} />;
 };
+
 export class Icon<T> extends React.Component<IconProps<T>> {
   static defaultProps: Partial<IconProps> = {
     animation: 'zoom',
