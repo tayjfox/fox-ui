@@ -14,7 +14,7 @@ import {
   ViewProps,
 } from 'react-native';
 
-import { Text } from '../../../components';
+import { Text } from '@fox-ui/components';
 
 export interface CalendarDateContentProps extends ViewProps {
   textStyle?: StyleProp<TextStyle>;

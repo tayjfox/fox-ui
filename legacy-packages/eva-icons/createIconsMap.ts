@@ -1,5 +1,9 @@
-import { IconProvider } from '../components';
-import { EvaIcon, SvgProps } from './EvaIcon';
+import { IconProvider } from '@fox-ui/components';
+
+import {
+  EvaIcon,
+  SvgProps,
+} from './EvaIcon';
 import { findIconByName } from './icons';
 import NotFound from './icons/NotFound';
 

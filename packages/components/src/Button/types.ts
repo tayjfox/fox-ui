@@ -16,10 +16,9 @@ import React, { ReactElement } from 'react';
 import { ImageProps } from 'react-native';
 
 import { RenderProp } from '@/Renderable';
+import { ButtonStatus, Sizes } from '@/shared/types';
 import { TextProps } from '@/Text';
 import { TouchableWebProps } from '@/Touchable';
-
-import { ButtonStatus, Sizes } from '../shared/types';
 
 type TouchableWebPropsWithoutChildren = Omit<TouchableWebProps, 'children'>;
 

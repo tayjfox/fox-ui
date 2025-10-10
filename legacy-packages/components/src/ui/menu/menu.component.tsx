@@ -11,12 +11,13 @@ import {
   ListRenderItemInfo,
 } from 'react-native';
 
-import { Divider } from '../../components/Divider/Divider';
 import {
+  Divider,
   List,
   ListElement,
   ListProps,
-} from '../../components/List/List';
+} from '@fox-ui/components';
+
 import {
   ChildrenWithProps,
   IndexPath,

@@ -13,7 +13,8 @@ import {
   ViewProps,
 } from 'react-native';
 
-import { Divider } from '../../components/Divider/Divider';
+import { Divider } from '@fox-ui/components';
+
 import {
   EvaStatus,
   FalsyFC,

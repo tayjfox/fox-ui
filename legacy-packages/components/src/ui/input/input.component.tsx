@@ -21,7 +21,8 @@ import {
   ViewStyle,
 } from 'react-native';
 
-import { TextProps } from '../../components';
+import { TextProps } from '@fox-ui/components';
+
 import {
   EvaSize,
   EvaStatus,

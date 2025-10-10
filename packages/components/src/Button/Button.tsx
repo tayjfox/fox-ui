@@ -17,12 +17,12 @@ import {
   Renderable,
   RenderableText,
 } from '@/Renderable';
+import { PressState } from '@/shared/types';
 import {
   TouchableWeb,
   TouchableWebElement,
 } from '@/Touchable';
 
-import { PressState } from '../shared/types';
 import {
   AccesoriesVariants,
   ButtonStyle,

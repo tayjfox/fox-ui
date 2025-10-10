@@ -3,7 +3,8 @@ import React from 'react';
 import {
   Text,
   TextProps,
-} from '../components';
+} from '@fox-ui/components';
+
 import { RenderProp } from './FalsyFC';
 
 export interface FalsyTextProps extends Omit<TextProps, 'children'> {

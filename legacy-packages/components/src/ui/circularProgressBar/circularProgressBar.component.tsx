@@ -16,8 +16,11 @@ import {
   ViewStyle,
 } from 'react-native';
 
-import { Text } from '../../components';
-import { IconProps } from '../../components/Icon/Icon';
+import {
+  IconProps,
+  Text,
+} from '@fox-ui/components';
+
 import {
   EvaSize,
   EvaStatus,

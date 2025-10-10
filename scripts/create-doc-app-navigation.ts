@@ -1,6 +1,6 @@
+import { pascalCase } from 'change-case';
 import * as fs from 'fs';
 import * as path from 'path';
-import { pascalCase } from 'change-case';
 
 interface ShowcaseMap {
   [componentName: string]: ComponentShowcase;
@@ -29,15 +29,27 @@ export const createDocAppNavigation = (showcasePath: string): string => {
     return { ...map, [component]: createComponentShowcase(showcasePath, component) };
   }, {});
 
-  const showcaseRouteMap: ShowcaseRouteMap = Object.keys(showcaseMap).reduce((routes, component: string) => {
-    const componentShowcaseRouteMap: ShowcaseRouteMap = createShowcaseRouteMap(showcaseMap, component);
-    return { ...routes, ...componentShowcaseRouteMap };
-  }, {});
+  const showcaseRouteMap: ShowcaseRouteMap = Object.keys(showcaseMap).reduce(
+    (routes, component: string) => {
+      const componentShowcaseRouteMap: ShowcaseRouteMap = createShowcaseRouteMap(
+        showcaseMap,
+        component
+      );
+      return { ...routes, ...componentShowcaseRouteMap };
+    },
+    {}
+  );
 
-  const importStatements: string[] = Object.keys(showcaseMap).reduce((statements, component: string) => {
-    const componentImportStatements: string[] = createShowcaseImportStatements(showcaseMap, component);
-    return [...statements, componentImportStatements.join('\n')];
-  }, []);
+  const importStatements: string[] = Object.keys(showcaseMap).reduce(
+    (statements, component: string) => {
+      const componentImportStatements: string[] = createShowcaseImportStatements(
+        showcaseMap,
+        component
+      );
+      return [...statements, componentImportStatements.join('\n')];
+    },
+    []
+  );
 
   const routesStatement: string = createRoutesStatement(showcaseRouteMap);
 
@@ -46,7 +58,9 @@ export const createDocAppNavigation = (showcasePath: string): string => {
 
 const createShowcaseRouteMap = (map: ShowcaseMap, component: string): ShowcaseRouteMap => {
   return map[component].showcases.reduce((componentShowcases, showcaseInfo: ShowcaseInfo) => {
-    const container = showcaseInfo.name.endsWith(`ThemingShowcase`) ? 'ShowcaseThemingIFrame' : 'ShowcaseIFrame';
+    const container = showcaseInfo.name.endsWith(`ThemingShowcase`)
+      ? 'ShowcaseThemingIFrame'
+      : 'ShowcaseIFrame';
     const showcaseScreenStatement = `() => ${container}(${showcaseInfo.name}, '${showcaseInfo.routeName}')`;
     return { ...componentShowcases, [showcaseInfo.routeName]: showcaseScreenStatement };
   }, {});
@@ -55,27 +69,34 @@ const createShowcaseRouteMap = (map: ShowcaseMap, component: string): ShowcaseRo
 const createShowcaseImportStatements = (map: ShowcaseMap, component: string): string[] => {
   return map[component].showcases.map((showcaseInfo: ShowcaseInfo): string => {
     const platformComponentPath: string = path.parse(showcaseInfo.path).name;
-    return `import { ${showcaseInfo.name} } from '../components/${component}/${platformComponentPath}';`;
+    return `import { ${showcaseInfo.name} } from '@fox-ui/components/${component}/${platformComponentPath}';`;
   });
 };
 
 const createComponentShowcase = (showcasePath: string, component: string): ComponentShowcase => {
   const showcaseFiles: string[] = fs.readdirSync(path.resolve(showcasePath, component));
 
-  return showcaseFiles.reduce((showcaseAcc: ComponentShowcase, showcaseFile: string) => {
-    const routeName: string = pascalCase(`${showcaseFile.split('.component.tsx')[0]}`);
-    const showcaseInfo: ShowcaseInfo = { name: `${routeName}Showcase`, routeName, path: showcaseFile };
-    return { ...showcaseAcc, showcases: [...showcaseAcc.showcases, showcaseInfo] };
-  }, { showcases: [] });
+  return showcaseFiles.reduce(
+    (showcaseAcc: ComponentShowcase, showcaseFile: string) => {
+      const routeName: string = pascalCase(`${showcaseFile.split('.component.tsx')[0]}`);
+      const showcaseInfo: ShowcaseInfo = {
+        name: `${routeName}Showcase`,
+        routeName,
+        path: showcaseFile,
+      };
+      return { ...showcaseAcc, showcases: [...showcaseAcc.showcases, showcaseInfo] };
+    },
+    { showcases: [] }
+  );
 };
 
 const createOutput = (imports: string[], statements: string[]): string => {
   return [
-    'import React from \'react\';',
-    'import { createBrowserApp } from \'@react-navigation/web\';',
-    'import { createStackNavigator } from \'react-navigation-stack\';',
-    'import { ShowcaseIFrame } from \'../components/showcaseIFrame.component\';',
-    'import { ShowcaseThemingIFrame } from \'../components/showcaseThemingIFrame.component\';',
+    "import React from 'react';",
+    "import { createBrowserApp } from '@react-navigation/web';",
+    "import { createStackNavigator } from 'react-navigation-stack';",
+    "import { ShowcaseIFrame } from '../components/showcaseIFrame.component';",
+    "import { ShowcaseThemingIFrame } from '../components/showcaseThemingIFrame.component';",
     ...imports,
     '',
     ...statements,

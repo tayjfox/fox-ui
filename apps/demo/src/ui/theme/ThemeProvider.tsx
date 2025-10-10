@@ -13,10 +13,8 @@ import {
   ThemeProps,
   ThemesVariants,
 } from '@/types';
-import {
-  ApplicationProvider,
-  IconRegistry,
-} from '@fox-ui/components';
+import { IconRegistry } from '@fox-ui/components';
+import { ApplicationProvider } from '@fox-ui/components-legacy';
 import { EvaIconsPack } from '@fox-ui/icons';
 import * as eva from '@fox-ui/themes';
 

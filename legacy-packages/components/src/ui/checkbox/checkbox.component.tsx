@@ -15,7 +15,8 @@ import {
 } from 'react-native';
 import { SvgProps } from 'react-native-svg';
 
-import { TextProps } from '../../components';
+import { TextProps } from '@fox-ui/components';
+
 import {
   EvaStatus,
   FalsyText,

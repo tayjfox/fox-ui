@@ -5,7 +5,8 @@ import {
   ViewProps,
 } from 'react-native';
 
-import { IconPack } from '../components';
+import { IconPack } from '@fox-ui/components';
+
 import {
   AnimationConfig,
   getIconAnimation,

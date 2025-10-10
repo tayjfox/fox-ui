@@ -6,7 +6,8 @@
 
 import React from 'react';
 
-import { TextProps } from '../../components';
+import { TextProps } from '@fox-ui/components';
+
 import { RenderProp } from '../../devsupport';
 import { styled } from '../../theme';
 import {

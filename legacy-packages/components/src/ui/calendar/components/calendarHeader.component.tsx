@@ -17,10 +17,11 @@ import {
 import { SvgProps } from 'react-native-svg';
 
 import {
+  Button,
   Text,
   TextProps,
-} from '../../../components';
-import { Button } from '../../../components/Button/Button';
+} from '@fox-ui/components';
+
 import { RTLService } from '../../../devsupport';
 import {
   ChevronDown,
