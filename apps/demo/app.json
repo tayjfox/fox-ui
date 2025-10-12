@@ -1,16 +1,16 @@
 {
   "name": "Fox UI",
   "description": "A Demo React Native fox UI based application",
-  "slug": "foxui",
+  "slug": "kitsui",
   "version": "1.0.0",
-  "scheme": "foxui",
+  "scheme": "kitsui",
   "orientation": "portrait",
   "icon": "./src/assets/images/app-icon.png",
   "newArchEnabled": true,
   "userInterfaceStyle": "automatic",
   "ios": {
     "supportsTablet": true,
-    "bundleIdentifier": "io.vedla.foxui",
+    "bundleIdentifier": "io.vedla.kitsui",
     "icon": "./src/assets/images/fox-ui.icon",
     "config": {
       "usesNonExemptEncryption": false
@@ -26,7 +26,7 @@
       "backgroundColor": "#5a2c72"
     },
     "versionCode": 1,
-    "package": "io.vedla.foxui"
+    "package": "io.vedla.kitsui"
   },
   "web": {
     "favicon": "./src/assets/images/favicon.png",

@@ -8,15 +8,12 @@
  *
  * @author Tay Fox <tay@vedla.ca>
  * @description: A React Native implementation of Eva Design System's Button component.
- * @since foxUI 1.0.0
+ * @since kitsUI 1.0.0
  */
 
 import React from 'react';
 
-import {
-  Animated,
-  View,
-} from 'react-native';
+import { Animated, View } from 'react-native';
 
 import { AnimationConfig } from '@fox-ui/utils';
 

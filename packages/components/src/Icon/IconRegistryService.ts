@@ -8,13 +8,10 @@
  *
  * @author Tay Fox <tay@vedla.ca>
  * @description: A React Native implementation of Eva Design System's Button component.
- * @since foxUI 1.0.0
+ * @since kitsUI 1.0.0
  */
 
-import {
-  IconPack,
-  IconProvider,
-} from './types';
+import { IconPack, IconProvider } from './types';
 
 function throwPackNotFoundError(name: string): void {
   const docRoot = 'https://akveo.github.io/react-native-ui-kitten/docs';

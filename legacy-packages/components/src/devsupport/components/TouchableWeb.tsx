@@ -8,7 +8,7 @@
  *
  * @author Tay Fox <tay@vedla.ca>
  * @description: A React Native implementation of Eva Design System's Button component.
- * @since foxUI 1.0.0
+ * @since kitsUI 1.0.0
  */
 
 import React from 'react';
@@ -32,8 +32,8 @@ export interface TouchableBaseWebProps extends TouchableWithoutFeedbackProps {
   onBlur?: (e: NativeSyntheticEvent<TargetedEvent>) => void;
 }
 /**
- * Additional props introduced in MeowUI. v0.1.0
- * @since foxUI 1.0.0
+ * Additional props introduced in kitsUI. v0.1.0
+ * @since kitsUI 1.0.0
  */
 export interface TouchableWebProps extends TouchableBaseWebProps {
   className?: string;
