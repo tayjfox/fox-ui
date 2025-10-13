@@ -4,6 +4,7 @@ export * from './showcase';
 export * from './text';
 export * from './top-navigation';
 export * from './divider';
+export * from './image';
 export * from './card';
 export * from './icon';
 export * from './layout';

@@ -4,8 +4,8 @@
     {
       "value" : {
         "linear-gradient" : [
-          "srgb:0.39636,0.16462,0.64307,1.00000",
-          "srgb:0.58080,0.07019,0.27206,1.00000"
+          "display-p3:0.47646,0.18672,0.43725,1.00000",
+          "display-p3:0.30181,0.00000,0.26097,1.00000"
         ]
       }
     },
@@ -25,7 +25,15 @@
       "blur-material" : 0.5,
       "layers" : [
         {
-          "blend-mode" : "normal",
+          "blend-mode-specializations" : [
+            {
+              "value" : "normal"
+            },
+            {
+              "appearance" : "dark",
+              "value" : "normal"
+            }
+          ],
           "fill-specializations" : [
             {
               "value" : "automatic"
@@ -38,6 +46,12 @@
           "glass" : true,
           "image-name" : "Asset 1.svg",
           "name" : "Asset 1",
+          "opacity-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : 1
+            }
+          ],
           "position" : {
             "scale" : 2.5,
             "translation-in-points" : [

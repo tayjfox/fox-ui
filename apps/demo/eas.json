@@ -6,8 +6,17 @@
   "build": {
     "base": {
       "node": "22.19.0",
-      "yarn": "4.9.4",
+      "yarn": "4.10.3",
       "corepack": true,
+      "env": {
+        "YARN_ENABLE_IMMUTABLE_INSTALLS": "false",
+        "YARN_ENABLE_GLOBAL_CACHE": "false"
+      },
+      "cache": {
+        "paths": [
+          "~/.yarn/cache"
+        ]
+      },
       "android": {
         "image": "auto",
         "env": {
@@ -19,14 +28,22 @@
         "env": {
           "PLATFORM": "ios"
         }
-      }
+      },
+      "channel": "base"
     },
     "development": {
       "extends": "base",
       "developmentClient": true,
+      "channel": "development",
       "distribution": "internal",
       "env": {
         "ENVIRONMENT": "development"
+      },
+      "android": {
+        "gradleCommand": ":app:assembleDebug"
+      },
+      "ios": {
+        "buildConfiguration": "Debug"
       }
     },
     "simulator": {
@@ -38,12 +55,18 @@
       },
       "ios": {
         "simulator": true
-      }
+      },
+      "channel": "simulator"
     },
     "preview": {
-      "extends": "base",
       "distribution": "internal",
-      "corepack": true,
+      "channel": "preview",
+      "ios": {
+        "simulator": true
+      },
+      "android": {
+        "buildType": "apk"
+      },
       "env": {
         "ENVIRONMENT": "preview"
       }
@@ -53,7 +76,8 @@
       "autoIncrement": true,
       "env": {
         "ENVIRONMENT": "production"
-      }
+      },
+      "channel": "production"
     }
   }
 }

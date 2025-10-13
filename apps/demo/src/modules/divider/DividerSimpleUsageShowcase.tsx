@@ -17,22 +17,14 @@ import { Avatar } from '@fox-ui/components-legacy';
 export const DividerSimpleUsageShowcase = (): React.ReactElement => (
   <View>
     <VStack>
-      <HStack alignment='center' gap='md'>
-        <Avatar
-          size='giant'
-          source={require('@/assets/images/icon.png')}
-        />
-        <Text
-          className='w-auto'
-          category='h6'
-        >
+      <HStack alignment="center" gap="md">
+        <Avatar size="giant" source={require('@/assets/icon/icon.png')} />
+        <Text className="w-auto" category="h6">
           UI Kitten
         </Text>
       </HStack>
       <Divider />
-      <Button className='w-full'>
-        INSTALL
-      </Button>
+      <Button className="w-full">INSTALL</Button>
     </VStack>
   </View>
 );

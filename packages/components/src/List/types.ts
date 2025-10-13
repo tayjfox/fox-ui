@@ -1,11 +1,20 @@
 import React from 'react';
 
-import { ImageProps, ViewProps } from 'react-native';
+import {
+  ImageProps,
+  ViewProps,
+} from 'react-native';
 
-import { RenderProp } from '@/Renderable';
+import {
+  RenderableTextProps,
+  RenderProp,
+} from '@/Renderable';
 import { TextProps } from '@/Text';
 import { type TouchableWebProps } from '@/Touchable';
-import { FlashListProps, FlashListRef } from '@shopify/flash-list';
+import {
+  FlashListProps,
+  FlashListRef,
+} from '@shopify/flash-list';
 
 export interface ListProps<ItemT = any> extends Omit<FlashListProps<ItemT>, 'data'> {
   className?: string;
@@ -16,6 +25,8 @@ export interface ListProps<ItemT = any> extends Omit<FlashListProps<ItemT>, 'dat
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ListElement<ItemT = any> = React.ReactElement<ListProps<ItemT>>;
+
+export type ListItemTitle = RenderProp<RenderableTextProps> | React.ReactNode;
 
 export interface BaseScrollParams {
   animated?: boolean;

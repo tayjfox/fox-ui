@@ -16,6 +16,7 @@ export type TokenOf<T extends readonly string[]> = T[number];
 export const GAP = ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'] as const;
 export type GapToken = TokenOf<typeof GAP>;
 export type ItemSize = GapToken | number;
+export type SizesAlt = TokenOf<typeof GAP>;
 
 export const ALIGNMENT = ['start', 'center', 'end', 'stretch', 'baseline'] as const;
 export type Alignment = TokenOf<typeof ALIGNMENT>;
@@ -52,4 +53,9 @@ export interface PressState {
 
 export interface ActiveState {
   interactionState: 'active' | undefined;
+}
+
+export interface ComponentProps {
+  className?: string;
+  theme?: 'light' | 'dark' | 'system';
 }

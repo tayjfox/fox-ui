@@ -4,85 +4,115 @@ import {
   useNavigation,
   useRouter,
 } from 'expo-router';
-import { View } from 'react-native';
 
 import {
-  Button,
   Divider,
+  HStack,
   Icon,
-  IconElement,
   List,
   ListItem,
+  ListItemTitle,
   ListSectionHeader,
+  Text,
+  View,
 } from '@fox-ui/components';
+
+type ShowCaseList = {
+  title?: string;
+  items: IListItem[];
+};
 
 interface IListItem {
   title: string;
+  badge?: 'new' | 'updated' | 'deprecated' | 'beta';
   description: string;
-  route: string
+  route: string;
 }
 
-
-
-const dataSection = [
+const dataSection: ShowCaseList[] = [
   {
-    title: "Global",
+    title: 'Content',
     items: [
-      {
-        title: 'Layout',
-        description: 'Separate content with hirarchy.',
-        route: '/components/global/layout'
-      },
       {
         title: 'Text',
         description: 'Text. Self explanatory right?',
-        route: '/components/global/text'
+        route: '/components/global/text',
       },
+      {
+        title: 'Image',
+        badge: 'New',
+        description: 'Images are used to display well... Images',
+        route: '/components/global/image',
+      },
+      {
+        title: 'Avatar',
+        description: 'Avatars are used to represent people.',
+        route: '/components/content/avatar',
+      },
+      {
+        title: 'Badge',
+        description: 'Badges are used to show status or notification count.',
+        route: '/components/content/badge',
+      },
+    ],
+  },
+  {
+    title: 'Global',
+    items: [
+      {
+        title: 'Layouts',
+        badge: 'new',
+        description: 'Separate content with hirarchy.',
+        route: '/components/global/layout',
+      },
+
       {
         title: 'Divider',
         description: 'A divider is a thin line.',
-        route: '/components/global/divider'
+        route: '/components/global/divider',
       },
       {
         title: 'Icon',
         description: 'Icons are used to enhance the UI.',
-        route: '/components/global/icon'
+        route: '/components/global/icon',
       },
       {
         title: 'Card',
         description: 'Cards are used to display content.',
-        route: '/components/global/card'
-      }, {
+        route: '/components/global/card',
+      },
+      {
         title: 'List',
         description: 'List renders a scrollable list of items.',
-        route: '/components/global/list'
+        route: '/components/global/list',
       },
-    ]
+    ],
   },
   {
-    title: "Navigation",
+    title: 'Navigation',
     items: [
       {
         title: 'Top Navigation',
         description: 'The thing at the top of the screen',
-        route: '/components/navigation/top-navigation'
-      }]
+        route: '/components/navigation/top-navigation',
+      },
+    ],
   },
   {
-    title: "Form",
+    title: 'Form',
     items: [
       {
         title: 'Buttons',
         description: 'Tappable thingies',
-        route: '/components/form/button'
+        route: '/components/form/button',
       },
       {
         title: 'Button Group',
         description: 'Group of tappable thingies',
-        route: '/components/form/button/group'
-      }
-    ]
-  }
+        route: '/components/form/button/group',
+      },
+    ],
+  },
 ];
 
 export const ListAccessoriesShowcase = (): React.ReactElement => {
@@ -93,53 +123,41 @@ export const ListAccessoriesShowcase = (): React.ReactElement => {
   }, [navigation]);
 
   const router = useRouter();
-  const renderItemAccessory = (): React.ReactElement => (
-    <Button size='tiny'>
-      View more
-    </Button>
-  );
 
-  interface RenderItemIconProps extends React.ComponentProps<typeof Icon> { }
+  const renderItem = ({ item, index }: { item: IListItem; index: number }): React.ReactElement => {
+    const Badge1 = item.badge ? (
+      <HStack>
+        <Text>Badge</Text>
+        <Text>{item.title}</Text>
+      </HStack>
+    ) : null;
 
-  const renderItemIcon = (props: RenderItemIconProps): IconElement => (
-    <Icon
-      {...props}
-      name='person'
-    />
-  );
-  const renderItem = ({ item, index }: { item: IListItem; index: number }): React.ReactElement => (
-    <ListItem
-      title={item.title}
-      description={item.description}
-      onPress={() => {
-        router.navigate(item.route);
-      }}
-      accessoryRight={(props) => (
-        <Icon
-          {...props}
-          name='chevron-right-outline'
-        />
-      )}
-
-    />
-  );
-
-  const titleItem = ({ item, index }: { item: IListItem; index: number }): React.ReactElement => {
+    const Badge = (props: ListItemTitle) => {
+      return (
+        <HStack alignment="center" gap="sm">
+          <Text {...props}>{item.title}</Text>
+          {item.badge ? <Text category="label">{item.badge.toUpperCase()}</Text> : null}
+        </HStack>
+      );
+    };
 
     return (
-      <ListSectionHeader title={item.title} />
-    )
+      <ListItem
+        title={Badge}
+        description={item.description}
+        onPress={() => {
+          router.navigate(item.route);
+        }}
+        accessoryRight={(props) => <Icon {...props} name="chevron-right-outline" />}
+      />
+    );
+  };
+  const titleItem = ({ item, index }: { item: IListItem; index: number }): React.ReactElement => {
+    return <ListSectionHeader title={item.title} />;
   };
 
-  // return (
-  //   <View className='p-safe h-full pt-15'>
-  //     <Container>
-  //       <Button onPress={() => { console.log('Back pressed'); }}>I am a button</Button>
-  //     </Container>
-  //   </View>);
-
   return (
-    <View className='p-safe h-full'>
+    <View className="p-safe h-full">
       <List
         data={dataSection}
         ItemSeparatorComponent={Divider}
@@ -149,7 +167,5 @@ export const ListAccessoriesShowcase = (): React.ReactElement => {
     </View>
   );
 };
-
-
 
 export default ListAccessoriesShowcase;

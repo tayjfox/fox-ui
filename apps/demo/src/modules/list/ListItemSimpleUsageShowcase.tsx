@@ -11,24 +11,20 @@ import {
 } from '@fox-ui/components';
 import { Avatar } from '@fox-ui/components-legacy';
 
-const InstallButton = (): React.ReactElement => (
-  <Button size='tiny'>
-    INSTALL
-  </Button>
-);
+const InstallButton = (): React.ReactElement => <Button size="tiny">INSTALL</Button>;
 
 const ItemImage = (props: ImageProps): React.ReactElement => (
   <Avatar
     {...props}
     style={[props.style, styles.itemImage]}
-    source={require('@/assets/images/icon.png')}
+    source={require('@/assets/icon/icon.png')}
   />
 );
 
 export const ListItemSimpleUsageShowcase = (): React.ReactElement => (
   <ListItem
-    title='UI Kitten'
-    description='A set of React Native components'
+    title="UI Kitten"
+    description="A set of React Native components"
     accessoryLeft={ItemImage}
     accessoryRight={InstallButton}
   />

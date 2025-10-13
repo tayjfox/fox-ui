@@ -33,6 +33,7 @@
     "@fox-ui/utils": "*",
     "@shopify/flash-list": ">2.0.0",
     "@types/hoist-non-react-statics": "^3.3.7",
+    "expo-image": ">=3.0.8",
     "react": ">=19.0.0",
     "react-dom": ">=19.1.0",
     "react-native": ">=0.70.0",

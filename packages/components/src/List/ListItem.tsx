@@ -25,9 +25,9 @@ import {
 
 import { View } from '../View/View';
 import {
-  ContainerStyle,
   DescriptionStyle,
   IconStyle,
+  ListStyle,
   TitleStyle,
 } from './styles';
 import {
@@ -79,7 +79,6 @@ import {
  */
 
 class ListItem extends React.Component<ListItemProps, ActiveState> {
-
   constructor(props: ListItemProps) {
     super(props);
     this.state = {
@@ -100,7 +99,7 @@ class ListItem extends React.Component<ListItemProps, ActiveState> {
     const { interactionState } = this.state;
     const state = interactionState;
 
-    return ContainerStyle({
+    return ListStyle({
       class: className,
       state,
     });
@@ -112,7 +111,7 @@ class ListItem extends React.Component<ListItemProps, ActiveState> {
     return IconStyle({
       class: accesoryClassName,
     });
-  }
+  };
 
   private getTextStyle = (): string => {
     const { titleClassName } = this.props;
@@ -120,7 +119,7 @@ class ListItem extends React.Component<ListItemProps, ActiveState> {
     return TitleStyle({
       class: titleClassName,
     });
-  }
+  };
 
   private getDescriptionStyle = (): string => {
     const { descriptionClassName } = this.props;
@@ -128,46 +127,27 @@ class ListItem extends React.Component<ListItemProps, ActiveState> {
     return DescriptionStyle({
       class: descriptionClassName,
     });
-  }
+  };
 
   private TemplateChildren = (props: ListItemProps): React.ReactElement => {
-
     const accesoryStyle = this.getAccesoryStyle();
     const textStyle = this.getTextStyle();
     const descriptionStyle = this.getDescriptionStyle();
 
     return (
       <>
-        <Renderable
-          className={accesoryStyle}
-          component={props.accessoryLeft}
-        />
+        <Renderable className={accesoryStyle} component={props.accessoryLeft} />
         <View className="flex-1">
-          <RenderableText
-            className={textStyle}
-            component={props.title}
-          />
-          <RenderableText
-            className={descriptionStyle}
-            component={props.description}
-          />
+          <RenderableText className={textStyle} component={props.title} />
+          <RenderableText className={descriptionStyle} component={props.description} />
         </View>
-        <Renderable
-          className={accesoryStyle}
-          component={props.accessoryRight}
-        />
+        <Renderable className={accesoryStyle} component={props.accessoryRight} />
       </>
     );
   };
 
-
-
-
   public render(): TouchableWebElement {
-    const {
-      children,
-      ...touchableProps
-    } = this.props;
+    const { children, ...touchableProps } = this.props;
 
     const className = this.getClassName();
 
@@ -176,8 +156,7 @@ class ListItem extends React.Component<ListItemProps, ActiveState> {
         className={className}
         {...touchableProps}
         onPressIn={this.onPressIn}
-        onPressOut={this.onPressOut}
-      >
+        onPressOut={this.onPressOut}>
         {children || this.TemplateChildren(this.props)}
       </TouchableWeb>
     );
