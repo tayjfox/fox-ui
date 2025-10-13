@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-import { TextProps } from '@fox-ui/components';
+import { TextProps } from '@kits-ui/components';
 
 import { RenderProp } from '../../devsupport';
 import { styled } from '../../theme';
@@ -55,8 +55,8 @@ export type RangeDatepickerElement<D = Date> = React.ReactElement<RangeDatepicke
  * @property {DateService<D>} dateService - Date service that is able to work with a date objects.
  * Defaults to Native Date service that works with JS Date.
  * Allows using different types of date like Moment.js or date-fns.
- * Moment.js service can be provided by installing `@fox-ui/moment` package.
- * date-fns service can be provided by installing `@fox-ui/date-fns` package.
+ * Moment.js service can be provided by installing `@kits-ui/moment` package.
+ * date-fns service can be provided by installing `@kits-ui/date-fns` package.
  *
  * @property {boolean} boundingMonth - Whether previous and next months in the current month view should be rendered.
  *

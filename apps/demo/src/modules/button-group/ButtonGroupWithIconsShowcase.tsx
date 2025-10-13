@@ -8,8 +8,8 @@ import {
   IconElement,
   IconProps,
   Layout,
-} from '@fox-ui/components';
-import { ButtonGroup } from '@fox-ui/components-legacy';
+} from '@kits-ui/components';
+import { ButtonGroup } from '@kits-ui/components-legacy';
 
 const StarIcon = (props: IconProps): IconElement => (
   <Icon

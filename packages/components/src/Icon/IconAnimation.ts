@@ -19,7 +19,7 @@ import {
   PulseAnimation,
   ShakeAnimation,
   ZoomAnimation,
-} from '@fox-ui/utils';
+} from '@kits-ui/utils';
 
 export type IconAnimation = Animation<AnimationConfig, ViewStyle>;
 

@@ -21,7 +21,7 @@ import {
   ViewProps,
 } from 'react-native';
 
-import { TextProps } from '@fox-ui/components';
+import { TextProps } from '@kits-ui/components';
 
 import {
   EvaStatus,
@@ -90,7 +90,7 @@ export type ToggleElement = React.ReactElement<ToggleProps>;
  * @overview-example ToggleStyling
  * Toggle and it's inner views can be styled by passing them as function components.
  * ```
- * import { Toggle, Text } from '@fox-ui/components-legacy';
+ * import { Toggle, Text } from '@kits-ui/components-legacy';
  *
  * <Toggle>
  *   {evaProps => <Text {...evaProps}>Place your Text</Text>}

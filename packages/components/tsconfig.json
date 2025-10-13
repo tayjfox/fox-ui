@@ -1,5 +1,5 @@
 {
-  "extends": "@fox-ui/tsconfig/react-native-library",
+  "extends": "@kits-ui/tsconfig/react-native-library",
   "include": [
     "."
   ],

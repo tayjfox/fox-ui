@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Text } from '@fox-ui/components';
-import { Card } from '@fox-ui/components-legacy';
+import { Text } from '@kits-ui/components';
+import { Card } from '@kits-ui/components-legacy';
 
 export const CardSimpleUsageShowcase = (): React.ReactElement => (
   <Card>

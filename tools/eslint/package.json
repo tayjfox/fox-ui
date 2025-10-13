@@ -1,5 +1,5 @@
 {
-  "name": "@fox-ui/eslint-config",
+  "name": "@kits-ui/eslint-config",
   "private": true,
   "type": "module",
   "exports": {
@@ -23,7 +23,7 @@
     "typescript-eslint": "^8.42.0"
   },
   "devDependencies": {
-    "@fox-ui/tsconfig": "*",
+    "@kits-ui/tsconfig": "*",
     "eslint": "*",
     "prettier": "*",
     "turbo": "*",

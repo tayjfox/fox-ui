@@ -1,4 +1,4 @@
-import { Button } from '@fox-ui/components';
+import { Button } from '@kits-ui/components';
 import type {
   Meta,
   StoryObj,

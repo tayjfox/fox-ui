@@ -4,8 +4,8 @@ import React from 'react';
 import { styled } from 'nativewind';
 import { SvgProps as SvgPropsBase } from 'react-native-svg';
 
-import { IconProvider } from '@fox-ui/components';
-import { isWeb } from '@fox-ui/components-legacy';
+import { IconProvider } from '@kits-ui/components';
+import { isWeb } from '@kits-ui/components-legacy';
 
 export interface SvgProps extends SvgPropsBase {
   className?: string;

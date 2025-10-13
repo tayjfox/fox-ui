@@ -11,7 +11,7 @@ import {
   IconElement,
   IconProps,
   Layout,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 import {
   IndexPath,
   Input,
@@ -20,7 +20,7 @@ import {
   Select,
   SelectItem,
   Tooltip,
-} from '@fox-ui/components-legacy';
+} from '@kits-ui/components-legacy';
 
 const StarIcon = (props: IconProps): IconElement => (
   <Icon

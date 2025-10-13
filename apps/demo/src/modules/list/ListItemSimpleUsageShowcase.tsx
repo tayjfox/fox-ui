@@ -8,8 +8,8 @@ import {
 import {
   Button,
   ListItem,
-} from '@fox-ui/components';
-import { Avatar } from '@fox-ui/components-legacy';
+} from '@kits-ui/components';
+import { Avatar } from '@kits-ui/components-legacy';
 
 const InstallButton = (): React.ReactElement => (
   <Button size='tiny'>

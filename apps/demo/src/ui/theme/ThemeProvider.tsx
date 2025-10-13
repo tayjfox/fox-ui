@@ -13,10 +13,10 @@ import {
   ThemeProps,
   ThemesVariants,
 } from '@/types';
-import { IconRegistry } from '@fox-ui/components';
-import { ApplicationProvider } from '@fox-ui/components-legacy';
-import { EvaIconsPack } from '@fox-ui/icons';
-import * as eva from '@fox-ui/themes';
+import { IconRegistry } from '@kits-ui/components';
+import { ApplicationProvider } from '@kits-ui/components-legacy';
+import { EvaIconsPack } from '@kits-ui/icons';
+import * as eva from '@kits-ui/themes';
 
 import { ThemeContext } from './context';
 

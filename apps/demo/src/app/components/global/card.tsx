@@ -12,7 +12,7 @@ import {
 import {
   Container,
   List,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 export default function CardScreen() {
   const navigation = useNavigation();

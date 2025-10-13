@@ -14,7 +14,9 @@ import {
   BaseCalendarComponent,
   BaseCalendarProps,
 } from './baseCalendar.component';
-import { CalendarPickerCellProps } from './components/picker/calendarPickerCell.component';
+import {
+  CalendarPickerCellProps,
+} from './components/picker/calendarPickerCell.component';
 import { DateBatch } from './service/calendarData.service';
 import { RangeDateService } from './service/rangeDate.service';
 import { CalendarRange } from './type';
@@ -54,8 +56,8 @@ export type RangeCalendarElement<D = Date> = React.ReactElement<RangeCalendarPro
  * @property {DateService<D>} dateService - Date service that is able to work with a date objects.
  * Defaults to Native Date service that works with JS Date.
  * Allows using different types of date like Moment.js or date-fns.
- * Moment.js service can be provided by installing `@fox-ui/moment` package.
- * date-fns service can be provided by installing `@fox-ui/date-fns` package.
+ * Moment.js service can be provided by installing `@kits-ui/moment` package.
+ * date-fns service can be provided by installing `@kits-ui/date-fns` package.
  *
  * @property {boolean} boundingMonth - Defines if we should render previous and next months in the current month view.
  *

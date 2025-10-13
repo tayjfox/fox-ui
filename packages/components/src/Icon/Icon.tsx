@@ -20,7 +20,7 @@ import {
   RegisteredIcon,
 } from './IconRegistryService';
 // This is basically needed to avoid generics in required props
-// In general, could be SVGProps if using @fox-ui/eva-icons or ImageProps if using Image.
+// In general, could be SVGProps if using @kits-ui/eva-icons or ImageProps if using Image.
 import type {
   AnimatedViewProps,
   IconProps,
@@ -47,7 +47,7 @@ import type {
  *
  * @property {any} ...props - Accepts any props
  * depending on the component registered in IconRegistry for a given `name` property.
- * In case of using `@fox-ui/eva-icons` package, Icon accepts any props for react-native-svg component.
+ * In case of using `@kits-ui/eva-icons` package, Icon accepts any props for react-native-svg component.
  *
  * @overview-example IconSimpleUsage
  * Icon component provides a simple way to render image by requesting it from an icon set.

@@ -3,7 +3,7 @@ import React from 'react';
 import {
   Button,
   HStack,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 export const ButtonStatesShowcase = (): React.ReactElement => (
   <HStack alignment='center' distribution='start' gap="sm">

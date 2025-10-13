@@ -19,7 +19,7 @@ import {
 import {
   IconProps,
   Text,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 import {
   EvaSize,

@@ -11,7 +11,7 @@ import {
 import {
   Container,
   List,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 export default function DividerScreen() {
   const navigation = useNavigation();

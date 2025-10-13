@@ -2,8 +2,8 @@ import React from 'react';
 
 import { View } from 'react-native';
 
-import { Text } from '@fox-ui/components';
-import { Card } from '@fox-ui/components-legacy';
+import { Text } from '@kits-ui/components';
+import { Card } from '@kits-ui/components-legacy';
 
 import { ShowcaseCardProps } from './types';
 

@@ -15,7 +15,7 @@ import {
   View,
 } from 'react-native';
 
-import { List } from '@fox-ui/components';
+import { List } from '@kits-ui/components';
 
 import { ChildrenWithProps } from '../../devsupport';
 import {

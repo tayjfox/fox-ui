@@ -8,7 +8,7 @@ import {
 import {
   Button,
   Layout,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 export const ButtonStatusShowcase = (): React.ReactElement => (
   <Layout

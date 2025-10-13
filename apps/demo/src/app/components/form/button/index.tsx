@@ -18,7 +18,7 @@ import {
 import {
   Container,
   List,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 export default function ButtonScreen() {
   const navigation = useNavigation();

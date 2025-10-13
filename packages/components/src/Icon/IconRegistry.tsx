@@ -34,8 +34,8 @@ import {
  * ```
  * import React from 'react';
  * import * as eva from '@eva-design/eva';
- * import { ApplicationProvider, IconRegistry, Layout, Text, Icon, Button } from '@fox-ui/components-legacy';
- * import { EvaIconsPack } from '@fox-ui/icons'; // <-- Make sure it is installed. npm i @fox-ui/icons
+ * import { ApplicationProvider, IconRegistry, Layout, Text, Icon, Button } from '@kits-ui/components-legacy';
+ * import { EvaIconsPack } from '@kits-ui/icons'; // <-- Make sure it is installed. npm i @kits-ui/icons
  *
  * const LikeIcon = (props) => (
  *   <Icon {...props} name='like' />

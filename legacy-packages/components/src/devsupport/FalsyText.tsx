@@ -3,7 +3,7 @@ import React from 'react';
 import {
   Text,
   TextProps,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 import { RenderProp } from './FalsyFC';
 

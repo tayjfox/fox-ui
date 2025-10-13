@@ -1,5 +1,5 @@
 {
-  "name": "meow-ui",
+  "name": "kits-ui",
   "private": true,
   "workspaces": [
     "tools/*",
@@ -24,11 +24,11 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-native": "0.81.4",
-    "tailwindcss": "^4.1.13",
+    "react-native-reanimated": "4.1.0",
+    "tailwindcss": "4.1.13",
     "typescript": "~5.9.2"
   },
   "devDependencies": {
-    "@turbo/gen": "^2.5.8",
     "cross-env": "^10.1.0",
     "prettier": "^3.6.2",
     "turbo": "^2.5.8",

@@ -47,7 +47,7 @@ interface State {
  * @property {SchemaType} mapping - Mapping for UI Kitten components.
  * This is designed to be provided from any `@eva-design/*` package.
  * If provided, will be merged with *customMapping* and compiled into styles during the runtime.
- * Can be improved with build-time processing with `@fox-ui/metro-config` package.
+ * Can be improved with build-time processing with `@kits-ui/metro-config` package.
  *
  * @property {CustomSchemaType} customMapping - Customized mapping.
  *
@@ -56,14 +56,14 @@ interface State {
  *
  * @property {ThemeStyleType} styles - Styles compiled by bootstrapping Eva packages.
  * If provided, will replace runtime styles processing.
- * Usually, can be provided by `@fox-ui/metro-config` package.
+ * Usually, can be provided by `@kits-ui/metro-config` package.
  *
  * @overview-example Simple Usage
  * ApplicationProvider is designed to be the root component of the application.
  * It should be rendered **once**, to provide Eva styles for nested components.
  * ```
  * import React from 'react';
- * import { ApplicationProvider, Layout, Text } from '@fox-ui/components-legacy';
+ * import { ApplicationProvider, Layout, Text } from '@kits-ui/components-legacy';
  * import * as eva from '@eva-design/eva';
  *
  * export default () => (
@@ -80,8 +80,8 @@ interface State {
  * to provide a highly customizable, design system based application.
  * ```
  * import React from 'react';
- * import { ApplicationProvider, IconRegistry, Layout, Text } from '@fox-ui/components-legacy';
- * import { EvaIconsPack } from '@fox-ui/icons';
+ * import { ApplicationProvider, IconRegistry, Layout, Text } from '@kits-ui/components-legacy';
+ * import { EvaIconsPack } from '@kits-ui/icons';
  * import * as eva from '@eva-design/eva';
  *
  * export default () => (

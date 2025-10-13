@@ -5,8 +5,8 @@ import { StyleSheet } from 'react-native';
 import {
   Layout,
   Text,
-} from '@fox-ui/components';
-import { Card } from '@fox-ui/components-legacy';
+} from '@kits-ui/components';
+import { Card } from '@kits-ui/components-legacy';
 
 export const CardStatusesShowcase = (): React.ReactElement => (
   <Layout

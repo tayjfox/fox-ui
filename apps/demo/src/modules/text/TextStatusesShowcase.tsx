@@ -8,7 +8,7 @@ import {
 import {
   Layout,
   Text,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 export const TextStatusesShowcase = (): React.ReactElement => (
   <Layout

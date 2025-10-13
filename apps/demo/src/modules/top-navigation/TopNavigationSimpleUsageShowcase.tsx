@@ -6,7 +6,7 @@ import {
   IconProps,
   TopNavigation,
   TopNavigationAction,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 const BackIcon = (props: IconProps): IconElement => (
   <Icon

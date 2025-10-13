@@ -1,5 +1,5 @@
 {
-  "name": "@fox-ui/components",
+  "name": "@kits-ui/components",
   "version": "1.0.0",
   "description": "React Native components based on Eva Design System",
   "exports": {
@@ -30,7 +30,7 @@
     "tsup": "8.5.0"
   },
   "peerDependencies": {
-    "@fox-ui/utils": "*",
+    "@kits-ui/utils": "*",
     "@shopify/flash-list": ">2.0.0",
     "@types/hoist-non-react-statics": "^3.3.7",
     "react": ">=19.0.0",

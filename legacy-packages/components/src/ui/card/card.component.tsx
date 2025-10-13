@@ -13,7 +13,7 @@ import {
   ViewProps,
 } from 'react-native';
 
-import { Divider } from '@fox-ui/components';
+import { Divider } from '@kits-ui/components';
 
 import {
   EvaStatus,

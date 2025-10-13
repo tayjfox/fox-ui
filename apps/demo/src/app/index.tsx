@@ -14,7 +14,8 @@ import {
   List,
   ListItem,
   ListSectionHeader,
-} from '@fox-ui/components';
+  Text,
+} from '@kits-ui/components';
 
 interface IListItem {
   title: string;
@@ -140,6 +141,7 @@ export const ListAccessoriesShowcase = (): React.ReactElement => {
 
   return (
     <View className='p-safe h-full'>
+      <Text className='p-4 text-lg font-bold'>List with Accessories</Text>
       <List
         data={dataSection}
         ItemSeparatorComponent={Divider}

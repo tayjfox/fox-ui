@@ -21,7 +21,7 @@ import {
   ViewStyle,
 } from 'react-native';
 
-import { TextProps } from '@fox-ui/components';
+import { TextProps } from '@kits-ui/components';
 
 import {
   EvaSize,
@@ -129,7 +129,7 @@ export type InputElement = React.ReactElement<InputProps>;
  * @overview-example InputStyling
  * Input and it's inner views can be styled by passing them as function components.
  * ```
- * import { Input, Text } from '@fox-ui/components-legacy';
+ * import { Input, Text } from '@kits-ui/components-legacy';
  *
  * <Input
  *   textStyle={{ ... }}

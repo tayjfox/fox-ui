@@ -10,11 +10,11 @@ import {
   TopNavigation,
   TopNavigationAction,
   TouchableWebElement,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 import {
   MenuItem,
   OverflowMenu,
-} from '@fox-ui/components-legacy';
+} from '@kits-ui/components-legacy';
 
 const BackIcon = (props: IconProps): IconElement => (
   <Icon

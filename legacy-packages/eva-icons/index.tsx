@@ -10,8 +10,8 @@ import {
   IconAnimation,
   IconAnimationRegistry,
   IconPack,
-} from '@fox-ui/components';
-import { AnimationConfig } from '@fox-ui/utils';
+} from '@kits-ui/components';
+import { AnimationConfig } from '@kits-ui/utils';
 
 import { createIconsMap } from './createIconsMap';
 import { SvgProps } from './EvaIcon';

@@ -6,7 +6,10 @@
 
 import moment, { Moment } from 'moment';
 
-import { DateService, TranslationWidth } from '@fox-ui/components-legacy';
+import {
+  DateService,
+  TranslationWidth,
+} from '@kits-ui/components-legacy';
 
 export class MomentDateService extends DateService<Moment> {
   protected localeData: {

@@ -1,6 +1,6 @@
 import { tv } from 'tailwind-variants';
 
-import { isWeb } from '@fox-ui/utils';
+import { isWeb } from '@kits-ui/utils';
 
 const baseStyle = isWeb ? 'outline-0' : '';
 

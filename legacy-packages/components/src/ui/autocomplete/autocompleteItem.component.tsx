@@ -10,7 +10,7 @@ import {
   ListItem,
   type ListItemElement,
   type ListItemProps,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 export type AutocompleteItemProps = ListItemProps;
 export type AutocompleteItemElement = React.ReactElement<AutocompleteItemProps>;

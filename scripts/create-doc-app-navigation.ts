@@ -69,7 +69,7 @@ const createShowcaseRouteMap = (map: ShowcaseMap, component: string): ShowcaseRo
 const createShowcaseImportStatements = (map: ShowcaseMap, component: string): string[] => {
   return map[component].showcases.map((showcaseInfo: ShowcaseInfo): string => {
     const platformComponentPath: string = path.parse(showcaseInfo.path).name;
-    return `import { ${showcaseInfo.name} } from '@fox-ui/components/${component}/${platformComponentPath}';`;
+    return `import { ${showcaseInfo.name} } from '@kits-ui/components/${component}/${platformComponentPath}';`;
   });
 };
 

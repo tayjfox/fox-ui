@@ -1,5 +1,5 @@
 {
-  "name": "@fox-ui/prettier-config",
+  "name": "@kits-ui/prettier-config",
   "private": true,
   "type": "module",
   "exports": {
@@ -16,9 +16,9 @@
     "prettier-plugin-tailwindcss": "^0.6.14"
   },
   "devDependencies": {
-    "@fox-ui/tsconfig": "*",
+    "@kits-ui/tsconfig": "*",
     "@types/node": "*",
     "typescript": "*"
   },
-  "prettier": "@fox-ui/prettier-config"
+  "prettier": "@kits-ui/prettier-config"
 }

@@ -13,7 +13,7 @@ import {
   ViewProps,
 } from 'react-native';
 
-import { TextProps } from '@fox-ui/components';
+import { TextProps } from '@kits-ui/components';
 
 import {
   FalsyFC,
@@ -94,7 +94,7 @@ export type TooltipElement = React.ReactElement<TooltipProps>;
  * Tooltip and it's inner views can be styled by passing them as function components.
  * In most cases this is redundant, if [custom theme is configured](docs/guides/branding).
  * ```
- * import { Tooltip, Text } from '@fox-ui/components-legacy';
+ * import { Tooltip, Text } from '@kits-ui/components-legacy';
  *
  * <Tooltip style={...}>
  *   {evaProps => <Text {...evaProps}>TEXT</Text>}

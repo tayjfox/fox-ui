@@ -14,7 +14,7 @@ import {
   TargetedEvent,
 } from 'react-native';
 
-import { TextProps } from '@fox-ui/components';
+import { TextProps } from '@kits-ui/components';
 
 import {
   FalsyFC,

@@ -7,7 +7,7 @@ import {
   Button,
   HStack,
   Text,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 export const ButtonSimpleUsageShowcase = (): ReactElement => {
 

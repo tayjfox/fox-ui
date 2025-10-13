@@ -6,7 +6,7 @@ import {
   View,
 } from 'react-native';
 
-import { Button } from '@fox-ui/components';
+import { Button } from '@kits-ui/components';
 
 const NotFoundScreen = () => {
   const router = useRouter();

@@ -13,14 +13,17 @@
 
 import React from 'react';
 
-import { Animated, View } from 'react-native';
+import {
+  Animated,
+  View,
+} from 'react-native';
 
-import { AnimationConfig } from '@fox-ui/utils';
+import { AnimationConfig } from '@kits-ui/utils';
 
 import { IconAnimationRegistry } from './IconAnimation';
 
 // This is basically needed to avoid generics in required props
-// In general, could be SVGProps if using @fox-ui/eva-icons or ImageProps if using Image.
+// In general, could be SVGProps if using @kits-ui/eva-icons or ImageProps if using Image.
 
 type WrappedElementProps = any;
 

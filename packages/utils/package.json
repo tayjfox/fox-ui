@@ -1,5 +1,5 @@
 {
-  "name": "@fox-ui/utils",
+  "name": "@kits-ui/utils",
   "version": "1.0.0",
   "description": "Utility functions for React Native components",
   "exports": {

@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native';
 import {
   List,
   ListItem,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 const data = new Array(8).fill({
   title: 'Item',

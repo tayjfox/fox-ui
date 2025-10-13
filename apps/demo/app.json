@@ -1,6 +1,6 @@
 {
-  "name": "Fox UI",
-  "description": "A Demo React Native fox UI based application",
+  "name": "kitsUI",
+  "description": "A Demo React Native kits UI based application",
   "slug": "kitsui",
   "version": "1.0.0",
   "scheme": "kitsui",
@@ -11,7 +11,7 @@
   "ios": {
     "supportsTablet": true,
     "bundleIdentifier": "io.vedla.kitsui",
-    "icon": "./src/assets/images/fox-ui.icon",
+    "icon": "./src/assets/images/kits-ui.icon",
     "config": {
       "usesNonExemptEncryption": false
     }
@@ -49,7 +49,14 @@
   "extra": {
     "router": {},
     "eas": {
-      "projectId": "60a6b4cf-adf4-4137-86f6-eefcd1dcc440"
+      "projectId": "6891b7ac-8a0a-4e5c-8a6d-e6fdff483ba4"
     }
+  },
+  "runtimeVersion": {
+    "policy": "appVersion"
+  },
+  "updates": {
+    "checkAutomatically": "NEVER",
+    "url": "https://u.expo.dev/6891b7ac-8a0a-4e5c-8a6d-e6fdff483ba4"
   }
 }

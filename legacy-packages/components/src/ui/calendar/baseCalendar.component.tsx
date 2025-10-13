@@ -11,7 +11,7 @@ import {
   ViewProps,
 } from 'react-native';
 
-import { Divider } from '@fox-ui/components';
+import { Divider } from '@kits-ui/components';
 
 import {
   EvaProp,
@@ -25,12 +25,16 @@ import {
   CalendarHeader,
   CalendarHeaderElement,
 } from './components/calendarHeader.component';
-import { CalendarMonthHeader } from './components/calendarMonthHeader.component';
+import {
+  CalendarMonthHeader,
+} from './components/calendarMonthHeader.component';
 import {
   CalendarPicker,
   CalendarPickerElement,
 } from './components/picker/calendarPicker.component';
-import { CalendarPickerCellProps } from './components/picker/calendarPickerCell.component';
+import {
+  CalendarPickerCellProps,
+} from './components/picker/calendarPickerCell.component';
 import { TranslationWidth } from './i18n/type';
 import {
   CalendarDataService,

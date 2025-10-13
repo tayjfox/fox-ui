@@ -10,7 +10,7 @@ import {
 import {
   Container,
   List,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 export default function LayoutScreen() {
   const navigation = useNavigation();

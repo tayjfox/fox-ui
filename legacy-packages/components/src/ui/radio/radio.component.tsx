@@ -14,7 +14,7 @@ import {
   View,
 } from 'react-native';
 
-import { TextProps } from '@fox-ui/components';
+import { TextProps } from '@kits-ui/components';
 
 import {
   EvaStatus,
@@ -85,7 +85,7 @@ export type RadioElement = React.ReactElement<RadioProps>;
  * @overview-example RadioStyling
  * Radio and it's inner views can be styled by passing them as function components.
  * ```
- * import { Radio, Text } from '@fox-ui/components-legacy';
+ * import { Radio, Text } from '@kits-ui/components-legacy';
  *
  * <Radio>
  *   {evaProps => <Text {...evaProps}>Place your Text</Text>}

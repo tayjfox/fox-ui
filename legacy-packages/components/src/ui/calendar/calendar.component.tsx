@@ -14,7 +14,9 @@ import {
   BaseCalendarComponent,
   BaseCalendarProps,
 } from './baseCalendar.component';
-import { CalendarPickerCellProps } from './components/picker/calendarPickerCell.component';
+import {
+  CalendarPickerCellProps,
+} from './components/picker/calendarPickerCell.component';
 import { DateBatch } from './service/calendarData.service';
 
 export interface CalendarProps<D = Date> extends StyledComponentProps, BaseCalendarProps<D> {
@@ -48,8 +50,8 @@ export type CalendarElement<D = Date> = React.ReactElement<CalendarProps<D>>;
  * @property {DateService<D>} dateService - Date service that is able to work with a date objects.
  * Defaults to Native Date service that works with JS Date.
  * Allows using different types of date like Moment.js or date-fns.
- * Moment.js service can be provided by installing `@fox-ui/moment` package.
- * date-fns service can be provided by installing `@fox-ui/date-fns` package.
+ * Moment.js service can be provided by installing `@kits-ui/moment` package.
+ * date-fns service can be provided by installing `@kits-ui/date-fns` package.
  *
  * @property {boolean} boundingMonth - Whether previous and next months in the current month view should be rendered.
  *
@@ -120,7 +122,7 @@ export type CalendarElement<D = Date> = React.ReactElement<CalendarProps<D>>;
  *
  * @overview-example CalendarMoment
  * Calendar is able to work with Moment, by configuring date service.
- * In order to use Moment, `@fox-ui/moment` package is required.
+ * In order to use Moment, `@kits-ui/moment` package is required.
  *
  * @overview-example CalendarCustomDay
  * To render custom cells, `renderDay`, `renderMonth` and `renderYear` properties may be used.

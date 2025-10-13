@@ -1,4 +1,4 @@
-import { IconProvider } from '@fox-ui/components';
+import { IconProvider } from '@kits-ui/components';
 
 import {
   EvaIcon,

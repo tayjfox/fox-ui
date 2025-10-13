@@ -5,8 +5,8 @@ import { StyleSheet } from 'react-native';
 import {
   Button,
   Layout,
-} from '@fox-ui/components';
-import { ButtonGroup } from '@fox-ui/components-legacy';
+} from '@kits-ui/components';
+import { ButtonGroup } from '@kits-ui/components-legacy';
 
 export const ButtonGroupSizeShowcase = (): React.ReactElement => (
   <Layout

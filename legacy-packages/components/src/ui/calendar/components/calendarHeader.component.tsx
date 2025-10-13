@@ -20,7 +20,7 @@ import {
   Button,
   Text,
   TextProps,
-} from '@fox-ui/components';
+} from '@kits-ui/components';
 
 import { RTLService } from '../../../devsupport';
 import {

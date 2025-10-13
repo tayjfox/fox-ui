@@ -1,5 +1,5 @@
 {
-  "extends": "@fox-ui/tsconfig/base.json",
+  "extends": "@kits-ui/tsconfig/base.json",
   "include": [
     "."
   ],

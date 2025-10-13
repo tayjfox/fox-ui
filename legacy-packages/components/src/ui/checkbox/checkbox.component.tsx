@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 import { SvgProps } from 'react-native-svg';
 
-import { TextProps } from '@fox-ui/components';
+import { TextProps } from '@kits-ui/components';
 
 import {
   EvaStatus,
@@ -102,7 +102,7 @@ export type CheckBoxElement = React.ReactElement<CheckBoxProps>;
  * @overview-example CheckboxStyling
  * CheckBox and it's inner views can be styled by passing them as function components.
  * ```
- * import { CheckBox, Text } from '@fox-ui/components-legacy';
+ * import { CheckBox, Text } from '@kits-ui/components-legacy';
  *
  * <CheckBox>
  *   {evaProps => <Text {...evaProps}>Place your Text</Text>}

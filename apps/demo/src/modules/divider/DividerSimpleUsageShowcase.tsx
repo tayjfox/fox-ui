@@ -11,8 +11,8 @@ import {
   HStack,
   Text,
   VStack,
-} from '@fox-ui/components';
-import { Avatar } from '@fox-ui/components-legacy';
+} from '@kits-ui/components';
+import { Avatar } from '@kits-ui/components-legacy';
 
 export const DividerSimpleUsageShowcase = (): React.ReactElement => (
   <View>
