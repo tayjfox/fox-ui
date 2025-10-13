@@ -5,6 +5,15 @@ echo "Finished removing directories"
 find . -name "node_modules" -type d -prune -exec rm -rf '{}' + || echo "Warning: Failed to remove node_modules in subfolders"
 echo "Finished removing all node_modules in subfolders"
 
+find . -name ".expo" -type d -prune -exec rm -rf '{}' + || echo "Warning: Failed to remove .expo directories"
+echo "Finished removing all .expo directories"
+
+find . -name ".turbo" -type d -prune -exec rm -rf '{}' + || echo "Warning: Failed to remove .turbo directories"
+echo "Finished removing all .turbo directories"
+
+find . -name ".next" -type d -prune -exec rm -rf '{}' + || echo "Warning: Failed to remove .next directories"
+echo "Finished removing all .next directories"
+
 yarn cache clean || echo "Warning: Failed to clean Yarn cache"
 echo "Finished cleaning Yarn cache"
 

@@ -13,7 +13,6 @@
     "clean": "rimraf ./dist ./web-build",
     "predev": "watchman watch-del-all",
     "dev": "expo start",
-    "eas-build-pre-install": "corepack enable && cd ../.. && yarn install",
     "env": "node ./env/set-env.js",
     "expo:start": "npx expo start",
     "fix": "npx expo install --fix",
@@ -92,6 +91,5 @@
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4.1.14",
     "typescript": "~5.9.3"
-  },
-  "packageManager": "yarn@4.9.4"
+  }
 }
