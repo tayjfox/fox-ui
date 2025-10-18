@@ -1,15 +1,18 @@
 import React, { useEffect } from 'react';
 
 import { useNavigation } from 'expo-router';
-import { View } from 'react-native';
 
 import {
+  ImageCaptionShowcase,
   ImageSimpleShowcase,
+  ImageSizesShowcase,
   ShowcaseCard,
 } from '@/modules';
 import {
   Container,
   List,
+  Text,
+  View,
 } from '@fox-ui/components';
 
 export default function TextScreen() {
@@ -26,30 +29,29 @@ export default function TextScreen() {
         'Text has pre-defined set of styles for headings, subtitles, paragraphs, and more.',
       component: ImageSimpleShowcase,
     },
-    // {
-    //   title: 'Image Sizes',
-    //   description: 'Text can have different appearances.',
-    //   component: ,
-    // },
-    // {
-    //   title: 'Image with caption',
-    //   description: 'Images can include a caption to provide context or description.',
-    //   component: ,
-    // },
-    // {
-    //   title: 'View the picture catalog',
-    //   description: 'Find the authors of the pictures used in this section of the app.',
-    //   component: () => (
-    //     <View>
-    //       <Text>Stay tuned!</Text>
-    //     </View>
-    //   ),
-    // },
+    {
+      title: 'Image Sizes',
+      description: 'Text can have different appearances.',
+      component: ImageSizesShowcase,
+    },
+    {
+      title: 'Image with caption',
+      description: 'Images can include a caption to provide context or description.',
+      component: ImageCaptionShowcase,
+    },
+    {
+      title: 'View the picture catalog',
+      description: 'Find the authors of the pictures used in this section of the app.',
+      component: () => (
+        <View>
+          <Text>Stay tuned!</Text>
+        </View>
+      ),
+    },
   ];
 
   return (
     <View className="py-safe h-full">
-      <ImageSimpleShowcase />
       <Container className="h-full">
         <List
           data={DemoTypes}

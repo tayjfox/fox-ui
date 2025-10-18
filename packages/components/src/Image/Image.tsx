@@ -12,30 +12,52 @@
 
 import React from 'react';
 
+import { Image as ExpoImage } from 'expo-image';
+
+import { Text } from '@/Text';
+import { View } from '@/View';
+
+import { ImageStyle } from './styles';
 import { ImageProps } from './types';
 
-// Dynamically import Expo Image to avoid issues if it's not installed
-// Users must install 'expo-image' themselves to use this component
-// See https://docs.vedla.net/foxui/components/image#installation for more info
-let ImageBase = null;
-let ExpoImage = null;
-try {
-  ExpoImage = require('expo-image').default;
-} catch {
-  ImageBase = require('expo-image').default;;
-}
-
-const ImageRN = (ImageBase || ExpoImage) as React.ComponentType<ImageProps>;
+const ImageRN = ExpoImage as React.ComponentType<ImageProps>;
 
 export const Image = (props: ImageProps) => {
+  const { size, caption, className, ...rest } = props;
 
-  if (process.env.NODE_ENV !== 'production' && process.env.FOXUI_SUPRESS_EXPO_IMAGE_WARNING !== 'true') {
+  const getClassName = (): string => {
+    return ImageStyle({
+      class: className,
+      size,
+    });
+  };
+
+  const ImageClassName = getClassName();
+
+  if (
+    process.env.NODE_ENV !== 'production' &&
+    process.env.FOXUI_SUPRESS_EXPO_IMAGE_WARNING !== 'true'
+  ) {
     if (!ExpoImage) {
       console.warn(
         "Missing peer dependency: 'expo-image'. Please install it to use the Image component.\n" +
-        "See https://docs.vedla.net/foxui/components/image#installation"
+          'See https://docs.vedla.net/foxui/components/image#installation'
       );
     }
-    return <ImageRN {...props} />;
-  };
-}
+  }
+
+  if (caption) {
+    return (
+      <View className="flex-1 items-center">
+        <ImageRN {...rest} className={ImageClassName} size={size} contentFit="contain" />
+        {typeof caption === 'string' ? (
+          <Text category="s1">{caption}</Text>
+        ) : (
+          (caption as React.ReactNode)
+        )}
+      </View>
+    );
+  }
+
+  return <ImageRN {...rest} className={ImageClassName} size={size} />;
+};

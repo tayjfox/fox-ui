@@ -1,14 +1,21 @@
 import { tv } from 'tailwind-variants';
 
-import { isWeb } from '@fox-ui/utils';
-
-const baseStyle = isWeb ? 'outline-0' : '';
-
 export const ImageStyle = tv({
-  base: `${baseStyle} flex-row items-center px-2 py-3 bg-basic-100`,
+  base: 'max-w-full',
   variants: {
-    state: {
-      active: 'bg-basic-transparent-300',
+    size: {
+      xs: 'h-6 w-6',
+      sm: 'h-18 w-18',
+      md: 'h-24  w-24',
+      lg: 'h-32 w-32',
+      xl: 'h-40 w-40',
+      '2xl': 'h-48 w-48',
+      '3xl': 'h-60 w-60',
+      '4xl': 'h-72 w-72',
+      full: 'w-full h-100',
     },
+  },
+  defaultVariants: {
+    size: 'full',
   },
 });
