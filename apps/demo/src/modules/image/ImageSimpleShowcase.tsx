@@ -1,9 +1,6 @@
 import React from 'react';
 
-import {
-  Image,
-  View,
-} from '@fox-ui/components';
+import { Image, View } from '@fox-ui/components';
 
 export const ImageSimpleShowcase = (): React.ReactElement => (
   <View className="flex">
